@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		F47A7F6827185E9F00502804 /* Clarity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F47A7F5E27185E9F00502804 /* Clarity.framework */; };
-		F47A7F6D27185E9F00502804 /* ClarityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A7F6C27185E9F00502804 /* ClarityTests.swift */; };
 		F47A7F6F27185E9F00502804 /* Clarity.h in Headers */ = {isa = PBXBuildFile; fileRef = F47A7F6127185E9F00502804 /* Clarity.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F47A7F8D27185F7F00502804 /* Clarity_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = F47A7F7F27185F7F00502804 /* Clarity_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F47A7F95271863E400502804 /* JSONAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A7F94271863E400502804 /* JSONAccess.swift */; };
@@ -17,6 +16,89 @@
 		F47A7FAD2718666F00502804 /* Clarity_tv.h in Headers */ = {isa = PBXBuildFile; fileRef = F47A7FAB2718666F00502804 /* Clarity_tv.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F47A7FB12718668C00502804 /* JSONAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A7F94271863E400502804 /* JSONAccess.swift */; };
 		F47A7FB22718668D00502804 /* JSONAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A7F94271863E400502804 /* JSONAccess.swift */; };
+		F47A7FB5271867A600502804 /* ClarityActivator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A7FB4271867A600502804 /* ClarityActivator.swift */; };
+		F47A7FB6271867A600502804 /* ClarityActivator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A7FB4271867A600502804 /* ClarityActivator.swift */; };
+		F47A7FB7271867A600502804 /* ClarityActivator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A7FB4271867A600502804 /* ClarityActivator.swift */; };
+		F47A7FB8271867A600502804 /* ClarityActivator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A7FB4271867A600502804 /* ClarityActivator.swift */; };
+		F47A7FBB2718681C00502804 /* SettingsManagerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A7FBA2718681C00502804 /* SettingsManagerService.swift */; };
+		F47A7FBC2718681C00502804 /* SettingsManagerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A7FBA2718681C00502804 /* SettingsManagerService.swift */; };
+		F47A7FBD2718681C00502804 /* SettingsManagerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A7FBA2718681C00502804 /* SettingsManagerService.swift */; };
+		F47A7FBE2718681C00502804 /* SettingsManagerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A7FBA2718681C00502804 /* SettingsManagerService.swift */; };
+		F47A7FC02718684800502804 /* FormattingManagerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A7FBF2718684800502804 /* FormattingManagerService.swift */; };
+		F47A7FC12718684800502804 /* FormattingManagerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A7FBF2718684800502804 /* FormattingManagerService.swift */; };
+		F47A7FC22718684800502804 /* FormattingManagerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A7FBF2718684800502804 /* FormattingManagerService.swift */; };
+		F47A7FC32718684800502804 /* FormattingManagerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A7FBF2718684800502804 /* FormattingManagerService.swift */; };
+		F47A7FC5271868A600502804 /* EntityLogService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A7FC4271868A600502804 /* EntityLogService.swift */; };
+		F47A7FC6271868A600502804 /* EntityLogService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A7FC4271868A600502804 /* EntityLogService.swift */; };
+		F47A7FC7271868A600502804 /* EntityLogService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A7FC4271868A600502804 /* EntityLogService.swift */; };
+		F47A7FC8271868A600502804 /* EntityLogService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A7FC4271868A600502804 /* EntityLogService.swift */; };
+		F47A7FCA2718693E00502804 /* EntityLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A7FC92718693E00502804 /* EntityLog.swift */; };
+		F47A7FCB2718693E00502804 /* EntityLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A7FC92718693E00502804 /* EntityLog.swift */; };
+		F47A7FCC2718693E00502804 /* EntityLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A7FC92718693E00502804 /* EntityLog.swift */; };
+		F47A7FCD2718693E00502804 /* EntityLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A7FC92718693E00502804 /* EntityLog.swift */; };
+		F47A7FD027186BA400502804 /* MessageCollator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A7FCF27186BA400502804 /* MessageCollator.swift */; };
+		F47A7FD127186BA400502804 /* MessageCollator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A7FCF27186BA400502804 /* MessageCollator.swift */; };
+		F47A7FD227186BA400502804 /* MessageCollator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A7FCF27186BA400502804 /* MessageCollator.swift */; };
+		F47A7FD327186BA400502804 /* MessageCollator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A7FCF27186BA400502804 /* MessageCollator.swift */; };
+		F47A7FD527186BD700502804 /* UsedPrintNumberIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A7FD427186BD700502804 /* UsedPrintNumberIdentifiable.swift */; };
+		F47A7FD627186BD700502804 /* UsedPrintNumberIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A7FD427186BD700502804 /* UsedPrintNumberIdentifiable.swift */; };
+		F47A7FD727186BD700502804 /* UsedPrintNumberIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A7FD427186BD700502804 /* UsedPrintNumberIdentifiable.swift */; };
+		F47A7FD827186BD700502804 /* UsedPrintNumberIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A7FD427186BD700502804 /* UsedPrintNumberIdentifiable.swift */; };
+		F47A7FDA27186C0E00502804 /* DuplicatePrintNumberIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A7FD927186C0E00502804 /* DuplicatePrintNumberIdentifiable.swift */; };
+		F47A7FDB27186C0E00502804 /* DuplicatePrintNumberIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A7FD927186C0E00502804 /* DuplicatePrintNumberIdentifiable.swift */; };
+		F47A7FDC27186C0E00502804 /* DuplicatePrintNumberIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A7FD927186C0E00502804 /* DuplicatePrintNumberIdentifiable.swift */; };
+		F47A7FDD27186C0E00502804 /* DuplicatePrintNumberIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A7FD927186C0E00502804 /* DuplicatePrintNumberIdentifiable.swift */; };
+		F47A7FDF27186C8000502804 /* PrintOverloads.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A7FDE27186C8000502804 /* PrintOverloads.swift */; };
+		F47A7FE027186C8000502804 /* PrintOverloads.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A7FDE27186C8000502804 /* PrintOverloads.swift */; };
+		F47A7FE127186C8000502804 /* PrintOverloads.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A7FDE27186C8000502804 /* PrintOverloads.swift */; };
+		F47A7FE227186C8000502804 /* PrintOverloads.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A7FDE27186C8000502804 /* PrintOverloads.swift */; };
+		F47A7FE527186CF300502804 /* ClarityPrintLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A7FE427186CF300502804 /* ClarityPrintLogic.swift */; };
+		F47A7FE627186CF300502804 /* ClarityPrintLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A7FE427186CF300502804 /* ClarityPrintLogic.swift */; };
+		F47A7FE727186CF300502804 /* ClarityPrintLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A7FE427186CF300502804 /* ClarityPrintLogic.swift */; };
+		F47A7FE827186CF300502804 /* ClarityPrintLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A7FE427186CF300502804 /* ClarityPrintLogic.swift */; };
+		F47A7FEA27186D2E00502804 /* ClarityPrintHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A7FE927186D2E00502804 /* ClarityPrintHelper.swift */; };
+		F47A7FEB27186D2E00502804 /* ClarityPrintHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A7FE927186D2E00502804 /* ClarityPrintHelper.swift */; };
+		F47A7FEC27186D2E00502804 /* ClarityPrintHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A7FE927186D2E00502804 /* ClarityPrintHelper.swift */; };
+		F47A7FED27186D2E00502804 /* ClarityPrintHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A7FE927186D2E00502804 /* ClarityPrintHelper.swift */; };
+		F47A7FEF27186D4E00502804 /* ClarityPrintConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A7FEE27186D4E00502804 /* ClarityPrintConstants.swift */; };
+		F47A7FF027186D4E00502804 /* ClarityPrintConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A7FEE27186D4E00502804 /* ClarityPrintConstants.swift */; };
+		F47A7FF127186D4E00502804 /* ClarityPrintConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A7FEE27186D4E00502804 /* ClarityPrintConstants.swift */; };
+		F47A7FF227186D4E00502804 /* ClarityPrintConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A7FEE27186D4E00502804 /* ClarityPrintConstants.swift */; };
+		F47A7FF927186DA300502804 /* ClarityPrintEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A7FF827186DA300502804 /* ClarityPrintEnums.swift */; };
+		F47A7FFA27186DA300502804 /* ClarityPrintEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A7FF827186DA300502804 /* ClarityPrintEnums.swift */; };
+		F47A7FFB27186DA300502804 /* ClarityPrintEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A7FF827186DA300502804 /* ClarityPrintEnums.swift */; };
+		F47A7FFC27186DA300502804 /* ClarityPrintEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A7FF827186DA300502804 /* ClarityPrintEnums.swift */; };
+		F47A7FFF27186DFC00502804 /* UtilitySystemExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A7FFE27186DFC00502804 /* UtilitySystemExtensions.swift */; };
+		F47A800027186DFC00502804 /* UtilitySystemExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A7FFE27186DFC00502804 /* UtilitySystemExtensions.swift */; };
+		F47A800127186DFC00502804 /* UtilitySystemExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A7FFE27186DFC00502804 /* UtilitySystemExtensions.swift */; };
+		F47A800227186DFC00502804 /* UtilitySystemExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A7FFE27186DFC00502804 /* UtilitySystemExtensions.swift */; };
+		F47A800427186E3D00502804 /* ClarityDeveloperAlerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A800327186E3D00502804 /* ClarityDeveloperAlerts.swift */; };
+		F47A800527186E3D00502804 /* ClarityDeveloperAlerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A800327186E3D00502804 /* ClarityDeveloperAlerts.swift */; };
+		F47A800627186E3D00502804 /* ClarityDeveloperAlerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A800327186E3D00502804 /* ClarityDeveloperAlerts.swift */; };
+		F47A800727186E3D00502804 /* ClarityDeveloperAlerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A800327186E3D00502804 /* ClarityDeveloperAlerts.swift */; };
+		F47A800927186F2000502804 /* ClarityJSON in Resources */ = {isa = PBXBuildFile; fileRef = F47A800827186F2000502804 /* ClarityJSON */; };
+		F47A800A27186F2000502804 /* ClarityJSON in Resources */ = {isa = PBXBuildFile; fileRef = F47A800827186F2000502804 /* ClarityJSON */; };
+		F47A800B27186F2000502804 /* ClarityJSON in Resources */ = {isa = PBXBuildFile; fileRef = F47A800827186F2000502804 /* ClarityJSON */; };
+		F47A800C27186F2000502804 /* ClarityJSON in Resources */ = {isa = PBXBuildFile; fileRef = F47A800827186F2000502804 /* ClarityJSON */; };
+		F47A800E271870EE00502804 /* TemplateJSON in Resources */ = {isa = PBXBuildFile; fileRef = F47A800D271870EE00502804 /* TemplateJSON */; };
+		F47A800F271870EE00502804 /* TemplateJSON in Resources */ = {isa = PBXBuildFile; fileRef = F47A800D271870EE00502804 /* TemplateJSON */; };
+		F47A8010271870EE00502804 /* TemplateJSON in Resources */ = {isa = PBXBuildFile; fileRef = F47A800D271870EE00502804 /* TemplateJSON */; };
+		F47A8011271870EE00502804 /* TemplateJSON in Resources */ = {isa = PBXBuildFile; fileRef = F47A800D271870EE00502804 /* TemplateJSON */; };
+		F47A8015271872CD00502804 /* ClarityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A8014271872CD00502804 /* ClarityTests.swift */; };
+		F47A8017271872FF00502804 /* ClarityActivatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A8016271872FF00502804 /* ClarityActivatorTests.swift */; };
+		F47A8019271873AF00502804 /* JSONAccessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A8018271873AE00502804 /* JSONAccessTests.swift */; };
+		F47A801B2718742000502804 /* RoundTripJSONDecodingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A801A2718742000502804 /* RoundTripJSONDecodingTests.swift */; };
+		F47A801D271875A600502804 /* SettingsManagerServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A801C271875A600502804 /* SettingsManagerServiceTests.swift */; };
+		F47A801F2718760400502804 /* FormattingManagerServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A801E2718760400502804 /* FormattingManagerServiceTests.swift */; };
+		F47A80212718767100502804 /* EntityLogServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A80202718767100502804 /* EntityLogServiceTests.swift */; };
+		F47A8023271876C600502804 /* EntityLogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A8022271876C600502804 /* EntityLogTests.swift */; };
+		F47A80252718770600502804 /* MessageCollatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A80242718770600502804 /* MessageCollatorTests.swift */; };
+		F47A80272718773700502804 /* ClarityPrintLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A80262718773700502804 /* ClarityPrintLogicTests.swift */; };
+		F47A8029271877CE00502804 /* CompilePrintStringMethodsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A8028271877CE00502804 /* CompilePrintStringMethodsTests.swift */; };
+		F47A802B2718783000502804 /* ClarityPrintPerformanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A802A2718783000502804 /* ClarityPrintPerformanceTests.swift */; };
+		F47A802D2718787C00502804 /* PrintOverloadVisualConsoleCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A802C2718787C00502804 /* PrintOverloadVisualConsoleCheck.swift */; };
+		F47A802F271878E600502804 /* PrintConstantsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A802E271878E600502804 /* PrintConstantsTests.swift */; };
+		F47A80312718793F00502804 /* TestingUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A80302718793F00502804 /* TestingUtilities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,7 +116,6 @@
 		F47A7F6127185E9F00502804 /* Clarity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Clarity.h; sourceTree = "<group>"; };
 		F47A7F6227185E9F00502804 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F47A7F6727185E9F00502804 /* ClarityTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClarityTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F47A7F6C27185E9F00502804 /* ClarityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClarityTests.swift; sourceTree = "<group>"; };
 		F47A7F6E27185E9F00502804 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F47A7F7D27185F7F00502804 /* Clarity_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Clarity_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F47A7F7F27185F7F00502804 /* Clarity_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Clarity_iOS.h; sourceTree = "<group>"; };
@@ -46,6 +127,38 @@
 		F47A7FA92718666F00502804 /* Clarity_tv.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Clarity_tv.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F47A7FAB2718666F00502804 /* Clarity_tv.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Clarity_tv.h; sourceTree = "<group>"; };
 		F47A7FAC2718666F00502804 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F47A7FB4271867A600502804 /* ClarityActivator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClarityActivator.swift; sourceTree = "<group>"; };
+		F47A7FBA2718681C00502804 /* SettingsManagerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsManagerService.swift; sourceTree = "<group>"; };
+		F47A7FBF2718684800502804 /* FormattingManagerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormattingManagerService.swift; sourceTree = "<group>"; };
+		F47A7FC4271868A600502804 /* EntityLogService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityLogService.swift; sourceTree = "<group>"; };
+		F47A7FC92718693E00502804 /* EntityLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityLog.swift; sourceTree = "<group>"; };
+		F47A7FCF27186BA400502804 /* MessageCollator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCollator.swift; sourceTree = "<group>"; };
+		F47A7FD427186BD700502804 /* UsedPrintNumberIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsedPrintNumberIdentifiable.swift; sourceTree = "<group>"; };
+		F47A7FD927186C0E00502804 /* DuplicatePrintNumberIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuplicatePrintNumberIdentifiable.swift; sourceTree = "<group>"; };
+		F47A7FDE27186C8000502804 /* PrintOverloads.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintOverloads.swift; sourceTree = "<group>"; };
+		F47A7FE427186CF300502804 /* ClarityPrintLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClarityPrintLogic.swift; sourceTree = "<group>"; };
+		F47A7FE927186D2E00502804 /* ClarityPrintHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClarityPrintHelper.swift; sourceTree = "<group>"; };
+		F47A7FEE27186D4E00502804 /* ClarityPrintConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClarityPrintConstants.swift; sourceTree = "<group>"; };
+		F47A7FF827186DA300502804 /* ClarityPrintEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClarityPrintEnums.swift; sourceTree = "<group>"; };
+		F47A7FFE27186DFC00502804 /* UtilitySystemExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilitySystemExtensions.swift; sourceTree = "<group>"; };
+		F47A800327186E3D00502804 /* ClarityDeveloperAlerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClarityDeveloperAlerts.swift; sourceTree = "<group>"; };
+		F47A800827186F2000502804 /* ClarityJSON */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ClarityJSON; sourceTree = "<group>"; };
+		F47A800D271870EE00502804 /* TemplateJSON */ = {isa = PBXFileReference; lastKnownFileType = folder; path = TemplateJSON; sourceTree = "<group>"; };
+		F47A8014271872CD00502804 /* ClarityTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClarityTests.swift; sourceTree = "<group>"; };
+		F47A8016271872FF00502804 /* ClarityActivatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClarityActivatorTests.swift; sourceTree = "<group>"; };
+		F47A8018271873AE00502804 /* JSONAccessTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONAccessTests.swift; sourceTree = "<group>"; };
+		F47A801A2718742000502804 /* RoundTripJSONDecodingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundTripJSONDecodingTests.swift; sourceTree = "<group>"; };
+		F47A801C271875A600502804 /* SettingsManagerServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsManagerServiceTests.swift; sourceTree = "<group>"; };
+		F47A801E2718760400502804 /* FormattingManagerServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormattingManagerServiceTests.swift; sourceTree = "<group>"; };
+		F47A80202718767100502804 /* EntityLogServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityLogServiceTests.swift; sourceTree = "<group>"; };
+		F47A8022271876C600502804 /* EntityLogTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityLogTests.swift; sourceTree = "<group>"; };
+		F47A80242718770600502804 /* MessageCollatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCollatorTests.swift; sourceTree = "<group>"; };
+		F47A80262718773700502804 /* ClarityPrintLogicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClarityPrintLogicTests.swift; sourceTree = "<group>"; };
+		F47A8028271877CE00502804 /* CompilePrintStringMethodsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompilePrintStringMethodsTests.swift; sourceTree = "<group>"; };
+		F47A802A2718783000502804 /* ClarityPrintPerformanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClarityPrintPerformanceTests.swift; sourceTree = "<group>"; };
+		F47A802C2718787C00502804 /* PrintOverloadVisualConsoleCheck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintOverloadVisualConsoleCheck.swift; sourceTree = "<group>"; };
+		F47A802E271878E600502804 /* PrintConstantsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintConstantsTests.swift; sourceTree = "<group>"; };
+		F47A80302718793F00502804 /* TestingUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingUtilities.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +204,8 @@
 		F47A7F5427185E9F00502804 = {
 			isa = PBXGroup;
 			children = (
+				F47A800D271870EE00502804 /* TemplateJSON */,
+				F47A800827186F2000502804 /* ClarityJSON */,
 				F47A7F6027185E9F00502804 /* Clarity */,
 				F47A7F6B27185E9F00502804 /* ClarityTests */,
 				F47A7F7E27185F7F00502804 /* Clarity_iOS */,
@@ -115,7 +230,12 @@
 		F47A7F6027185E9F00502804 /* Clarity */ = {
 			isa = PBXGroup;
 			children = (
+				F47A7FFD27186DD900502804 /* Extensions and Alerts */,
 				F47A7FB3271866A700502804 /* JSON Access */,
+				F47A7FB9271867EC00502804 /* Service and Model */,
+				F47A7FCE27186B7000502804 /* Message Collator */,
+				F47A7FE327186CC500502804 /* Print Logic */,
+				F47A7FDE27186C8000502804 /* PrintOverloads.swift */,
 				F47A7F6127185E9F00502804 /* Clarity.h */,
 				F47A7F6227185E9F00502804 /* Info.plist */,
 			);
@@ -125,8 +245,22 @@
 		F47A7F6B27185E9F00502804 /* ClarityTests */ = {
 			isa = PBXGroup;
 			children = (
-				F47A7F6C27185E9F00502804 /* ClarityTests.swift */,
+				F47A8014271872CD00502804 /* ClarityTests.swift */,
 				F47A7F6E27185E9F00502804 /* Info.plist */,
+				F47A8016271872FF00502804 /* ClarityActivatorTests.swift */,
+				F47A8018271873AE00502804 /* JSONAccessTests.swift */,
+				F47A801A2718742000502804 /* RoundTripJSONDecodingTests.swift */,
+				F47A801C271875A600502804 /* SettingsManagerServiceTests.swift */,
+				F47A801E2718760400502804 /* FormattingManagerServiceTests.swift */,
+				F47A80202718767100502804 /* EntityLogServiceTests.swift */,
+				F47A8022271876C600502804 /* EntityLogTests.swift */,
+				F47A80242718770600502804 /* MessageCollatorTests.swift */,
+				F47A80262718773700502804 /* ClarityPrintLogicTests.swift */,
+				F47A8028271877CE00502804 /* CompilePrintStringMethodsTests.swift */,
+				F47A802A2718783000502804 /* ClarityPrintPerformanceTests.swift */,
+				F47A802C2718787C00502804 /* PrintOverloadVisualConsoleCheck.swift */,
+				F47A802E271878E600502804 /* PrintConstantsTests.swift */,
+				F47A80302718793F00502804 /* TestingUtilities.swift */,
 			);
 			path = ClarityTests;
 			sourceTree = "<group>";
@@ -162,8 +296,50 @@
 			isa = PBXGroup;
 			children = (
 				F47A7F94271863E400502804 /* JSONAccess.swift */,
+				F47A7FB4271867A600502804 /* ClarityActivator.swift */,
 			);
 			path = "JSON Access";
+			sourceTree = "<group>";
+		};
+		F47A7FB9271867EC00502804 /* Service and Model */ = {
+			isa = PBXGroup;
+			children = (
+				F47A7FBA2718681C00502804 /* SettingsManagerService.swift */,
+				F47A7FBF2718684800502804 /* FormattingManagerService.swift */,
+				F47A7FC4271868A600502804 /* EntityLogService.swift */,
+				F47A7FC92718693E00502804 /* EntityLog.swift */,
+			);
+			path = "Service and Model";
+			sourceTree = "<group>";
+		};
+		F47A7FCE27186B7000502804 /* Message Collator */ = {
+			isa = PBXGroup;
+			children = (
+				F47A7FCF27186BA400502804 /* MessageCollator.swift */,
+				F47A7FD427186BD700502804 /* UsedPrintNumberIdentifiable.swift */,
+				F47A7FD927186C0E00502804 /* DuplicatePrintNumberIdentifiable.swift */,
+			);
+			path = "Message Collator";
+			sourceTree = "<group>";
+		};
+		F47A7FE327186CC500502804 /* Print Logic */ = {
+			isa = PBXGroup;
+			children = (
+				F47A7FE427186CF300502804 /* ClarityPrintLogic.swift */,
+				F47A7FE927186D2E00502804 /* ClarityPrintHelper.swift */,
+				F47A7FEE27186D4E00502804 /* ClarityPrintConstants.swift */,
+				F47A7FF827186DA300502804 /* ClarityPrintEnums.swift */,
+			);
+			path = "Print Logic";
+			sourceTree = "<group>";
+		};
+		F47A7FFD27186DD900502804 /* Extensions and Alerts */ = {
+			isa = PBXGroup;
+			children = (
+				F47A7FFE27186DFC00502804 /* UtilitySystemExtensions.swift */,
+				F47A800327186E3D00502804 /* ClarityDeveloperAlerts.swift */,
+			);
+			path = "Extensions and Alerts";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,6 +485,7 @@
 					};
 					F47A7F6627185E9F00502804 = {
 						CreatedOnToolsVersion = 12.5;
+						LastSwiftMigration = 1250;
 					};
 					F47A7F7C27185F7F00502804 = {
 						CreatedOnToolsVersion = 12.5;
@@ -349,6 +526,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F47A800E271870EE00502804 /* TemplateJSON in Resources */,
+				F47A800927186F2000502804 /* ClarityJSON in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,6 +542,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F47A800F271870EE00502804 /* TemplateJSON in Resources */,
+				F47A800A27186F2000502804 /* ClarityJSON in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,6 +551,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F47A8010271870EE00502804 /* TemplateJSON in Resources */,
+				F47A800B27186F2000502804 /* ClarityJSON in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,6 +560,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F47A8011271870EE00502804 /* TemplateJSON in Resources */,
+				F47A800C27186F2000502804 /* ClarityJSON in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,7 +572,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F47A800427186E3D00502804 /* ClarityDeveloperAlerts.swift in Sources */,
+				F47A7FFF27186DFC00502804 /* UtilitySystemExtensions.swift in Sources */,
+				F47A7FEA27186D2E00502804 /* ClarityPrintHelper.swift in Sources */,
+				F47A7FE527186CF300502804 /* ClarityPrintLogic.swift in Sources */,
+				F47A7FD027186BA400502804 /* MessageCollator.swift in Sources */,
+				F47A7FD527186BD700502804 /* UsedPrintNumberIdentifiable.swift in Sources */,
+				F47A7FC02718684800502804 /* FormattingManagerService.swift in Sources */,
+				F47A7FF927186DA300502804 /* ClarityPrintEnums.swift in Sources */,
+				F47A7FDF27186C8000502804 /* PrintOverloads.swift in Sources */,
+				F47A7FCA2718693E00502804 /* EntityLog.swift in Sources */,
+				F47A7FB5271867A600502804 /* ClarityActivator.swift in Sources */,
 				F47A7F95271863E400502804 /* JSONAccess.swift in Sources */,
+				F47A7FC5271868A600502804 /* EntityLogService.swift in Sources */,
+				F47A7FEF27186D4E00502804 /* ClarityPrintConstants.swift in Sources */,
+				F47A7FBB2718681C00502804 /* SettingsManagerService.swift in Sources */,
+				F47A7FDA27186C0E00502804 /* DuplicatePrintNumberIdentifiable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,7 +595,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F47A7F6D27185E9F00502804 /* ClarityTests.swift in Sources */,
+				F47A801F2718760400502804 /* FormattingManagerServiceTests.swift in Sources */,
+				F47A8023271876C600502804 /* EntityLogTests.swift in Sources */,
+				F47A801B2718742000502804 /* RoundTripJSONDecodingTests.swift in Sources */,
+				F47A802F271878E600502804 /* PrintConstantsTests.swift in Sources */,
+				F47A80272718773700502804 /* ClarityPrintLogicTests.swift in Sources */,
+				F47A802D2718787C00502804 /* PrintOverloadVisualConsoleCheck.swift in Sources */,
+				F47A8017271872FF00502804 /* ClarityActivatorTests.swift in Sources */,
+				F47A8029271877CE00502804 /* CompilePrintStringMethodsTests.swift in Sources */,
+				F47A80252718770600502804 /* MessageCollatorTests.swift in Sources */,
+				F47A8019271873AF00502804 /* JSONAccessTests.swift in Sources */,
+				F47A80312718793F00502804 /* TestingUtilities.swift in Sources */,
+				F47A801D271875A600502804 /* SettingsManagerServiceTests.swift in Sources */,
+				F47A8015271872CD00502804 /* ClarityTests.swift in Sources */,
+				F47A80212718767100502804 /* EntityLogServiceTests.swift in Sources */,
+				F47A802B2718783000502804 /* ClarityPrintPerformanceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,7 +617,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F47A800527186E3D00502804 /* ClarityDeveloperAlerts.swift in Sources */,
+				F47A800027186DFC00502804 /* UtilitySystemExtensions.swift in Sources */,
+				F47A7FEB27186D2E00502804 /* ClarityPrintHelper.swift in Sources */,
+				F47A7FE627186CF300502804 /* ClarityPrintLogic.swift in Sources */,
+				F47A7FD127186BA400502804 /* MessageCollator.swift in Sources */,
+				F47A7FD627186BD700502804 /* UsedPrintNumberIdentifiable.swift in Sources */,
+				F47A7FC12718684800502804 /* FormattingManagerService.swift in Sources */,
+				F47A7FFA27186DA300502804 /* ClarityPrintEnums.swift in Sources */,
+				F47A7FE027186C8000502804 /* PrintOverloads.swift in Sources */,
+				F47A7FCB2718693E00502804 /* EntityLog.swift in Sources */,
+				F47A7FB6271867A600502804 /* ClarityActivator.swift in Sources */,
 				F47A7F96271863E400502804 /* JSONAccess.swift in Sources */,
+				F47A7FC6271868A600502804 /* EntityLogService.swift in Sources */,
+				F47A7FF027186D4E00502804 /* ClarityPrintConstants.swift in Sources */,
+				F47A7FBC2718681C00502804 /* SettingsManagerService.swift in Sources */,
+				F47A7FDB27186C0E00502804 /* DuplicatePrintNumberIdentifiable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,7 +640,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F47A800627186E3D00502804 /* ClarityDeveloperAlerts.swift in Sources */,
+				F47A800127186DFC00502804 /* UtilitySystemExtensions.swift in Sources */,
+				F47A7FEC27186D2E00502804 /* ClarityPrintHelper.swift in Sources */,
+				F47A7FE727186CF300502804 /* ClarityPrintLogic.swift in Sources */,
+				F47A7FD227186BA400502804 /* MessageCollator.swift in Sources */,
+				F47A7FD727186BD700502804 /* UsedPrintNumberIdentifiable.swift in Sources */,
+				F47A7FC22718684800502804 /* FormattingManagerService.swift in Sources */,
+				F47A7FFB27186DA300502804 /* ClarityPrintEnums.swift in Sources */,
+				F47A7FE127186C8000502804 /* PrintOverloads.swift in Sources */,
+				F47A7FCC2718693E00502804 /* EntityLog.swift in Sources */,
+				F47A7FB7271867A600502804 /* ClarityActivator.swift in Sources */,
 				F47A7FB12718668C00502804 /* JSONAccess.swift in Sources */,
+				F47A7FC7271868A600502804 /* EntityLogService.swift in Sources */,
+				F47A7FF127186D4E00502804 /* ClarityPrintConstants.swift in Sources */,
+				F47A7FBD2718681C00502804 /* SettingsManagerService.swift in Sources */,
+				F47A7FDC27186C0E00502804 /* DuplicatePrintNumberIdentifiable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,7 +663,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F47A800727186E3D00502804 /* ClarityDeveloperAlerts.swift in Sources */,
+				F47A800227186DFC00502804 /* UtilitySystemExtensions.swift in Sources */,
+				F47A7FED27186D2E00502804 /* ClarityPrintHelper.swift in Sources */,
+				F47A7FE827186CF300502804 /* ClarityPrintLogic.swift in Sources */,
+				F47A7FD327186BA400502804 /* MessageCollator.swift in Sources */,
+				F47A7FD827186BD700502804 /* UsedPrintNumberIdentifiable.swift in Sources */,
+				F47A7FC32718684800502804 /* FormattingManagerService.swift in Sources */,
+				F47A7FFC27186DA300502804 /* ClarityPrintEnums.swift in Sources */,
+				F47A7FE227186C8000502804 /* PrintOverloads.swift in Sources */,
+				F47A7FCD2718693E00502804 /* EntityLog.swift in Sources */,
+				F47A7FB8271867A600502804 /* ClarityActivator.swift in Sources */,
 				F47A7FB22718668D00502804 /* JSONAccess.swift in Sources */,
+				F47A7FC8271868A600502804 /* EntityLogService.swift in Sources */,
+				F47A7FF227186D4E00502804 /* ClarityPrintConstants.swift in Sources */,
+				F47A7FBE2718681C00502804 /* SettingsManagerService.swift in Sources */,
+				F47A7FDD27186C0E00502804 /* DuplicatePrintNumberIdentifiable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -610,6 +869,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = V9PFV3K6V8;
@@ -621,6 +881,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Real-Intelligence.ClarityTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -629,6 +890,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = V9PFV3K6V8;

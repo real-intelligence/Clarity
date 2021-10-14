@@ -1,6 +1,6 @@
 //
-//  Clarity_iOS.h
-//  Clarity_iOS
+//  JSONAccessTests.swift
+//  ClarityTests
 //
 // Copyright (c) 2021 Lawrence Heyfron (http://realint.org/)
 
@@ -24,14 +24,32 @@
 
 //
 
-#import <Foundation/Foundation.h>
+import XCTest
+@testable import Clarity
 
-//! Project version number for Clarity_iOS.
-FOUNDATION_EXPORT double Clarity_iOSVersionNumber;
-
-//! Project version string for Clarity_iOS.
-FOUNDATION_EXPORT const unsigned char Clarity_iOSVersionString[];
-
-// In this header, you should import all the public headers of your framework using statements like #import <Clarity_iOS/PublicHeader.h>
-
+class JSONAccessTests: XCTestCase {
+    
+    // MARK: - 🧪 Tests - static properties not nil
+    func test_JsonBundleNotNil() throws {
+        XCTAssertNotNil(ClarityActivator.jsonBundle)
+    }
+    
+    func test_ManagerServiceFromBundleNotNil() throws {
+        let array: [EntityLogService] = ClarityActivator.decoderServicesFromBundle(ClarityActivator.jsonBundle, inSubdirectory: "ClarityJSON", excludingFiles: ["Settings.json","Formatting.json"])
+        
+        XCTAssertNotNil(array)
+    }
+    
+    func test_EntityLogServiceArrayNotNil() throws {
+        XCTAssertNotNil(ClarityActivator.entityLogServiceArray)
+    }
+    
+    func test_SettingsManagerServiceNotNil() throws {
+        XCTAssertNotNil(ClarityActivator.settings)
+    }
+    
+    func test_FormattingManagerServiceNotNil() throws {
+        XCTAssertNotNil(ClarityActivator.formatting)
+    }
+}
 

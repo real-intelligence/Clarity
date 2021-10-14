@@ -1,0 +1,65 @@
+{
+    "entity_code":"ZZYY",
+    "entity_functions" : [
+        {
+            "function_number":121,
+            "function_number_always_custom":false,
+            "function_type":"i",
+            "function_nodes":[
+                {
+                    "print_number":195,
+                    "node_type":2,
+                    "event_description":"Decision event description",
+                    "effect_description":"Consequence description"
+                },
+                {
+                    "print_number":197,
+                    "node_type":2,
+                    "event_description":"Decision event description",
+                    "effect_description":"Consequence description"
+                }
+            ]
+        },
+        {
+            "function_number":25,
+            "function_number_always_custom":false,
+            "function_type":"i",
+            "function_nodes":[
+                {
+                    "print_number":198,
+                    "node_type":2,
+                    "event_description":"Decision event description",
+                    "effect_description":"Consequence description"
+                }
+            ]
+        },
+        {
+            "function_number":888,
+            "function_number_always_custom":false,
+            "function_type":"i",
+            "function_nodes":[
+                {
+                    "print_number":298,
+                    "node_type":2,
+                    "event_description":"Decision event description",
+                    "effect_description":"Consequence description"
+                }
+            ]
+        },
+        {
+            "function_number":889,
+            "function_number_always_custom":false,
+            "function_type":"f",
+            "function_nodes":[
+                {
+                    "print_number":299,
+                    "node_type":12,
+                    "event_description":"description of the error",
+                    "effect_description":"n/a"
+                }
+            ]
+        }
+    ]
+}
+
+

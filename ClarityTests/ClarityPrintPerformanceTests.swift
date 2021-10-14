@@ -1,5 +1,5 @@
 //
-//  ClarityTests.swift
+//  ClarityPrintPerformanceTests.swift
 //  ClarityTests
 //
 // Copyright (c) 2021 Lawrence Heyfron (http://realint.org/)
@@ -27,26 +27,45 @@
 import XCTest
 @testable import Clarity
 
-class ClarityTests: XCTestCase {
+class ClarityPrintPerformanceTests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() throws {
+    // MARK: - ⏱ Tests - Performance
+    func testPerformanceDecision() throws {
         // This is an example of a performance test case.
         self.measure {
-            // Put the code you want to measure the time of here.
+            print(5)
+        }
+    }
+    func testPerformanceSingleValue() throws {
+        // This is an example of a performance test case.
+         
+        self.measure {
+            print(206, values: "1")
+        }
+    }
+    func testPerformanceValuesDictionary() throws {
+        // This is an example of a performance test case.
+        let someDic = ["a":1, "b":2, "c":3, "d":4, "e":5, "f":6, "g":7, "h":8, "i":9]
+        self.measure {
+            print(5, values:someDic)
+        }
+    }
+    
+    func testPerformanceValuesArray() throws {
+        // This is an example of a performance test case.
+        let someArray = [1,2,3,4,5]
+        self.measure {
+            print(5, values:someArray)
+        }
+    }
+    
+    func testPerformanceFunction() throws {
+        // This is an example of a performance test case.
+        
+        self.measure {
+            print(1, functionName: #function)
         }
     }
 
 }
+

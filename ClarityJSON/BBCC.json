@@ -1,0 +1,189 @@
+{
+    "entity_code":"BBCC",
+    "entity_functions" : [
+        {
+            "function_number":1,
+            "function_number_always_custom":false,
+            "function_type":"i",
+            "function_nodes":[
+                {
+                    "print_number":191,
+                    "node_type":2,
+                    "event_description":"Decision event description",
+                    "effect_description":"Consequence description"
+                },
+                {
+                    "print_number":55,
+                    "node_type":1,
+                    "event_description":"Decision event description",
+                    "effect_description":"Consequence description"
+                }
+            ]
+        },
+        {
+            "function_number":26,
+            "function_number_always_custom":false,
+            "function_type":"i",
+            "function_nodes":[
+                {
+                    "print_number":199,
+                    "node_type":2,
+                    "event_description":"Decision event description",
+                    "effect_description":"Consequence description"
+                }
+            ]
+        },
+        {
+            "function_number":27,
+            "function_number_always_custom":true,
+            "function_type":"f",
+            "function_nodes":[
+                {
+                    "print_number":205,
+                    "node_type":2,
+                    "event_description":"Decision event description",
+                    "effect_description":"Consequence description"
+                },
+                {
+                    "print_number":206,
+                    "node_type":11,
+                    "event_description":"(variable name(s) or description(s)",
+                    "effect_description":"N/A"
+                },
+                {
+                    "print_number":35,
+                    "node_type":1,
+                    "event_description":"Decision event description",
+                    "effect_description":"Consequence description"
+                },
+                {
+                    "print_number":301,
+                    "node_type":0,
+                    "event_description":"variable name or value description",
+                    "effect_description":"not used"
+                }
+            ]
+        },
+        {
+            "function_number":1127,
+            "function_number_always_custom":true,
+            "function_type":"f",
+            "function_nodes":[
+                {
+                    "print_number":401,
+                    "node_type":2,
+                    "event_description":"Decision event description",
+                    "effect_description":"Consequence description"
+                }
+            ]
+        },
+        {
+            "function_number":11127,
+            "function_number_always_custom":true,
+            "function_type":"f",
+            "function_nodes":[
+                {
+                    "print_number":402,
+                    "node_type":2,
+                    "event_description":"Decision event description",
+                    "effect_description":"Consequence description"
+                }
+            ]
+        },
+        {
+            "function_number":11128,
+            "function_number_always_custom":false,
+            "function_type":"f",
+            "function_nodes":[
+                {
+                    "print_number":9998,
+                    "node_type":2,
+                    "event_description":"Decision event description",
+                    "effect_description":"Consequence description"
+                }
+            ]
+        },
+        {
+            "function_number":11129,
+            "function_number_always_custom":true,
+            "function_type":"f",
+            "function_nodes":[
+                {
+                    "print_number":99988,
+                    "node_type":2,
+                    "event_description":"Decision event description",
+                    "effect_description":"Consequence description"
+                },
+                {
+                    "print_number":99989,
+                    "node_type":2,
+                    "event_description":"Decision event description",
+                    "effect_description":"Consequence description"
+                },
+                {
+                    "print_number":99990,
+                    "node_type":2,
+                    "event_description":"Decision event description",
+                    "effect_description":"Consequence description"
+                },
+                {
+                    "print_number":99991,
+                    "node_type":2,
+                    "event_description":"Decision event description",
+                    "effect_description":"Consequence description"
+                },
+                {
+                    "print_number":99992,
+                    "node_type":2,
+                    "event_description":"Decision event description",
+                    "effect_description":"Consequence description"
+                },
+                {
+                    "print_number":99993,
+                    "node_type":2,
+                    "event_description":"Decision event description",
+                    "effect_description":"Consequence description"
+                },
+                {
+                    "print_number":99994,
+                    "node_type":2,
+                    "event_description":"Decision event description",
+                    "effect_description":"Consequence description"
+                },
+                {
+                    "print_number":99995,
+                    "node_type":2,
+                    "event_description":"Decision event description",
+                    "effect_description":"Consequence description"
+                },
+                {
+                    "print_number":99996,
+                    "node_type":2,
+                    "event_description":"Decision event description",
+                    "effect_description":"Consequence description"
+                },
+                {
+                    "print_number":99997,
+                    "node_type":2,
+                    "event_description":"Decision event description",
+                    "effect_description":"Consequence description"
+                },
+                {
+                    "print_number":99998,
+                    "node_type":2,
+                    "event_description":"Decision event description",
+                    "effect_description":"Consequence description"
+                },
+                {
+                    "print_number":99999,
+                    "node_type":1,
+                    "event_description":"Decision event description",
+                    "effect_description":"Consequence description"
+                }
+            ]
+        }
+        
+    ]
+}
+
+
