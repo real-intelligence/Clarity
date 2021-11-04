@@ -1,0 +1,20 @@
+{
+    "entity_code":"🟧CM",
+    "entity_functions" : [
+        {
+            "function_number":15,
+            "function_number_always_custom":false,
+            "function_type":"f",
+            "function_nodes":[
+                {
+                    "print_number":500,
+                    "node_type":1,
+                    "event_description":"this is an example of a colorised module",
+                    "effect_description":"description"
+                }
+            ]
+        }
+    ]
+}
+
+

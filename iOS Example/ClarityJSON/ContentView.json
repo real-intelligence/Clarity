@@ -1,0 +1,63 @@
+{
+    "entity_code":"CONTVW",
+    "entity_functions" : [
+        {
+            "function_number":1,
+            "function_number_always_custom":false,
+            "function_type":"v",
+            "function_nodes":[
+                {
+                    "print_number":300,
+                    "node_type":0,
+                    "event_description":"",
+                    "effect_description":""
+                },
+                {
+                    "print_number":301,
+                    "node_type":11,
+                    "event_description":"This is a 'value reporter' without a value for a quick comment",
+                    "effect_description":""
+                },
+                {
+                    "print_number":302,
+                    "node_type":11,
+                    "event_description":"it is possible to print comments from inside a View body var",
+                    "effect_description":""
+                },
+                {
+                    "print_number":303,
+                    "node_type":11,
+                    "event_description":"... as well as from inside ViewBuilders and ViewModifiers",
+                    "effect_description":""
+                }
+            ]
+        },
+        {
+            "function_number":2,
+            "function_number_always_custom":false,
+            "function_type":"v",
+            "function_nodes":[
+                {
+                    "print_number":315,
+                    "node_type":0,
+                    "event_description":"",
+                    "effect_description":""
+                },
+                {
+                    "print_number":316,
+                    "node_type":8,
+                    "event_description":"guard fail – myEmptyView IS nil",
+                    "effect_description":"create and return an EmptyView"
+                },
+                {
+                    "print_number":317,
+                    "node_type":7,
+                    "event_description":"guard pass – the myEmptyView NOT nil (scenario not reached in demo app)",
+                    "effect_description":"create and return an EmptyView"
+                }
+            ]
+        }
+    ]
+}
+
+

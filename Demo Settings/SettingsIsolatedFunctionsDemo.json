@@ -5,34 +5,24 @@
     "suppressLogFunctionNames":false,
     "logIsolatedPrintNumbersOnly":false,
     "isolatedPrintNumbers":[
-        72,
-        1
+         
     ],
     "isolatedEntities":[
-        {
-            "entityCode":"ABCD",
-            "isolate":false
-        },
-        {
-            "entityCode":"ABCE",
-            "isolate":false
-        }
+
     ],
     "isolatedFunctions":[
         {
-            "entityCode":"BBCC",
-            "isolate":false,
+            "entityCode":"APPDG",
+            "isolate":true,
             "isolatedFunctionNumbers":[
-                1,
-                27
+                27, 50
             ]
         },
         {
-            "entityCode":"ABCE",
-            "isolate":false,
+            "entityCode":"🟧CMOD",
+            "isolate":true,
             "isolatedFunctionNumbers":[
-                21,
-                89
+                1
             ]
         }
     ],

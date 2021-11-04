@@ -1,0 +1,26 @@
+{
+    "entity_code":"🟧CMOD",
+    "entity_functions" : [
+        {
+            "function_number":1,
+            "function_number_always_custom":false,
+            "function_type":"a",
+            "function_nodes":[
+                {
+                    "print_number":500,
+                    "node_type":0,
+                    "event_description":"",
+                    "effect_description":""
+                },
+                {
+                    "print_number":501,
+                    "node_type":1,
+                    "event_description":"Demonstration of coloured entity codes",
+                    "effect_description":"... coloured codes can help to differentiate output from separate modules"
+                }
+            ]
+        }
+    ]
+}
+
+

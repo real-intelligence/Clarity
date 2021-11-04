@@ -5,40 +5,26 @@
     "suppressLogFunctionNames":false,
     "logIsolatedPrintNumbersOnly":false,
     "isolatedPrintNumbers":[
-        72,
-        1
+
     ],
     "isolatedEntities":[
         {
-            "entityCode":"ABCD",
-            "isolate":false
-        },
-        {
-            "entityCode":"ABCE",
+            "entityCode":"",
             "isolate":false
         }
     ],
     "isolatedFunctions":[
         {
-            "entityCode":"BBCC",
+            "entityCode":"",
             "isolate":false,
             "isolatedFunctionNumbers":[
-                1,
-                27
-            ]
-        },
-        {
-            "entityCode":"ABCE",
-            "isolate":false,
-            "isolatedFunctionNumbers":[
-                21,
-                89
+
             ]
         }
     ],
-    "calculateFunctionNumbersRelativeToEntity":false,
-    "calculateNodeNumbersRelativeToFunction":false,
-    "displayNodePrintNumberWhenUsingRelativeNumbering":false,
+    "calculateFunctionNumbersRelativeToEntity":true,
+    "calculateNodeNumbersRelativeToFunction":true,
+    "displayNodePrintNumberWhenUsingRelativeNumbering":true,
     "displayNodeSequenceWithoutDescriptions":false,
     "listAllUsedPrintNumbers":false,
     "listAllUsedPrintNumbersByEntityCode":false,

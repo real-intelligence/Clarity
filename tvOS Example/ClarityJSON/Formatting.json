@@ -1,0 +1,44 @@
+{
+    "outcome_symbols":
+    {
+        "if_true_condition":"✅",
+        "else_condition":"🔴",
+        "if_true_condition_negative_outcome":"⚠️",
+        "else_condition_positive_outcome":"✅",
+        "case_true_positive_outcome":"✅",
+        "case_true_negative_outcome":"⚠️",
+        "guard_pass":"☑️",
+        "guard_fail":"⚔️",
+        "do_try_pass":"✅",
+        "catch_try_fail":"🎣",
+        "value_reporter":"📋",
+        "error_reporter":"☎️"
+    },
+    "controlflow_node_type_symbols":
+    {
+        "if_else_conditional":"N",
+        "switch_case":"C",
+        "guard":"G",
+        "do_catch_try":"T",
+        "value_reporter":"R",
+        "error_reporter":"E"
+    },
+    "function_type_symbols":
+    {
+        "initialiser":"♻️",
+        "custom_function":"🍎",
+        "system_method_override":"🍏",
+        "action_method":"🎯",
+        "delegate_method":"🔮",
+        "datasource_method":"📀",
+        "computed_variable":"💻",
+        "protocol_extension_method":"🧩"
+    },
+    "spacers":
+    {
+        "spacer1":0,
+        "spacer2":0,
+        "spacer3":0,
+        "spacer4":0
+    }
+}

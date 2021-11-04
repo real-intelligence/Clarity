@@ -2,44 +2,30 @@
     "suppressAllClarityLogs":false,
     "printAllClarityLogs":false,
     "logFunctionNamesOnly":false,
-    "suppressLogFunctionNames":false,
+    "suppressLogFunctionNames":true,
     "logIsolatedPrintNumbersOnly":false,
     "isolatedPrintNumbers":[
-        72,
-        1
+
     ],
     "isolatedEntities":[
         {
-            "entityCode":"ABCD",
-            "isolate":false
-        },
-        {
-            "entityCode":"ABCE",
+            "entityCode":"",
             "isolate":false
         }
     ],
     "isolatedFunctions":[
         {
-            "entityCode":"BBCC",
+            "entityCode":"",
             "isolate":false,
             "isolatedFunctionNumbers":[
-                1,
-                27
-            ]
-        },
-        {
-            "entityCode":"ABCE",
-            "isolate":false,
-            "isolatedFunctionNumbers":[
-                21,
-                89
+
             ]
         }
     ],
     "calculateFunctionNumbersRelativeToEntity":false,
     "calculateNodeNumbersRelativeToFunction":false,
     "displayNodePrintNumberWhenUsingRelativeNumbering":false,
-    "displayNodeSequenceWithoutDescriptions":false,
+    "displayNodeSequenceWithoutDescriptions":true,
     "listAllUsedPrintNumbers":false,
     "listAllUsedPrintNumbersByEntityCode":false,
     "listHighestUsedPrintNumber":false,

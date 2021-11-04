@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "container:Clarity.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:iOS Example/iOS Example.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:iOS App Delegate Example/iOS App Delegate Example.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:macOS Example/macOS Example.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:watchOS Example/watchOS Example.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:tvOS Example/tvOS Example.xcodeproj">
+   </FileRef>
+   <Group
+      location = "group:iOS App Delegate Example/../Demo Settings"
+      name = "Demo Settings for Examples">
+      <FileRef
+         location = "group:README.md">
+      </FileRef>
+      <FileRef
+         location = "group:/Users/home/Documents/Development/Projects/Clarity/Demo Settings/SettingsIsolatedEntitiesDemo.json">
+      </FileRef>
+      <FileRef
+         location = "group:SettingsIsolatedFunctionsDemo.json">
+      </FileRef>
+      <FileRef
+         location = "group:SettingsIsolatedPrintNumbersDemo.json">
+      </FileRef>
+      <FileRef
+         location = "group:/Users/home/Documents/Development/Projects/Clarity/Demo Settings/SettingsNodeOnlyDemo1.json">
+      </FileRef>
+      <FileRef
+         location = "group:/Users/home/Documents/Development/Projects/Clarity/Demo Settings/SettingsNodeOnlyDemo2.json">
+      </FileRef>
+      <FileRef
+         location = "group:SettingsRelativeDemo1.json">
+      </FileRef>
+      <FileRef
+         location = "group:SettingsRelativeDemo2.json">
+      </FileRef>
+      <FileRef
+         location = "group:SettingsRelativeDemo3.json">
+      </FileRef>
+      <FileRef
+         location = "group:SettingsRestoreDefault.json">
+      </FileRef>
+   </Group>
+</Workspace>
