@@ -177,9 +177,9 @@ All other keys set to false
 
 ![](Resources/logs1-nodescriptionsnofunc-lightmode.png)
 
-The different display options are controlled using a combination of keys in the [Settings](documentation/Settings.md) json file, the [Formatting](documentation/Formatting.md) json file and keys within the associated [EntityLogService](documentation/Entitylogservice.md) json file.
+The different display options are controlled using a combination of keys in the [Settings](Documentation/Settings.md) json file, the [Formatting](Documentation/Formatting.md) json file and keys within the associated [EntityLogService](Documentation/Entitylogservice.md) json file.
 
-See additional examples of using different node types and display options and the resulting console output in the [documentation](documentation/Examples.md).
+See additional examples of using different node types and display options and the resulting console output in the [documentation](Documentation/Examples.md).
 
 
 
@@ -210,7 +210,7 @@ The 'CS' row marks the position of custom spacers (with a default value of 0).
 
 | Platforms                                          | Minimum Swift Version | Installation                                                 | Status       |
 | -------------------------------------------------- | --------------------- | ------------------------------------------------------------ | ------------ |
-| iOS 14.5+, macOS 11.2+, tvOS 14.5+  , watchOS 7.4+ | 5                     | [Swift Package Manager](#swift-package-manager), [XCFramework](#xcframework), [Embedded Framework](#embedded framework), [Manual](#manually) | Fully Tested |
+| iOS 14.5+, macOS 11.2+, tvOS 14.5+  , watchOS 7.4+ | 5                     | [Swift Package Manager](#swift-package-manager), [XCFramework](#xcframework), [Embedded Framework (using git submodules)](#embedded framework) | Fully Tested |
 
 
 
@@ -252,7 +252,7 @@ Each release will include a `clarity.xcframework` framework binary.
   
   
 
-### Embedded Framework (using git submodules)
+### Embedded Framework 
 
 Ensure that your project is initialized as a git repository.
 
@@ -423,7 +423,7 @@ Ensure that your project is initialized as a git repository.
 
 ## Reference
 
-All reference materials can be found in the [Documentation](documentation/Documentation.md) folder.
+All reference materials can be found in the [Documentation](Documentation/Documentation.md) folder.
 
 Full developer API docs can be found [here](https://realint.org/clarity/api/developer/index).
 
