@@ -87,7 +87,7 @@ Fully native and compatible with all Apple platforms, 100% stable, lightweight, 
   - unambiguous instructions
   - no terminal use, build phase scripts or third party application required. 
 
-🔆  **Comprehensive API docs [website](https://)  and reference [documentation](documentation/documentation.md) provided.**
+🔆  **Comprehensive API docs [website](https://realint.org/clarity/api/developer/index)  and reference [documentation](Documentation/Documentation.md) provided.**
 
   
 
@@ -115,7 +115,7 @@ Use judiciously as a tool for logging print statements during project developmen
 
 ![](Resources/logs1-lightmode.png)
 
-Note: the source and associated JSON extracts depicted above are for print statements in **evaluateMyPet(_:)** and **changePet(_:)**  : the console also shows output from print statements in **application(_:didFinishLaunchingWithOptions:)** – see  [example code](ios app delegate example) for full details.
+Note: the source and associated JSON extracts depicted above are for print statements in **evaluateMyPet(_:)** and **changePet(_:)**  : the console also shows output from print statements in **application(_:didFinishLaunchingWithOptions:)** – see  [example code](iOS App Delegate Example) for full details.
 
 
 
@@ -177,9 +177,9 @@ All other keys set to false
 
 ![](Resources/logs1-nodescriptionsnofunc-lightmode.png)
 
-The different display options are controlled using a combination of keys in the [Settings](documentation/settings.md) json file, the [Formatting](documentation/formatting.md) json file and keys within the associated [EntityLogService](documentation/entitylogservice.md) json file.
+The different display options are controlled using a combination of keys in the [Settings](documentation/Settings.md) json file, the [Formatting](documentation/Formatting.md) json file and keys within the associated [EntityLogService](documentation/Entitylogservice.md) json file.
 
-See additional examples of using different node types and display options and the resulting console output in the [documentation](documentation/examples.md).
+See additional examples of using different node types and display options and the resulting console output in the [documentation](documentation/Examples.md).
 
 
 
@@ -423,11 +423,11 @@ Ensure that your project is initialized as a git repository.
 
 ## Reference
 
-All reference materials can be found in the [Documentation](documentation/documentation.md) folder.
+All reference materials can be found in the [Documentation](documentation/Documentation.md) folder.
 
-Full developer API docs can be found [here](https://).
+Full developer API docs can be found [here](https://realint.org/clarity/api/developer/index).
 
-Public API docs can be found [here](https://). 
+Public API docs can be found [here](https://realint.org/clarity/api/public/index). 
 
 ## Credits
 
@@ -437,7 +437,7 @@ Public API docs can be found [here](https://).
 
 If you like Clarity and want to support the project please let other developers know that the framework exists – tutorial creators are especially encouraged! 
 
-Feedback, code contributions, issues and pull requests including unit tests that add to the test coverage are welcomed. By making contributions to this project you give permission for your code to be used under the same [license](LICENSE).
+Feedback, code contributions, issues and pull requests including unit tests that add to the test coverage are welcomed. By making contributions to this project you give permission for your code to be used under the same [license](LICENSE.md).
 
 ### Contribution guidelines
 
@@ -459,8 +459,9 @@ If you use Clarity within an organisation or company ask if your employer might 
 
 ## License
 
-Copyright (c) 2021 Lawrence Heyfron (http://realint.org/)
+Copyright (c) 2021 Lawrence Heyfron (https://realint.org/)
 
-Clarity is released under the MIT license. [See LICENSE](LICENSE) for details.
+Clarity is released under the MIT license. [See LICENSE](LICENSE.md) for details.
 
 [Back to top](#introduction)
+
