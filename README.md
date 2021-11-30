@@ -1,5 +1,5 @@
 
-![](/Users/home/Documents/Development/Projects/Clarity/Clarity/Resources/ClarityLogo.png)
+![](Resources/ClarityLogo.png)
 
 
 ![Version](https://img.shields.io/badge/version-1.0.0-2196f3.svg)![Swift](https://img.shields.io/badge/Swift-5.4-orange)<img src="https://img.shields.io/badge/platforms-iOS%20%7C%20macOS%20%7C%20tvOS%20%7C%20watchOS-333333.svg" alt="Supported Platforms: iOS, macOS, tvOS, watchOS" />![Swift Package Manager](https://img.shields.io/badge/Swift_Package_Manager-compatible-brightgreen)[![License: MIT](https://img.shields.io/badge/License-MIT-darkgrey.svg)](https://opensource.org/licenses/MIT)[![Documentation](https://img.shields.io/badge/docs-latest-yellow.svg)](https://www)[![PayPal](https://img.shields.io/badge/paypal-donate-blue.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=9ZGWNK5FEZFF6&source=url)
@@ -18,16 +18,16 @@ Fully native and compatible with all Apple platforms, 100% stable, lightweight, 
 
 ## Table of Contents
 
-- [Features & Benefits](#features & benefits)
+- [Features & Benefits](#features)
 - [Usage](#usage)
-- [Structure of Clarity print statements](#structure of clarity print statement elements)
+- [Structure of Clarity print statements](#structure)
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [Activation](#activation)
-- [Reference & Docs](#reference & docs)
+- [Reference & Docs](#reference)
 - [Donations](#donations)
 
-## Features & Benefits
+## Features
 
 🔆 **Complete granular control of all logs printed to the console**: 
 
@@ -99,21 +99,21 @@ Use judiciously as a tool for logging print statements during project developmen
 
 #### Clarity print statements in source code
 
-![](/Users/home/Documents/Development/Projects/Clarity/Clarity/Resources/source–199-220.png) 
+![](Resources/source–199-220.png) 
 
 #### Log JSON data associated with the print statements
 
-![](/Users/home/Documents/Development/Projects/Clarity/Clarity/Resources/JSON–f2.png)
+![](Resources/JSON–f2.png)
 
 #### Log output for the print statements
 
 ##### Dark mode  
 
-![](/Users/home/Documents/Development/Projects/Clarity/Clarity/Resources/logs1-1absolute.png)
+![](Resources/logs1-1absolute.png)
 
 ##### Light mode  
 
-![](/Users/home/Documents/Development/Projects/Clarity/Clarity/Resources/logs1-lightmode.png)
+![](Resources/logs1-lightmode.png)
 
 Note: the source and associated JSON extracts depicted above are for print statements in **evaluateMyPet(_:)** and **changePet(_:)**  : the console also shows output from print statements in **application(_:didFinishLaunchingWithOptions:)** – see  [example code](ios app delegate example) for full details.
 
@@ -132,11 +132,11 @@ All other keys set to false
 
 ##### Dark mode
 
-![](/Users/home/Documents/Development/Projects/Clarity/Clarity/Resources/logs–1relative.png)
+![](Resources/logs–1relative.png)
 
 ##### Light mode
 
-![](/Users/home/Documents/Development/Projects/Clarity/Clarity/Resources/logs1-1absolute-lightmode.png)
+![](Resources/logs1-1absolute-lightmode.png)
 
 
 
@@ -151,11 +151,11 @@ All other keys set to false
 
 ##### Dark mode
 
-![](/Users/home/Documents/Development/Projects/Clarity/Clarity/Resources/logs1-nodescriptions.png) 
+![](Resources/logs1-nodescriptions.png) 
 
 ##### Light mode
 
-![](/Users/home/Documents/Development/Projects/Clarity/Clarity/Resources/logs1-nodescriptions-lightmode.png)
+![](Resources/logs1-nodescriptions-lightmode.png)
 
 
 
@@ -171,11 +171,11 @@ All other keys set to false
 
 ##### Dark mode
 
-![](/Users/home/Documents/Development/Projects/Clarity/Clarity/Resources/logs1-nodescriptionsnofunc.png) 
+![](Resources/logs1-nodescriptionsnofunc.png) 
 
 ##### Light mode
 
-![](/Users/home/Documents/Development/Projects/Clarity/Clarity/Resources/logs1-nodescriptionsnofunc-lightmode.png)
+![](Resources/logs1-nodescriptionsnofunc-lightmode.png)
 
 The different display options are controlled using a combination of keys in the [Settings](documentation/settings.md) json file, the [Formatting](documentation/formatting.md) json file and keys within the associated [EntityLogService](documentation/entitylogservice.md) json file.
 
@@ -183,9 +183,9 @@ See additional examples of using different node types and display options and th
 
 
 
-## Structure of Clarity print statement elements
+## Structure
 
-![](/Users/home/Documents/Development/Projects/Clarity/Clarity/Resources/structure.png)
+![](Resources/structure.png)
 
 
 
@@ -218,44 +218,65 @@ The 'CS' row marks the position of custom spacers (with a default value of 0).
 
 ### Swift Package Manager
 
-- File > Swift Packages > Add Package Dependency
-- Add `https://github.com/real-intelligence/Clarity.git`
-- Rules > check Version: **Select Up to Next Major** > **1.0.0**
-- Next
+- Xcode > File > Swift Packages > **Add Package Dependency**...
+  or Project navigator > PROJECT > Swift Packages > **click add (plus) icon** – Add Package Dependency
+- Choose Package Repository > Search or enter package repository URL (browser) > enter ...
+   `https://github.com/real-intelligence/Clarity.git`
+- Rules > check Version: **Select Up to Next Major** >  ( Xcode will automatically fill latest tag number )
+- **Next...**
+- Choose package products and targets: Package Product > **ensure Clarity is checked** 
+  Add to Target > **select YourProject name** 
+- **Finish**
 
 
-
-
-
-```swift
-dependencies: [
-    .package(url: "  ", .upToNextMajor(from: "1.0.0"))
-]
-```
 
 ### XCFramework
 
 Each release will include a `clarity.xcframework` framework binary.
 
-Simply drag the framework binary to your **Frameworks, Libraries, and Embedded Content** section under your target's **General** tab.
+- Navigate to **latest** release > https://github.com/real-intelligence/Clarity/releases
 
-**TODO** as run through
+- (select) Assets > **Clarity.xcframework.zip**
 
+- Doubleclick the downloaded zip file > move **Clarity.xcframework** to a convenient location.
 
+- Open > YourProjectName… 
 
-### Embedded Framework
+- Project navigator > ProjectName > TARGET > ProjectName > **General Tab**...
 
-**TODO** as run through
+- Finder ... > select Clarity.xcframework  >  Drag and drop into the **Frameworks, Libraries, and Embedded Content**
+  or **Frameworks and Embedded Content** of a client ProjectName if it is itself a framework.
 
-### Manually ( using git submodules)
+- **Cmd+B** to build the project.
 
-**TODO** as run through
+  
+  
 
-### Manual sub-project 
+### Embedded Framework (using git submodules)
 
-**TODO** as run through
+Ensure that your project is initialized as a git repository.
 
+- Navigate to your project root folder > (right click) **New Terminal at Folder**
 
+- Add Clarity as a git [submodule](https://git-scm.com/docs/git-submodule) by running the following command:
+
+  ```bash
+  $ git submodule add https://github.com/real-intelligence/Clarity.git
+  ```
+
+- Your project root folder > Clarity > (Select) **Clarity.xcodeproj** 
+  Drag the icon into the Project Navigator of your application's Xcode project
+
+- > It should appear nested underneath your application's blue project icon.
+
+- Project Navigator > Clarity.xcodeproj > PROJECT >  **Deployment Target** ...
+  Ensure the specific platform deployment target matches (or is less than) your application target
+
+- Project Navigator > Your project (xcodeproj) > TARGETS >  General > **Frameworks, Libraries, and Embedded Content**
+
+- Click **Add Items** (plus icon)
+
+- (select) **Clarity(relevant platform).framework** 
 
 
 
@@ -275,6 +296,15 @@ Simply drag the framework binary to your **Frameworks, Libraries, and Embedded C
    Create a custom initialiser (if one does not already exist) for the type annotated with the `@main` attribute that conforms to the `App` protocol (the entry point of the application). 
    
    - Add the Clarity import statement.
+     Note: Swift Package installations require `import Clarity` for all platforms
+   
+     XCFramework installations will require platform specific imports: 
+   
+     - macOS :  `import Clarity` 
+     - iOS : `import Clarity_iOS` 
+     - WatchOS : `import Clarity_watch` 
+     - tvOS : `import Clarity_tv` 
+   
    - Add the Clarity activation initialiser.
    
    ```swift
@@ -391,7 +421,7 @@ Simply drag the framework binary to your **Frameworks, Libraries, and Embedded C
 
    
 
-## Reference & Docs
+## Reference
 
 All reference materials can be found in the [Documentation](documentation/documentation.md) folder.
 
