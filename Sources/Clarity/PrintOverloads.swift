@@ -47,9 +47,9 @@ This function is placed outside a struct or class to enable clients to call it w
 
 
  - Parameters:
-   - printNumber:  A unique number used as a key to access a specific associated message from a dictionary containing all message data.
+   - printNumber: A unique number used as a key to access a specific associated message from a dictionary containing all message data.
    - functionName: An optional parameter for a `#function` macro argument. If this parameter is included Clarity formats and prints the log as a function call node for the function that contains `printNumber`.
-   - settings: An optional parameter for a mock `SettingsManagerService` instance. The mock SettingsManagerService instance can have its properties set programmatically to a variety of values. This enables more convenient and dynamic evaluation of a wider range of unit tests in a test target than is possible when using the JSON access mechanism.
+   - settings: An optional parameter for a dynamic `SettingsManagerService` instance. The SettingsManagerService instance can have its properties set programmatically to a variety of values. This enables more convenient and dynamic evaluation of a wider range of unit tests in a test target than is possible when using the JSON access mechanism.
 
 
  - Note:
@@ -134,9 +134,9 @@ This function is placed outside a struct or class to enable clients to call it w
 
 
  - Parameters:
-   - printNumber:  A unique number used as a key to access a specific associated message from a dictionary containing all message data.
+   - printNumber: A unique number used as a key to access a specific associated message from a dictionary containing all message data.
    - values: An optional parameter for the inclusion of variable values to be printed as part of the message. If this parameter is included Clarity formats and prints the log as a value report node. The parameter can be a single value of any type,  a `Collection` of any type or an instance conforming to the `Error` protocol.
-   - settings: An optional parameter for a mock `SettingsManagerService` instance. The mock SettingsManagerService instance can have its properties set programmatically to a variety of values. This enables more convenient and dynamic evaluation of a wider range of unit tests in a test target than is possible when using the JSON access mechanism.
+   - settings: An optional parameter for a dynamic `SettingsManagerService` instance. The SettingsManagerService instance can have its properties set programmatically to a variety of values. This enables more convenient and dynamic evaluation of a wider range of unit tests in a test target than is possible when using the JSON access mechanism.
 
  - Note:
  All calls to this function must provide an argument to the `printNumber` parameter.
@@ -196,7 +196,6 @@ This function is placed outside a struct or class to enable clients to call it w
  //This is the best approximation of the console possible here using markdown
  ````
  */
-
 public func print(_ printNumber: Int,
                   values: Any? = nil,
                   settings: SettingsManagerService? = nil){
@@ -220,9 +219,9 @@ extension View {
      All message data relating to each print number is placed entirely in associated JSON files. This enables the printing of unlimited verbose commentary yet having zero impact on the source code.
 
      - Parameters:
-       - printNumber:  A unique number used as a key to access a specific associated message from a dictionary containing all message data.
+       - printNumber: A unique number used as a key to access a specific associated message from a dictionary containing all message data.
        - functionName: An optional parameter for a `#function` macro argument. If this parameter is included Clarity formats and prints the log as a function call node for the function that contains `printNumber`.
-       - settings: An optional parameter for a mock `SettingsManagerService` instance. The mock SettingsManagerService instance can have its properties set programmatically to a variety of values. This enables more convenient and dynamic evaluation of a wider range of unit tests in a test target than is possible when using the JSON access mechanism.
+       - settings: An optional parameter for a dynamic `SettingsManagerService` instance. The SettingsManagerService instance can have its properties set programmatically to a variety of values. This enables more convenient and dynamic evaluation of a wider range of unit tests in a test target than is possible when using the JSON access mechanism.
      
      - Returns:
      An empty `View` that allows the function to conform to the `View` protocol and be used within the `body` var of a `View` instance.
@@ -311,9 +310,9 @@ extension View {
 
 
      - Parameters:
-       - printNumber:  A unique number used as a key to access a specific associated message from a dictionary containing all message data.
+       - printNumber: A unique number used as a key to access a specific associated message from a dictionary containing all message data.
        - values: An optional parameter for the inclusion of variable values to be printed as part of the message. If this parameter is included Clarity formats and prints the log as a value report node. The parameter can be a single value of any type,  a `Collection` of any type or an instance conforming to the `Error` protocol.
-       - settings: An optional parameter for a mock `SettingsManagerService` instance. The mock SettingsManagerService instance can have its properties set programmatically to a variety of values. This enables more convenient and dynamic evaluation of a wider range of unit tests in a test target than is possible when using the JSON access mechanism.
+       - settings: An optional parameter for a dynamic `SettingsManagerService` instance. The SettingsManagerService instance can have its properties set programmatically to a variety of values. This enables more convenient and dynamic evaluation of a wider range of unit tests in a test target than is possible when using the JSON access mechanism.
      
      - Returns:
      An empty `View` that allows the function to conform to the `View` protocol and be used within the `body` var of a `View` instance.
@@ -400,9 +399,9 @@ extension ViewModifier {
      All message data relating to each print number is placed entirely in associated JSON files. This enables the printing of unlimited verbose commentary yet having zero impact on the source code.
 
      - Parameters:
-       - printNumber:  A unique number used as a key to access a specific associated message from a dictionary containing all message data.
+       - printNumber: A unique number used as a key to access a specific associated message from a dictionary containing all message data.
        - functionName: An optional parameter for a `#function` macro argument. If this parameter is included Clarity formats and prints the log as a function call node for the function that contains `printNumber`.
-       - settings: An optional parameter for a mock `SettingsManagerService` instance. The mock SettingsManagerService instance can have its properties set programmatically to a variety of values. This enables more convenient and dynamic evaluation of a wider range of unit tests in a test target than is possible when using the JSON access mechanism.
+       - settings: An optional parameter for a dynamic `SettingsManagerService` instance. The SettingsManagerService instance can have its properties set programmatically to a variety of values. This enables more convenient and dynamic evaluation of a wider range of unit tests in a test target than is possible when using the JSON access mechanism.
      
      - Returns:
      An empty `View` that allows the function to conform to the `ViewModifier` protocol and be used within a `ViewModifier` as well as within the `body` var of a `View` instance.
@@ -490,9 +489,9 @@ extension ViewModifier {
 
 
      - Parameters:
-       - printNumber:  A unique number used as a key to access a specific associated message from a dictionary containing all message data.
+       - printNumber: A unique number used as a key to access a specific associated message from a dictionary containing all message data.
        - values: An optional parameter for the inclusion of variable values to be printed as part of the message. If this parameter is included Clarity formats and prints the log as a value report node. The parameter can be a single value of any type,  a `Collection` of any type or an instance conforming to the `Error` protocol.
-       - settings: An optional parameter for a mock `SettingsManagerService` instance. The mock SettingsManagerService instance can have its properties set programmatically to a variety of values. This enables more convenient and dynamic evaluation of a wider range of unit tests in a test target than is possible when using the JSON access mechanism.
+       - settings: An optional parameter for a dynamic `SettingsManagerService` instance. The SettingsManagerService instance can have its properties set programmatically to a variety of values. This enables more convenient and dynamic evaluation of a wider range of unit tests in a test target than is possible when using the JSON access mechanism.
      
      - Returns:
      An empty `View` that allows the function to conform to the `ViewModifier` protocol and be used within a `ViewModifier` as well as within the `body` var of a `View` instance.

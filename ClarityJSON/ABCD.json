@@ -76,13 +76,13 @@
                     "print_number":11,
                     "node_type":2,
                     "event_description":"x result IS .success",
-                    "effect_description":"Do something"
+                    "effect_description":""
                 },
                 {
                     "print_number":11,
                     "node_type":2,
                     "event_description":"x result IS .success",
-                    "effect_description":"Do something"
+                    "effect_description":""
                 },
                 
                 {

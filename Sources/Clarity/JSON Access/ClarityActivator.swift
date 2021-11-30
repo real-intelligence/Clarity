@@ -150,20 +150,18 @@ public class ClarityActivator: JSONAccess {
 
          
             The main bundle is used to access the user Clarity json files stored in the ClarityJSON folder: these files are used to calculate, format and print to the console details correlating to the index of Clarity print statements and user preferences.
-.
+     
+            This initialiser is not required by the Clarity framework test target during internal testing of the functionality of the framework. The JSON data derived properties are set lazily by calling JSONAccess protocol generic decoding methods.
+
+             The initialiser is set  `@discardableResult` as a convenience for the client application activation API.
      
          - Note:
             Setting `isClientInDebugMode` as the argument to `inPrintMode` will disable Clarity print statements when the client application is in RELEASE mode. If printing Clarity logs is required in RELEASE mode simply pass `true`. Conversely if disabling Clarity print statements is required in DEBUG mode simply pass `false`.
-
      
-            This initialiser is not required by the Clarity framework test target during internal testing of the functionality of the framework. The JSON data derived properties are set lazily by calling JSONAccess protocol generic decoding methods.
-     
-            The initialiser is set  `@discardableResult` as a convenience for the client application activation API.
-     
+            Client application DEBUG mode status must be accessed using the `ClarityActivator` computed var `isClientInDebugMode` and NOT via the `DEBUG` macro nor calling `_isDebugAssertConfiguration()` directly within the framework in order to provide the correct value for the client application.
          - Important:
-          Setting `isClientInDebugMode` as the argument to `inPrintMode` will only work as described when using the Clarity project source code and the client application within the same Workspace. In all other cases it is impossible for a framework to detect the build configuration of a client and therefore necessary to set  `inPrintMode` manually to either `true` or `false` as required.
-     
-          Client application DEBUG mode status must be accessed using the `ClarityActivator` computed var `isClientInDebugMode` and NOT via the `DEBUG` macro nor calling `_isDebugAssertConfiguration()` directly within the framework in order to provide the correct value for the client application.
+            Setting `isClientInDebugMode` as the argument to `inPrintMode` functions as described only when using the Clarity project source code and the client application within the same Workspace during development. In all other cases it is currently impossible for a framework to detect the build configuration of a client and therefore necessary to set  `inPrintMode` manually to either `true` or `false` as required. For maximum efficiency ensure that Clarity remains embedded and that `inPrintMode` is set manually to `false` when archiving for release.
+
      
          The main tasks of this initialiser are:
           - to check whether `inPrintMode` has been set manually to override the application DEBUG status.

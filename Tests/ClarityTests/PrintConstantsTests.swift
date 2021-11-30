@@ -45,7 +45,7 @@ class PrintConstantsTests: XCTestCase {
         stringConstant = pC.valueReporterLabel
         XCTAssertEqual(stringConstant, "Value for variable ")
         stringConstant = pC.valuesReporterLabel
-        XCTAssertEqual(stringConstant, "Values for variables ")
+        XCTAssertEqual(stringConstant, "Values for variable ")
         stringConstant = pC.errorReporterLabel
         XCTAssertEqual(stringConstant, "Error for ")
         stringConstant = pC.isLabel

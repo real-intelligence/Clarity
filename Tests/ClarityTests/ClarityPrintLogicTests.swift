@@ -184,27 +184,27 @@ class ClarityPrintLogicTests: XCTestCase {
     
     func test_ClarityPrintLogic_ReturnsCorrectFormatting_ForPrintNumberWithDictionaryValuesArgument() {
 
-        XCTAssertEqual(sutStringFromPrintNumberAndParameters(205, printType: .valuesDictionary, true, values: ["a":1, "b":2, "c":3, "d":4, "e":5, "f":6, "g":7, "h":8, "i":9]).compiledString, "BBCC        27    R-205   📋  - Values for variables Decision event description are:")
+        XCTAssertEqual(sutStringFromPrintNumberAndParameters(205, printType: .valuesDictionary, true, values: ["a":1, "b":2, "c":3, "d":4, "e":5, "f":6, "g":7, "h":8, "i":9]).compiledString, "BBCC        27    R-205   📋  - Values for variable Decision event description are:")
     }
     
     func test_ClarityPrintLogic_ReturnsCorrectFormatting_ForPrintNumberWithDictionaryValuesArgument_RelativeDisplayPrintNumber() {
         SMST.fakeSettings.calculateNodeNumbersRelativeToFunction = true
         SMST.fakeSettings.displayNodePrintNumberWhenUsingRelativeNumbering = true
         
-        XCTAssertEqual(sutStringFromPrintNumberAndParameters(205, printType: .valuesDictionaryDisplayPrintNumber, true, values: ["a":1, "b":2, "c":3, "d":4, "e":5, "f":6, "g":7, "h":8, "i":9]).compiledString, "BBCC        27    R-1        205  📋  - Values for variables Decision event description are:")
+        XCTAssertEqual(sutStringFromPrintNumberAndParameters(205, printType: .valuesDictionaryDisplayPrintNumber, true, values: ["a":1, "b":2, "c":3, "d":4, "e":5, "f":6, "g":7, "h":8, "i":9]).compiledString, "BBCC        27    R-1        205  📋  - Values for variable Decision event description are:")
     }
     
  
     func test_ClarityPrintLogic_ReturnsCorrectFormatting_ForPrintNumberWithArrayValuesArgument() {
 
-        XCTAssertEqual(sutStringFromPrintNumberAndParameters(205, printType: .valuesArray, true, values: [1,2,3,4,5,6]).compiledString, "BBCC        27    R-205   📋  - Values for variables Decision event description are:")
+        XCTAssertEqual(sutStringFromPrintNumberAndParameters(205, printType: .valuesArray, true, values: [1,2,3,4,5,6]).compiledString, "BBCC        27    R-205   📋  - Values for variable Decision event description are:")
     }
     
     func test_ClarityPrintLogic_ReturnsCorrectFormatting_ForPrintNumberWithArrayValuesArgument_RelativeDisplayPrintNumber() {
         SMST.fakeSettings.calculateNodeNumbersRelativeToFunction = true
         SMST.fakeSettings.displayNodePrintNumberWhenUsingRelativeNumbering = true
         
-        XCTAssertEqual(sutStringFromPrintNumberAndParameters(205, printType: .valuesArrayDisplayPrintNumber, true, values: [1,2,3,4,5,6]).compiledString, "BBCC        27    R-1        205  📋  - Values for variables Decision event description are:")
+        XCTAssertEqual(sutStringFromPrintNumberAndParameters(205, printType: .valuesArrayDisplayPrintNumber, true, values: [1,2,3,4,5,6]).compiledString, "BBCC        27    R-1        205  📋  - Values for variable Decision event description are:")
     }
     
     func test_ClarityPrintLogic_ReturnsCorrectFormatting_ForReporterWithNoValues() {

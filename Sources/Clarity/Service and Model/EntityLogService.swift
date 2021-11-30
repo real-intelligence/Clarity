@@ -136,7 +136,7 @@ enum NodeType: Int,Codable , Equatable {
 
      The message will include the function name if the argument `#function` is supplied to the optional `functionName` parameter of the `print(_:functionName:settings:)` overload.
 
-     If no argument is supplied it will simply display the entity code, function symbol and function number.
+     If there is no argument supplied it will simply display the entity code, function symbol and function number.
      */
     case functionName = 0
     /// The message should be displayed as the successful pass of a conditional `if` statement in the control flow.
@@ -164,7 +164,7 @@ enum NodeType: Int,Codable , Equatable {
 
      The message will be displayed as a value report if a value argument is supplied to the optional `values` parameter of the `print(_:values:settings:)` overload.
               
-     If no argument is supplied it will simply display the report `event_description` as a comment.
+     If there is no argument supplied it will simply display the report `event_description` as a comment.
 
      If a value argument is supplied any value or values are displayed on subsequent lines in the console after the report description.
      */
@@ -181,7 +181,7 @@ enum NodeType: Int,Codable , Equatable {
               
      Alternatively the error description will be described if `localizedDescription` is called on the error as it is supplied to the `values` parameter.
               
-     If no argument is supplied it will simply display the error report `event_description` as a comment without actual error information.
+     If there is no argument supplied it will simply display the error report `event_description` as a comment without actual error information.
      */
     case errorReporter
 }

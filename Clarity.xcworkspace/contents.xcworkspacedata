@@ -26,19 +26,19 @@
          location = "group:README.md">
       </FileRef>
       <FileRef
-         location = "group:/Users/home/Documents/Development/Projects/Clarity/Demo Settings/SettingsIsolatedEntitiesDemo.json">
-      </FileRef>
-      <FileRef
          location = "group:SettingsIsolatedFunctionsDemo.json">
       </FileRef>
       <FileRef
          location = "group:SettingsIsolatedPrintNumbersDemo.json">
       </FileRef>
       <FileRef
-         location = "group:/Users/home/Documents/Development/Projects/Clarity/Demo Settings/SettingsNodeOnlyDemo1.json">
+         location = "group:SettingsIsolatedEntitiesDemo.json">
       </FileRef>
       <FileRef
-         location = "group:/Users/home/Documents/Development/Projects/Clarity/Demo Settings/SettingsNodeOnlyDemo2.json">
+         location = "group:SettingsNodeOnlyDemo1.json">
+      </FileRef>
+      <FileRef
+         location = "group:SettingsNodeOnlyDemo2.json">
       </FileRef>
       <FileRef
          location = "group:SettingsRelativeDemo1.json">

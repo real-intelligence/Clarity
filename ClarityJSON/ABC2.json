@@ -1,0 +1,19 @@
+{
+    "entity_code":"ABCD",
+    "entity_functions" : [
+        {
+            "function_number":568,
+            "function_number_always_custom":false,
+            "function_type":"f",
+            "function_nodes":[
+                {
+                    "print_number":7856,
+                    "node_type":2,
+                    "event_description":"validation FAILED",
+                    "effect_description":"Consequence description"
+                }
+            ]
+        }
+    ]
+}
+

@@ -21,9 +21,9 @@
             ]
         }
     ],
-    "calculateFunctionNumbersRelativeToEntity":false,
-    "calculateNodeNumbersRelativeToFunction":false,
-    "displayNodePrintNumberWhenUsingRelativeNumbering":false,
+    "calculateFunctionNumbersRelativeToEntity":true,
+    "calculateNodeNumbersRelativeToFunction":true,
+    "displayNodePrintNumberWhenUsingRelativeNumbering":true,
     "displayNodeSequenceWithoutDescriptions":false,
     "listAllUsedPrintNumbers":false,
     "listAllUsedPrintNumbersByEntityCode":false,

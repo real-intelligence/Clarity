@@ -4,7 +4,7 @@
         {
             "function_number":1,
             "function_number_always_custom":false,
-            "function_type":"i",
+            "function_type":"o",
             "function_nodes":[
                 {
                     "print_number":1,
@@ -15,23 +15,15 @@
                 {
                     "print_number":2,
                     "node_type":1,
-                    "event_description":"Description of a conditional event that resolves to true (x == 1)",
+                    "event_description":"Description of a conditional event that resolves to true (pet type is a dog)",
                     "effect_description":"description of what is expected to occur as a result (nothing)"
                 },
-                
                 {
                     "print_number":3,
                     "node_type":2,
-                    "event_description":"A conditional event that resolves to false (x == 2)",
-                    "effect_description":"call the helper function"
-                },
-                {
-                    "print_number":804,
-                    "node_type":0,
-                    "event_description":"helper",
-                    "effect_description":""
+                    "event_description":"A conditional event that resolves to false (pet type is a cat)",
+                    "effect_description":"call function to evalute pet type again to demo use in switch statements"
                 }
-                
             ]
         },
         {
@@ -42,32 +34,38 @@
                 {
                     "print_number":199,
                     "node_type":0,
-                    "event_description":"",
-                    "effect_description":""
+                    "event_description":"(not used – leave empty)",
+                    "effect_description":"(not used – leave empty)"
                 },
                 {
                     "print_number":201,
                     "node_type":5,
-                    "event_description":"Description of a Switch case that resolves to true",
-                    "effect_description":"nothing expected to occur"
+                    "event_description":"Description of a Switch case that resolves to true (pet type is a dog)",
+                    "effect_description":"describe will happen as a result of the case being true"
                 },
                 {
                     "print_number":202,
                     "node_type":6,
                     "event_description":"A Switch statement reached the default case",
-                    "effect_description":"evaluate Int x for the value 1"
+                    "effect_description":"describe will happen as a result of reaching the default"
+                },
+                {
+                    "print_number":203,
+                    "node_type":5,
+                    "event_description":"Pet type is a cat",
+                    "effect_description":"Never reached in the demo (it is safe to omit print number references from JSON)"
                 },
                 {
                     "print_number":204,
                     "node_type":3,
-                    "event_description":"x == 1 – this is considered a negative outcome in this hypothetical app",
-                    "effect_description":"call another helper function"
+                    "event_description":"Pet type is a dog – this is now considered a negative true outcome",
+                    "effect_description":"call a function to change the pet type"
                 },
                 {
                     "print_number":205,
                     "node_type":11,
-                    "event_description":"newValue (my Int incremented)",
-                    "effect_description":""
+                    "event_description":"newPet (variable name or a description of the value)",
+                    "effect_description":"(not used – leave empty)"
                 }
             ]
         },

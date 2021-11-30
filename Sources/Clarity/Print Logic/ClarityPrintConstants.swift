@@ -75,7 +75,7 @@ enum PrintConstants {
      - Note:
       A single space suffix is concatenated at the end of the label rather than allocated its own slot in the composite array. This is for array optimisation purposes as well as for code semantics: the space is part of a sentence rather than acting as a column separator.
      */
-    static let valuesReporterLabel = "Values for variables"+singleSpace
+    static let valuesReporterLabel = "Values for variable"+singleSpace
     /**
      A Unicode string representing the label of an error reporter message.
      

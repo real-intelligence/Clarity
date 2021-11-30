@@ -54,6 +54,8 @@ class PrintOverloadVisualConsoleCheck: XCTestCase {
         SMST.fakeSettings.suppressLogFunctionNames = false
     }
     
+
+    
     // MARK: - 👀 Visual console check  -  default settings
     func test_VisualTest_AllPrintNodeTypesAlignCorrectlyInConsole_WithDefaultSettings() {
         //All of the nodes tested here are tested for correct formatting in other test classes – this is for a visual alignment check
@@ -303,6 +305,10 @@ class PrintOverloadVisualConsoleCheck: XCTestCase {
         print(100000)
     }
     
+    func test_VisualTestPrintNumberInSplitEntityLogJSONFileRendersNormally() {
+        print(7856)
+    }
+    
     // MARK: - 🧪 Miscellaneous
     func test_AppleSymbolCharacterCountReturnsIntValue1() {
         //Test for specific Apple symbols
@@ -310,6 +316,12 @@ class PrintOverloadVisualConsoleCheck: XCTestCase {
         let symbol = "🔴"
          
         XCTAssertEqual(symbol.count, 1)
+    }
+    
+    
+    func test_QuickTest() {
+        // Placeholder for quick enquiry into specific conditions that may arise.
+       
     }
 }
 
