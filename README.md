@@ -220,7 +220,12 @@ The 'CS' row marks the position of custom spacers (with a default value of 0).
 
 - File > Swift Packages > Add Package Dependency
 - Add `https://github.com/real-intelligence/Clarity.git`
-- Select "Up to Next Major" with "1.0.0"
+- Rules > check Version: **Select Up to Next Major** > **1.0.0**
+- Next
+
+
+
+
 
 ```swift
 dependencies: [
