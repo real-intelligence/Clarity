@@ -36,7 +36,7 @@ Fully native and compatible with all Apple platforms, 100% stable, lightweight, 
 - switch all printing on or off.
   
 
-🔆 **Deactivate printing for release without removing print statements  **
+🔆 **Deactivate printing for release without removing print statements**:
 
 - Keeping Clarity print statements intact yet inert in the code source.
   
