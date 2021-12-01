@@ -437,9 +437,9 @@ Ensure that your project is initialized as a git repository.
 
 All reference materials can be found in the [Documentation](Documentation/Documentation.md) folder.
 
-Full developer API docs can be found [here](https://clarity.developer.realint.org).
+Full developer API docs can be found [here](http://clarity.developer.realint.org).
 
-Public API docs can be found [here](https://clarity.publicapi.realint.org). 
+Public API docs can be found [here](http://clarity.publicapi.realint.org). 
 
 ## Credits
 
