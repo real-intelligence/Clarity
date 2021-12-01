@@ -22,17 +22,17 @@ iOS App Delegate Example > ClarityJSON ...
 
 #### Clarity print statements in source code
 
-![](/Users/home/Documents/Development/Projects/Clarity/Clarity/Resources/examples1-source.png)
+![](../Resources/examples1-source.png)
 
 #### Log output for the print statements
 
 ##### Dark mode
 
-![](/Users/home/Documents/Development/Projects/Clarity/Clarity/Resources/examples1-output-dark.png)
+![](../Resources/examples1-output-dark.png)
 
 ##### Light mode
 
-![](/Users/home/Documents/Development/Projects/Clarity/Clarity/Resources/examples1-output-light.png)
+![](../Resources/examples1-output-light.png)
 
 
 
@@ -48,11 +48,11 @@ iOS App Delegate Example > ClarityJSON ...
 
 ##### Dark mode
 
-![](/Users/home/Documents/Development/Projects/Clarity/Clarity/Resources/examples2-output-dark.png)
+![](../Resources/examples2-output-dark.png)
 
 ##### Light mode
 
-![](/Users/home/Documents/Development/Projects/Clarity/Clarity/Resources/examples2-output-light.png)
+![](../Resources/examples2-output-light.png)
 
 
 
@@ -74,11 +74,11 @@ iOS App Delegate Example > ClarityJSON ...
 
 ##### Dark mode
 
-![](/Users/home/Documents/Development/Projects/Clarity/Clarity/Resources/examples3-output-dark.png)
+![](../Resources/examples3-output-dark.png)
 
 ##### Light mode
 
-![](/Users/home/Documents/Development/Projects/Clarity/Clarity/Resources/examples3-output-light.png)
+![](../Resources/examples3-output-light.png)
 
 
 
@@ -99,11 +99,11 @@ All other keys set to false
 
 ##### Dark mode
 
-![](/Users/home/Documents/Development/Projects/Clarity/Clarity/Resources/examples4-output-dark.png) 
+![](../Resources/examples4-output-dark.png) 
 
 ##### Light mode
 
-![](/Users/home/Documents/Development/Projects/Clarity/Clarity/Resources/examples4-output-light.png)  
+![](../Resources/examples4-output-light.png)  
 
 
 
@@ -120,11 +120,11 @@ All other keys set to false
 
 ##### Dark mode
 
-![](/Users/home/Documents/Development/Projects/Clarity/Clarity/Resources/examples5-output-dark.png)
+![](../Resources/examples5-output-dark.png)
 
 ##### Light mode
 
-![](/Users/home/Documents/Development/Projects/Clarity/Clarity/Resources/examples5-output-light.png)
+![](../Resources/examples5-output-light.png)
 
 
 
@@ -142,11 +142,11 @@ All other keys set to false
 
 ##### Dark mode
 
-![](/Users/home/Documents/Development/Projects/Clarity/Clarity/Resources/examples6-output-dark.png)
+![](../Resources/examples6-output-dark.png)
 
 ##### Light mode
 
-![](/Users/home/Documents/Development/Projects/Clarity/Clarity/Resources/examples6-output-light.png)
+![](../Resources/examples6-output-light.png)
 
 
 
@@ -169,11 +169,11 @@ All other keys set to false
 
 ##### Dark mode
 
-![](/Users/home/Documents/Development/Projects/Clarity/Clarity/Resources/examples7-output-dark.png)
+![](../Resources/examples7-output-dark.png)
 
 ##### Light mode
 
-![](/Users/home/Documents/Development/Projects/Clarity/Clarity/Resources/examples7-output-light.png)
+![](../Resources/examples7-output-light.png)
 
 
 
@@ -198,11 +198,11 @@ All other keys set to false
 
 ##### Dark mode
 
-![](/Users/home/Documents/Development/Projects/Clarity/Clarity/Resources/examples8-output-dark.png)
+![](../Resources/examples8-output-dark.png)
 
 ##### Light mode
 
-![](/Users/home/Documents/Development/Projects/Clarity/Clarity/Resources/examples8-output-light.png)
+![](../Resources/examples8-output-light.png)
 
 
 
@@ -221,11 +221,11 @@ All other keys set to false
 
 ##### Dark mode
 
-![](/Users/home/Documents/Development/Projects/Clarity/Clarity/Resources/examples9-output-dark.png)
+![](../Resources/examples9-output-dark.png)
 
 ##### Light mode
 
-![](/Users/home/Documents/Development/Projects/Clarity/Clarity/Resources/examples9-output-light.png)
+![](../Resources/examples9-output-light.png)
 
 
 
@@ -243,11 +243,11 @@ All other keys set to false
 
 ##### Dark mode
 
-![](/Users/home/Documents/Development/Projects/Clarity/Clarity/Resources/examples10-output-dark.png)
+![](../Resources/examples10-output-dark.png)
 
 ##### Light mode
 
-![](/Users/home/Documents/Development/Projects/Clarity/Clarity/Resources/examples10-output-light.png)
+![](../Resources/examples10-output-light.png)
 
 
 
@@ -267,11 +267,11 @@ All other keys set to false
 
 **Dark mode**
 
-![](/Users/home/Documents/Development/Projects/Clarity/Clarity/Resources/examples11-output-dark.png)
+![](../Resources/examples11-output-dark.png)
 
 **Light mode**
 
-![](/Users/home/Documents/Development/Projects/Clarity/Clarity/Resources/examples11-output-light.png)
+![](../Resources/examples11-output-light.png)
 
 
 
@@ -292,8 +292,8 @@ All other keys set to false
 
 **Dark mode**
 
-![](/Users/home/Documents/Development/Projects/Clarity/Clarity/Resources/examples12-output-dark.png)
+![](../Resources/examples12-output-dark.png)
 
 **Light mode**
 
-![](/Users/home/Documents/Development/Projects/Clarity/Clarity/Resources/examples12-output-light.png)
+![](../Resources/examples12-output-light.png)

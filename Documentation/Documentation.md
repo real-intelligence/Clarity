@@ -2,9 +2,9 @@
 
 ## Documentation links
 
-- [EntityLogService](entitylogservice.md)
-- [Settings](settings.md)
-- [Formatting](formatting.md)
-- [Node-type](node-type.md)
-- [Function-type](function-type.md)
-- [Examples](examples)
+- [EntityLogService](EntityLogService.md)
+- [Settings](Settings.md)
+- [Formatting](Formatting.md)
+- [Node-type](Node-type.md)
+- [Function-type](Function-type.md)
+- [Examples](Examples)

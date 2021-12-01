@@ -1,6 +1,6 @@
 ## Node type reference
 
-### EntityLogService JSON > entity_functions  > function_nodes > node_type key
+### EntityLogService JSON > entity_functions  > function_nodes > [node_type](EntityLogService.md#node_type ) key
 
 | Node type name                     | Value | Renders the print statement output as signifying:            |
 | ---------------------------------- | ----- | ------------------------------------------------------------ |

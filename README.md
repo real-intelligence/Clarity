@@ -34,58 +34,70 @@ Fully native and compatible with all Apple platforms, 100% stable, lightweight, 
 - isolate entities, functions or collections of specific print statements. 
 - display function names or control nodes only.
 - switch all printing on or off.
+  
 
 🔆 **Deactivate printing for release without removing print statements  **
 
 - Keeping Clarity print statements intact yet inert in the code source.
+  
 
 🔆 **All print log data is separated from the source code**: 
 
   - each JSON data point is referenced by a single unique print number. 
   - the JSON data is accessed as project files that are editable within Xcode.
   - significantly reduce the chance of introducing regressions through accidental deletions such as can occur when editing print statements in source.
+    
 
 🔆 **Public API with a negligible footprint to help maintain clean code**: 
 
   - overloads the familiar Swift print() function. 
   - simple, quick and intuitive to add log references.
   - reduces the impact of logging on source code to the absolute minimum.
+    
 
 🔆 **Print statement output designed to be easily read as a clear narrative of the control flow**: 
 
   - control flow logs printed as concise 'event – effect' pairs. 
   - each statement tagged by entity code, function and print number.
   - quick to find nodes of interest in the code using the tags.
+    
 
 🔆 **Print statement output formatted using semantic assignment of symbols**: 
 
   - aids clear visual detection of unexpected events or anomalies in the control flow. 
   - semantic symbols can be set to coloured Apple symbols.
   - fully customisable settings for formatting, symbols and display.
+    
 
 🔆 **Values and Errors can be passed as arguments to print statements**: 
 
   - values displayed formatted as an easily readable list. 
   - LocalizedErrors automatically displayed as a NSLocalizedString written for the specific custom error case.
+    
 
 🔆 **Custom or relative numbering system for tagging functions and control flow nodes**.
+
 
 🔆 **Number tag sequence only display:**
 
   - concise and space efficient yet potentially comprehensive list of control flow nodes. 
   - track paths through complex algorithms. 
   - trace the source of intermittent errors using overlaid transparencies.
+    
 
 🔆 **SwiftUI support:**
 
   - print output from within `body` vars and view modifiers. 
+    
 
 🔆 **Written entirely in Swift without third party dependancies.** 
+
 
 🔆 **Easy to install and use:**
 
   - unambiguous instructions
   - no terminal use, build phase scripts or third party application required. 
+    
 
 🔆  **Comprehensive API docs [website](https://realint.org/clarity/api/developer/index)  and reference [documentation](Documentation/Documentation.md) provided.**
 
@@ -177,7 +189,7 @@ All other keys set to false
 
 ![](Resources/logs1-nodescriptionsnofunc-lightmode.png)
 
-The different display options are controlled using a combination of keys in the [Settings](Documentation/Settings.md) json file, the [Formatting](Documentation/Formatting.md) json file and keys within the associated [EntityLogService](Documentation/Entitylogservice.md) json file.
+The different display options are controlled using a combination of keys in the [Settings](Documentation/Settings.md) json file, the [Formatting](Documentation/Formatting.md) json file and keys within the associated [EntityLogService](Documentation/EntityLogService.md) json file.
 
 See additional examples of using different node types and display options and the resulting console output in the [documentation](Documentation/Examples.md).
 
@@ -300,10 +312,10 @@ Ensure that your project is initialized as a git repository.
    
      XCFramework installations will require platform specific imports: 
    
-     - macOS :  `import Clarity` 
-     - iOS : `import Clarity_iOS` 
-     - WatchOS : `import Clarity_watch` 
-     - tvOS : `import Clarity_tv` 
+     - **macOS** :  `import Clarity` 
+     - **iOS** : `import Clarity_iOS` 
+     - **WatchOS** : `import Clarity_watch` 
+     - **tvOS** : `import Clarity_tv` 
    
    - Add the Clarity activation initialiser.
    
