@@ -99,7 +99,7 @@ Fully native and compatible with all Apple platforms, 100% stable, lightweight, 
   - no terminal use, build phase scripts or third party application required. 
     
 
-🔆  **Comprehensive API docs [website](https://realint.org/clarity/api/developer/index)  and reference [documentation](Documentation/Documentation.md) provided.**
+🔆  **Comprehensive API docs [website](https://clarity.developer.realint.org)  and reference [documentation](Documentation/Documentation.md) provided.**
 
   
 
@@ -437,9 +437,9 @@ Ensure that your project is initialized as a git repository.
 
 All reference materials can be found in the [Documentation](Documentation/Documentation.md) folder.
 
-Full developer API docs can be found [here](https://realint.org/clarity/api/developer/index).
+Full developer API docs can be found [here](https://clarity.developer.realint.org).
 
-Public API docs can be found [here](https://realint.org/clarity/api/public/index). 
+Public API docs can be found [here](https://clarity.publicapi.realint.org). 
 
 ## Credits
 
@@ -459,7 +459,7 @@ Feedback, code contributions, issues and pull requests including unit tests that
 
 It would be great to know about projects using Clarity!
 
-clarity@slack
+ https://realint-org.slack.com
 
 ## Donations
 
@@ -471,7 +471,7 @@ If you use Clarity within an organisation or company ask if your employer might 
 
 ## License
 
-Copyright (c) 2021 Lawrence Heyfron (https://realint.org/)
+Copyright (c) 2021 Lawrence Heyfron https://realint.org/
 
 Clarity is released under the MIT license. [See LICENSE](LICENSE.md) for details.
 
