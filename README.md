@@ -99,7 +99,7 @@ Fully native and compatible with all Apple platforms, 100% stable, lightweight, 
   - no terminal use, build phase scripts or third party application required. 
     
 
-🔆  **Comprehensive API docs [website](https://clarity.developer.realint.org)  and reference [documentation](Documentation/Documentation.md) provided.**
+🔆  **Comprehensive API docs [website](http://clarity.developer.realint.org)  and reference [documentation](Documentation/Documentation.md) provided.**
 
   
 
