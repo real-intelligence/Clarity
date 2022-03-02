@@ -29,77 +29,64 @@ Fully native and compatible with all Apple platforms, 100% stable, lightweight, 
 
 ## Features
 
-🔆 **Complete granular control of all logs printed to the console**: 
+### Complete granular control of all logs printed to the console:
 
-- isolate entities, functions or collections of specific print statements. 
+- isolate entities, functions or collections of specific print statements.
 - display function names or control nodes only.
 - switch all printing on or off.
-  
 
-🔆 **Deactivate printing for release without removing print statements**:
+### Deactivate printing for release without removing print statements:
 
-- Keeping Clarity print statements intact yet inert in the code source.
-  
+- Keep Clarity print statements intact yet inert in the code source.
 
-🔆 **All print log data is separated from the source code**: 
+### All print log data is separated from the source code:
 
-  - each JSON data point is referenced by a single unique print number. 
-  - the JSON data is accessed as project files that are editable within Xcode.
-  - significantly reduce the chance of introducing regressions through accidental deletions such as can occur when editing print statements in source.
-    
+- each JSON data point is referenced by a single unique print number.
+- the JSON data is accessed as project files that are editable within Xcode.
+- significantly reduce the chance of introducing regressions through accidental deletions such as can occur when editing print statements in source.
 
-🔆 **Public API with a negligible footprint to help maintain clean code**: 
+### Public API with a negligible footprint to help maintain clean code:
 
-  - overloads the familiar Swift print() function. 
-  - simple, quick and intuitive to add log references.
-  - reduces the impact of logging on source code to the absolute minimum.
-    
+- Clarity print statements overload the familiar Swift print() function.
+- simple, quick and intuitive to add log references.
+- reduces the impact of logging on source code to the absolute minimum.
 
-🔆 **Print statement output designed to be easily read as a clear narrative of the control flow**: 
+### Output design easily read as a clear narrative of the control flow:
 
-  - control flow logs printed as concise 'event – effect' pairs. 
-  - each statement tagged by entity code, function and print number.
-  - quick to find nodes of interest in the code using the tags.
-    
+- control flow logs printed as concise ‘event – effect’ pairs.
+- each statement tagged by entity code, function and print number.
+- quick to find nodes of interest in the code using the statement tags.
+- custom or relative numbering system for tagging functions and control flow nodes.
 
-🔆 **Print statement output formatted using semantic assignment of symbols**: 
+### Output formatted using semantic assignment of symbols:
 
-  - aids clear visual detection of unexpected events or anomalies in the control flow. 
-  - semantic symbols can be set to coloured Apple symbols.
-  - fully customisable settings for formatting, symbols and display.
-    
+- aids clear visual detection of anomalies in the control flow.
+- semantic symbols can be set to coloured Apple symbols.
+- fully customisable settings for formatting, symbols and display.
 
-🔆 **Values and Errors can be passed as arguments to print statements**: 
+### Values and Errors can be passed as arguments to print statements:
 
-  - values displayed formatted as an easily readable list. 
-  - LocalizedErrors automatically displayed as a NSLocalizedString written for the specific custom error case.
-    
+- the log output of value arguments formatted as an easily readable list.
+- any `LocalizedError` automatically displayed as a `NSLocalizedString`written for the specific custom error case.
 
-🔆 **Custom or relative numbering system for tagging functions and control flow nodes**.
+### Number tag sequence only display:
 
+- concise and space efficient yet potentially comprehensive list of control flow nodes.
+- use to help track paths through complex algorithms.
+- trace the source of intermittent errors using overlaid transparencies.
 
-🔆 **Number tag sequence only display:**
+### SwiftUI support:
 
-  - concise and space efficient yet potentially comprehensive list of control flow nodes. 
-  - track paths through complex algorithms. 
-  - trace the source of intermittent errors using overlaid transparencies.
-    
+- print output from within `body` vars and view modifiers.
 
-🔆 **SwiftUI support:**
+### Easy to install and use:
 
-  - print output from within `body` vars and view modifiers. 
-    
+- unambiguous instructions
+- no terminal use, build phase scripts or third party application required.
 
-🔆 **Written entirely in Swift without third party dependancies.** 
+### Written entirely in Swift without third party dependancies.
 
-
-🔆 **Easy to install and use:**
-
-  - unambiguous instructions
-  - no terminal use, build phase scripts or third party application required. 
-    
-
-🔆  **Comprehensive API docs [website](http://clarity.developer.realint.org)  and reference [documentation](Documentation/Documentation.md) provided.**
+### Comprehensive API docs [website](http://clarity.developer.realint.org/) and reference [documentation](https://realint.org/clarity/reference/)
 
   
 
@@ -119,22 +106,17 @@ Use judiciously as a tool for logging print statements during project developmen
 
 #### Log output for the print statements
 
-##### Dark mode  
-
-![](Resources/logs1-1absolute.png)
-
-##### Light mode  
-
 ![](Resources/logs1-lightmode.png)
 
-Note: the source and associated JSON extracts depicted above are for print statements in **evaluateMyPet(_:)** and **changePet(_:)**  : the console also shows output from print statements in **application(_:didFinishLaunchingWithOptions:)** – see  [example code](iOS App Delegate Example) for full details.
+> See  [example code](iOS App Delegate Example) for full details.
 
 
 
-#### Display log output using relative numbering including additional display of (absolute) print numbers 
+### Display options
 
-ClarityJSON > **Settings.json**
-All other keys set to false
+Different display options are controlled using a combination of keys in the [Settings](https://realint.org/clarity/reference/settings/) json file, the [Formatting](https://realint.org/clarity/reference/formatting/) json file and keys within the associated [EntityLogService](https://realint.org/clarity/reference/entitylogservice/) json file.
+
+Display options can be used to isolate issues of concern, change the numbering system or reducing the amount of formatting components displayed.
 
 | Key                                              | Value |
 | ------------------------------------------------ | ----- |
@@ -142,79 +124,34 @@ All other keys set to false
 | calculateNodeNumbersRelativeToFunction           | true  |
 | displayNodePrintNumberWhenUsingRelativeNumbering | true  |
 
-##### Dark mode
-
-![](Resources/logs–1relative.png)
-
-##### Light mode
+##### Log output – in light mode
 
 ![](Resources/logs1-1absolute-lightmode.png)
 
 
 
-#### Display log output as number sequence without descriptions – including function names
+### Display log output as a number sequence
 
-ClarityJSON > **Settings.json**
-All other keys set to false
-
-| Key                                    | Value |
-| -------------------------------------- | ----- |
-| displayNodeSequenceWithoutDescriptions | true  |
-
-##### Dark mode
-
-![](Resources/logs1-nodescriptions.png) 
-
-##### Light mode
-
-![](Resources/logs1-nodescriptions-lightmode.png)
-
-
-
-#### Display log output as number sequence without descriptions – control nodes only
-
-ClarityJSON > **Settings.json**
-All other keys set to false
+#### Settings used in extract
 
 | Key                                    | Value |
 | -------------------------------------- | ----- |
 | suppressLogFunctionNames               | true  |
 | displayNodeSequenceWithoutDescriptions | true  |
 
-##### Dark mode
-
-![](Resources/logs1-nodescriptionsnofunc.png) 
-
-##### Light mode
+##### Log output – in light mode
 
 ![](Resources/logs1-nodescriptionsnofunc-lightmode.png)
 
-The different display options are controlled using a combination of keys in the [Settings](Documentation/Settings.md) json file, the [Formatting](Documentation/Formatting.md) json file and keys within the associated [EntityLogService](Documentation/EntityLogService.md) json file.
-
-See additional examples of using different node types and display options and the resulting console output in the [documentation](Documentation/Examples.md).
+There are many more ways to display Clarity print statements: see additional [examples](https://realint.org/clarity/reference/settings/clarity/examples/) of using different node types and display options.
 
 
 
 ## Structure
 
+### Clarity print statement components in the console
+
 ![](Resources/structure.png)
-
-
-
-### Clarity print statement node type grouping inclusions and 'column' alignments
-
-|                              | CS1  |             |                        | CS2  |                 | CS3  |                    |             |                                 | CS4  |                                 |                   |
-| ---------------------------- | ---- | ----------- | ---------------------- | ---- | --------------- | ---- | ------------------ | ----------- | ------------------------------- | ---- | ------------------------------- | ----------------- |
-| **Node type grouping:**      |      |             |                        |      |                 |      |                    |             |                                 |      |                                 |                   |
-| **Function name**            |      | Entity Code | Function ‘type’ symbol |      | Function number |      | Function name      |             |                                 |      |                                 |                   |
-| Line 1:                      |      |             |                        |      |                 |      |                    |             |                                 |      |                                 |                   |
-| **Control flow / Reporters** |      | Entity Code |                        |      | Function number |      | Node ‘type’ symbol | Node number | Print number (relative setting) |      | Outcome/ Reporter/ Error symbol | Event description |
-| Line 2:                      |      |             |                        |      |                 |      |                    |             |                                 |      |                                 |                   |
-| **Control flow**             |      |             |                        |      |                 |      |                    |             |                                 |      |                                 | Event description |
-| **Value Reporter**           |      |             |                        |      |                 |      |                    |             |                                 |      |                                 | Value(s) list     |
-| **Error Reporter**           |      |             |                        |      |                 |      |                    |             |                                 |      |                                 | Error description |
-
-The 'CS' row marks the position of custom spacers (with a default value of 0).
 
 
 
@@ -230,39 +167,38 @@ The 'CS' row marks the position of custom spacers (with a default value of 0).
 
 ### Swift Package Manager
 
-- Xcode > File > Swift Packages > **Add Package Dependency**...
-  or Project navigator > PROJECT > Swift Packages > **click add (plus) icon** – Add Package Dependency
-- Choose Package Repository > Search or enter package repository URL (browser) > enter ...
-   `https://github.com/real-intelligence/Clarity.git`
-- Rules > check Version: **Select Up to Next Major** >  ( Xcode will automatically fill latest tag number )
-- **Next...**
-- Choose package products and targets: Package Product > **ensure Clarity is checked** 
-  Add to Target > **select YourProject name** 
-- **Finish**
+1. Project navigator > PROJECT > Swift Packages > click **Add Package Dependency** (plus) icon
+
+2. Browser > 'Choose Package Repository: Search or enter package repository URL' 
+   **(enter)**` https://github.com/real-intelligence/Clarity.git`
+
+3. 'Rules' > (check) 'Version: Select Up to Next Major' ( Xcode will automatically fill latest tag number )
+   \> **Next...**
+
+4. 'Choose package products and targets: Package Product' 
+
+   - Ensure Clarity is checked
+   - 'Add to Target' > (select) YourProjectName
+
+5. **Finish**
 
 
 
 ### XCFramework
 
-Each release will include a `clarity.xcframework` framework binary.
+Each release will include a single `clarity.xcframework` framework binary that can be added to all Apple platforms.
 
-- Navigate to **latest** release > https://github.com/real-intelligence/Clarity/releases
+1. Navigate to latest release > 
+   https://github.com/real-intelligence/Clarity/releases
+2. Assets > Clarity.xcframework.zip > **click to download**
+3. Doubleclick to expand the downloaded zip file > move **Clarity.xcframework** to a convenient location.
+4. (open) **YourProjectName** > Project navigator > ProjectName > TARGET > ProjectName > General Tab...
+5. Finder > (select) Clarity.xcframework >
+   Drag and drop it into the **Frameworks, Libraries, and Embedded Content** of YourProjectName 
+   or **Frameworks and Embedded Content** of YourProjectName if it is itself a framework.
+6. **Cmd+B** to build the project.
 
-- (select) Assets > **Clarity.xcframework.zip**
 
-- Doubleclick the downloaded zip file > move **Clarity.xcframework** to a convenient location.
-
-- Open > YourProjectName… 
-
-- Project navigator > ProjectName > TARGET > ProjectName > **General Tab**...
-
-- Finder ... > select Clarity.xcframework  >  Drag and drop into the **Frameworks, Libraries, and Embedded Content**
-  or **Frameworks and Embedded Content** of a client ProjectName if it is itself a framework.
-
-- **Cmd+B** to build the project.
-
-  
-  
 
 ### Embedded Framework 
 
@@ -294,148 +230,165 @@ Ensure that your project is initialized as a git repository.
 
 ## Activation
 
-1. Add the Clarity activation initialiser at the entry point of the client application.
-   
-   
-   Important: The Clarity activation initialiser should only be called once in an application.
-   
-   Note: if the `displayStatus` parameter is omitted or set to `true`  – the print mode and activation status of Clarity will be displayed at the top of the console output on initialisation.
-   
-   
-   
-   ### SwiftUI App 
-   
-   Create a custom initialiser (if one does not already exist) for the type annotated with the `@main` attribute that conforms to the `App` protocol (the entry point of the application). 
-   
-   - Add the Clarity import statement.
-     Note: Swift Package installations require `import Clarity` for all platforms
-   
-     XCFramework installations will require platform specific imports: 
-   
-     - **macOS** :  `import Clarity` 
-     - **iOS** : `import Clarity_iOS` 
-     - **WatchOS** : `import Clarity_watch` 
-     - **tvOS** : `import Clarity_tv` 
-   
-   - Add the Clarity activation initialiser.
-   
-   ```swift
-   import Clarity
-   
-   @main
-   struct ClientForBigSuriOSApp: App {
-   init() {
-    ClarityActivator(withBundle: Bundle.main, inPrintMode: true, displayStatus:false)
-     ...
-   }
-   ```
-   
-   
-   
-      ### App Delegate
-   
-   Add activation to `application(_:didFinishLaunchingWithOptions:)`
-   
-      ```swift
-   import Clarity
-   ...
-   
-   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-         
-    ClarityActivator(withBundle: Bundle.main, inPrintMode: true, displayStatus:false)
-   	...
-   }
-      ```
-   
-   
-   
-   ### Framework as a client application
-   
-   Framework applications that have a single entry point or activation method should activate Clarity in the same way as shown above in the entry point method implementation.
-   
-   Note: Framework applications will need to call the Bundle initialiser `init(for:) ` supplying the implementing class as argument to the `aClass` parameter to access the correct Bundle for the framework.
-   
-   
-   
-      #### Framework as a client without a single entry point
-   
-   Framework applications that do not have a single entry point will need to implement a class that includes a static variable that lazily stores the result of a closure containing the activation initialiser. The closure will then need to be accessed by all classes, structs or enums that use Clarity. This technique ensures that Clarity is activated only once and that any failure to activate Clarity will not adversely affect the client framework.
-   
-   
-   
-      ```swift
-   //Activation
-   import Clarity
-   
-   class ClarityServiceExample {
-   
-    static let clarityActivation: ClarityActivator? = {
-       return ClarityActivator(withBundle: Bundle(for: ClarityServiceExample.self), inPrintMode: true)
-     }()
-   }
-   
-   //Accessing the activation
-   import Clarity
-   class MyClass {
-               public init() {
-               // All other essential initialisation work here …
-   
-                guard let _ = ClarityService.clarityActivation else{
-                    print("Clarity activation failed")
-                    return
-                }   
-                // Place a Clarity print statement for the initialiser here if required.
-            }
-     
-         // Clarity print statements can now be placed anywhere in the class (struct or enum) as usual.
-   }
-      ```
+### Activation procedure
 
+1. Add the Clarity activation initialiser (with Clarity `import` statement) at the entry point of the client application. See specific instructions and sample code for particular life cycles / project type below.
 
 2. Run the client application in any Xcode device simulator. 
 
-   A folder containing template and default settings JSON files named **ClarityJSON** will be copied to the desktop.
+   > A folder containing template and default settings JSON files named **ClarityJSON**will be copied to the desktop. See note regarding macOS
 
-   Note: running Clarity for the first time in a macOS application will likely cause a denied permissions issue when attempting to copy ClarityJSON to the desktop. 
+3. **All platforms except watchOS:** Drag the folder named ClarityJSON from the desktop into: Xcode > Project Navigator > under (as a child of) the ProjectName icon.
 
-   In this situation either temporarily switch the scheme to run once in a simulator or download the folder named **TemplateJSON** from the GitHub repository or locate the copy of the folder in the client project DerivedData, rename the folder to ClarityJSON and then continue to follow the instructions below (that are also given in the console).
+   **watchOS only:** Drag the folder named ClarityJSON from the desktop into: Xcode > Project Navigator > under (as a child of) the ProjectName **Watchkit Extension** folder.
 
-2. **All platforms except watchOS:**
-   Drag the folder named ClarityJSON from the desktop into: Xcode > Project Navigator > under (as a child of) the ProjectName icon.
-   
-   **watchOS only:**
-   Drag the folder named ClarityJSON from the desktop into: Xcode > Project Navigator > under (as a child of) the ProjectName **Watchkit Extension** folder.
-
-2. In the pop up window:
-
+4. In the pop up window that appears:
 
    - check Destination: **'Copy items if needed'**
-   - select '**Create folder reference**' 
+   - select '**Create folder reference**'
    - check 'Add to targets:' > 'ProjectName'
 
-   **All platforms except watchOS:**
+5. > **All platforms except watchOS:**
+   >
+   > Xcode should place the directory at the top level of your project in the same directory containing the **.xcodeproj** file.
+   >
+   > **watchOS only:**
+   >
+   > Xcode should place the directory in the top level of the **Watchkit Extension**folder.
+   >
+   > In all instances the folder should be coloured blue.
 
-   Xcode should place the directory at the top level of your project in the same directory containing the **.xcodeproj** file.
-
-   **watchOS only:**
-
-   Xcode should place the directory in the top level of the **Watchkit Extension** folder.
-
-   In all instances the folder should be coloured blue.
-
-2. Copy and rename the EntityLog json template files for each entity (struct, class or enum) where Clarity print statements are required. Additional EntityLog json files can be added at any time.
+6. Copy and rename the **EntityLog JSON template files** for each entity (struct, class or enum) where Clarity print statements are required. Additional EntityLog JSON files can be added at any time. 
 
    Copy or move **ExampleEntityLog.json** to a separate location for reference and delete it from the ClarityJSON folder.
 
-   Note:  Settings.json and Formatting.json must NOT be renamed, deleted or have their keys altered (the default values can be edited).
+   > Important: **Settings.json** and **Formatting.json** must NOT be renamed, deleted or have their keys altered (the default values can be edited as required).
 
-2. Add Clarity print statements to the project source code as required.
+7. Add Clarity print statements to the project source code as required with an `import Clarity`statement in each separate file.
 
+
+
+## Activation notes
+
+Important: The Clarity activation initialiser should only be called once in an application.
+
+**Swift Package** installations require `import Clarity` for all platforms
+
+**XCFramework** installations require platform specific imports:
+
+- macOS : `import Clarity`
+- iOS : `import Clarity_iOS`
+- WatchOS : `import Clarity_watch`
+- tvOS : `import Clarity_tv`
+
+If the `displayStatus` parameter is omitted or set to `true` – the print mode and activation status of Clarity will be displayed at the top of the console output on initialisation.
+
+Running Clarity for the first time in a macOS application will likely cause a denied permissions issue when attempting to copy ClarityJSON to the desktop. 
+
+In this situation do one of the following steps:
+
+- temporarily switch the scheme to run once in a simulator and create the ClarityJSON on the desktop
+- download the folder named **TemplateJSON** from the GitHub repository and rename it to ClarityJSON
+- locate the copy of the TemplateJSON folder in the client project DerivedData, rename the folder to ClarityJSON
+
+
+
+## Specific activation examples
+
+### SwiftUI App
+
+Create a custom initialiser (if one does not already exist) for the type annotated with the `@main`attribute that conforms to the `App` protocol (the entry point of the application).
+
+Add Clarity activation to the custom initialiser.
+
+```swift
+import Clarity
    
+@main
+struct ClientForBigSuriOSApp: App {
+
+  init() {
+
+   ClarityActivator(withBundle: Bundle.main, inPrintMode:true, displayStatus:false)
+
+   ...
+ }
+```
+
+
+
+### App Delegate
+
+Add Clarity activation to `application(_:didFinishLaunchingWithOptions:)`
+
+```swift
+import Clarity
+...
+   
+func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+
+ ClarityActivator(withBundle: Bundle.main, inPrintMode:true, displayStatus:false)
+
+ ...
+}
+```
+
+
+
+### Framework as a client application
+
+Framework applications that have a single entry point or activation method should simply add Clarity activation to that method.
+
+Important: framework applications need to call the Bundle initialiser `init(for:)`supplying the implementing class as argument to the `aClass` parameter to access the correct Bundle for the framework.
+
+```swift
+ClarityActivator(withBundle: Bundle(for: MyImplementingClassName.self), 
+                  inPrintMode: true, displayStatus:false)
+```
+
+
+
+#### Framework as a client without a single entry point
+
+Framework applications that do not have a single entry point will need to implement a class that includes a static variable that lazily stores the result of a closure containing the Clarity activation initialiser. The closure will then need to be accessed by all classes, structs or enums that use Clarity. This technique ensures that Clarity is activated only once and that any failure to activate Clarity will not adversely affect the client framework.
+
+```swift
+//Activation in a custom class 'ClarityService'
+import Clarity
+   
+class ClarityService {
+   
+ static let clarityActivation: ClarityActivator? = {
+  
+    return ClarityActivator(withBundle: Bundle(for: ClarityServiceExample.self), 
+                                            inPrintMode:true, displayStatus:false)
+  }()
+}
+   
+//Accessing the activation from another class 'MyClass'
+import Clarity
+
+class MyClass {
+            public init() {
+            // All other essential initialisation work here …
+   
+             guard let _ = ClarityService.clarityActivation else{
+                 print("Clarity activation failed")
+                 return
+             }   
+             // Place a Clarity print statement for the initialiser here if required.
+         }
+     
+      // Clarity print statements can now be placed anywhere in the class (struct or 
+      //  enum) as usual.
+}
+```
+
+
 
 ## Reference
 
-All reference materials can be found in the [Documentation](Documentation/Documentation.md) folder.
+All reference materials can be found on the realint.org site https://realint.org/clarity/reference/
 
 Full developer API docs can be found [here](http://clarity.developer.realint.org).
 
@@ -449,7 +402,7 @@ Public API docs can be found [here](http://clarity.publicapi.realint.org).
 
 If you like Clarity and want to support the project please let other developers know that the framework exists – tutorial creators are especially encouraged! 
 
-Feedback, code contributions, issues and pull requests including unit tests that add to the test coverage are welcomed. By making contributions to this project you give permission for your code to be used under the same [license](LICENSE.md).
+Feedback, code contributions, issues and pull requests including unit tests that add to the test coverage are welcomed. By making contributions to this project you give permission for your code to be used under the same [license](https://realint.org/clarity/licence/).
 
 ### Contribution guidelines
 
@@ -473,7 +426,7 @@ If you use Clarity within an organisation or company ask if your employer might 
 
 Copyright (c) 2021 Lawrence Heyfron https://realint.org/
 
-Clarity is released under the MIT license. [See LICENSE](LICENSE.md) for details.
+Clarity is released under the MIT license. [See LICENSE](https://realint.org/clarity/licence/) for details.
 
 [Back to top](#introduction)
 

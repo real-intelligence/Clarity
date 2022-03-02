@@ -4,14 +4,14 @@
 
 Setting this value will assign both the function node type symbol and the function type character symbol in the print statement output for function name node types.
 
-| Function type name        | Value | Renders the function name output symbols to represent :      |
-| ------------------------- | ----- | ------------------------------------------------------------ |
-| Initialiser               | i     | an initialiser.                                              |
-| Custom function           | f     | a custom function.                                           |
-| Override                  | o     | a custom override of an Apple API method.                    |
-| Action method             | a     | an action method.                                            |
-| Delegate method           | g     | a custom override of an Apple API delegate method.           |
-| Datasource method         | d     | a custom override of an Apple API datasource method.         |
-| Computed variable         | v     | the name of a computed variable.                             |
-| Protocol extension method | e     | a method whose implementation resides in a Protocol extension. |
+| Value | Name                      | Functionality – renders the function name output symbols to represent : |
+| ----- | ------------------------- | ------------------------------------------------------------ |
+| i     | Initialiser               | an initialiser.                                              |
+| f     | Custom function           | a custom function.                                           |
+| o     | Override                  | a custom override of an Apple API method.                    |
+| a     | Action method             | an action method.                                            |
+| g     | Delegate method           | a custom override of an Apple API delegate method.           |
+| d     | Datasource method         | a custom override of an Apple API datasource method.         |
+| v     | Computed variable         | the name of a computed variable.                             |
+| e     | Protocol extension method | a method whose implementation resides in a Protocol extension. |
 

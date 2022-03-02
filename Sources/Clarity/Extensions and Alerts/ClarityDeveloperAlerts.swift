@@ -25,6 +25,16 @@
 //
 
 import Foundation
+
+
+
+/**
+A struct that is used to store constants that determine the status of print statement alerts for the use by Clarity developers.
+ 
+The struct contains a single method that prints alerts depending on the status.
+ */
+
+
 struct ClarityDeveloperAlerts {
     
     /**
