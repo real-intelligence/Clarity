@@ -1,0 +1,93 @@
+@Tutorial(time: 3) {
+    @Intro(title: "Activate for a Framework") {
+        Framework applications activate Clarity differently depending on whether they possess single or multiple entry points for their client applications. 
+        
+        @Image(source: activate-as-framework-intro.png, alt: "An activation icon – a green outline of a circle bisected at its top by a vertical green bar that extends from the circumference to below the halfway point of its radius. This icon is shown to the right of an orange framework icon.")
+    }
+    
+    
+    
+    @Section(title: "Activation: single entry point") {
+        @ContentAndMedia {
+            Framework applications that have a single entry point or activation method should simply call the Clarity activation initialiser from that method.
+            
+            Note that to access the correct Bundle for the framework you will need to call the Bundle initialiser `init(for:)` and supply the entry point implementing class as argument to the `aClass` parameter.  
+
+            
+            @Image(source: 02-activating-single-section1.png, alt: "A framework single entry point initialiser icon – a green cog with a single green dot at its centre surrounded at its top and bottom by two green semicircular direction arrows pointing in a clockwise direction.")
+        }
+
+        
+        @Steps {
+            
+            @Step {
+                Open the file for the type that is the single entry point of  your framework.
+                @Code(name: "MyFrameworkEntryPoint.swift", file: 02-activate-framework-01-01.swift)
+                 
+            }
+            @Step {
+                Add a Clarity import statement.
+                @Code(name: "MyFrameworkEntryPoint.swift", file: 02-activate-framework-01-02.swift)
+                
+            }
+            @Step {
+                Add the Clarity activation initialiser to the activation initialiser of the client framework.
+                
+                Supply the client framework bundle to the `withBundle` parameter and set `inPrintMode` to `true`. 
+                @Code(name: "MyFrameworkEntryPoint.swift", file: 02-activate-framework-01-03.swift)
+                
+                
+            }
+        }
+    }
+    
+    @Section(title: "Activation: multiple entry points") {
+        @ContentAndMedia {
+            Framework applications that have multiple entry points or activation methods will need to implement a class that includes a static variable that lazily stores the result of a closure containing the Clarity activation initialiser. 
+            
+            The closure will then need to be accessed by all classes, structs or enums that use Clarity. This technique ensures that Clarity is activated only once and that any failure to activate Clarity will not adversely affect the client framework.
+
+            Note that to access the correct Bundle for the framework you will need to call the Bundle initialiser `init(for:)` and supply the entry point implementing class as argument to the `aClass` parameter.
+            
+            @Image(source: 02-activating-multi-section2.png, alt: "A framework multiple entry points initialiser icon – a green cog with seven green dots formed as a hexagon at its centre surrounded at its top and bottom by two green semicircular direction arrows pointing in a clockwise direction.")
+        }
+
+        
+        @Steps {
+            @Step {
+                Create a 'ClarityService' class. 
+                
+                This type can be custom named to anything as required. 
+                @Code(name: "ClarityService.swift", file:  02-activate-framework-02-01.swift)
+                 
+            }
+            @Step {
+                Add a Clarity import statement to the enclosing file that contains the class. 
+                @Code(name: "ClarityService.swift", file:  02-activate-framework-02-02.swift)
+                 
+            }
+            @Step {
+                Add the Clarity activation initialiser as the return value of a closure stored lazily in a static variable 'clarityActivation' of type optional ClarityActivator. Supply the client framework bundle to the `withBundle` parameter and set `inPrintMode` to `true`.
+                
+                This variable can be custom named to anything as required.
+                @Code(name: "ClarityService.swift", file:  02-activate-framework-02-03.swift)
+                 
+            }
+            @Step {
+                Open the files of all entity types that use Clarity print statements.  
+                @Code(name: "MyFrameworkType.swift", file:  02-activate-framework-02-04.swift)
+                
+            }
+            @Step {
+                Add a Clarity import statement to the enclosing files.
+                @Code(name: "MyFrameworkType.swift", file:  02-activate-framework-02-05.swift)
+                 
+            }
+            @Step {
+                Place activation access in an entry point initialiser for each type.
+                @Code(name: "MyFrameworkType.swift", file:  02-activate-framework-02-06.swift)
+                
+            }
+        }
+    }
+   

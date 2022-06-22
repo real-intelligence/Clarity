@@ -28,14 +28,7 @@ import Foundation
 
 
 /**
-A struct that is used as the top level container of a model used to decode Settings JSON data.
-          
-The struct matches the structure of the Settings JSON exactly and is not currently used to service a struct that models the JSON differently. It embeds nested structs representing arrays in the JSON data.
-          
-- Note:
- Unlike the other JSON service structs in the framework this struct names the properties the same as the keys in the JSON to avoid the requirement for CodingKey enums. The simplicity of the Settings JSON structure allows the struct to take advantage of the Codable protocol automatic key generation feature.
- 
- The properties are settable variables so that settings can be changed programmatically during the run of a client application – this feature is designed specifically for use during unit testing.
+A struct that is used as the top level container of a model used to decode JSON data from the <doc:Settings>  JSON file in the ClarityJSON folder
      */
 public struct SettingsManagerService: Codable, Equatable {
     /// A Bool mapped to the `suppressAllClarityLogs` key in the Settings JSON data.
@@ -71,27 +64,27 @@ public struct SettingsManagerService: Codable, Equatable {
     /// A Bool mapped to the `alertOrphanedPrintNumbersDetected` key in the Settings JSON data
     var alertOrphanedPrintNumbersDetected: Bool
     /**
-     A struct embedded inside an `SettingsManagerService` struct that is used as a nested layer within an intermediate service model used to decode Settings JSON data.
+     A struct embedded inside an ``SettingsManagerService`` struct that is used as a nested layer within an intermediate service model used to decode <doc:Settings> JSON data.
               
-     The struct models an array of JSON objects mapped to the `isolatedEntities` key in the Settings JSON data.
+     The struct models an array of JSON objects mapped to the `isolatedEntities` key in the <doc:Settings> JSON data.
      */
     public struct IsolatedEntity: Codable, Equatable{
-        /// A String mapped to the `entityCode` key in the array keyed by the `isolatedEntities` key in the Settings JSON data.
+        /// A String mapped to the `entityCode` key in the array keyed by the `isolatedEntities` key in the <doc:Settings> JSON data.
         public var entityCode: String
-        /// A Bool mapped to the `isolate` key in the array keyed by the `isolatedEntities` key in the Settings JSON data.
+        /// A Bool mapped to the `isolate` key in the array keyed by the `isolatedEntities` key in the <doc:Settings> JSON data.
         public var isolate: Bool
     }
     /**
-     A struct embedded inside an `SettingsManagerService` struct that is used as a nested layer within an intermediate service model used to decode Settings JSON data.
+     A struct embedded inside an ``SettingsManagerService`` struct that is used as a nested layer within an intermediate service model used to decode <doc:Settings> JSON data.
               
-     The struct models an array of JSON objects mapped to the `isolatedFunctions` key in the Settings JSON data.
+     The struct models an array of JSON objects mapped to the `isolatedFunctions` key in the <doc:Settings> JSON data.
      */
     public struct IsolatedFunction: Codable, Equatable{
-        /// A String mapped to the `entityCode` key in the array keyed by the `isolatedFunctions` key in the Settings JSON data.
+        /// A String mapped to the `entityCode` key in the array keyed by the `isolatedFunctions` key in the <doc:Settings> JSON data.
         public var entityCode: String
-        /// A Bool mapped to the `isolate` key in the array keyed by the `isolatedFunctions` key in the Settings JSON data.
+        /// A Bool mapped to the `isolate` key in the array keyed by the `isolatedFunctions` key in the <doc:Settings> JSON data.
         public var isolate: Bool
-        /// An Int array mapped to the `isolatedFunctionNumbers` key in the array keyed by the `isolatedFunctions` key in the Settings JSON data.
+        /// An Int array mapped to the `isolatedFunctionNumbers` key in the array keyed by the `isolatedFunctions` key in the <doc:Settings> JSON data.
         public var isolatedFunctionNumbers: [Int]
     }
 }

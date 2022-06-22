@@ -1,0 +1,36 @@
+@Tutorial(time: 1) {
+    @Intro(title: "Activate for App Delegate") {
+        Add the Clarity activation initialiser at the entry point of an App Delegate client application.
+        
+        @Image(source: activate-as-appdelegate-intro.png, alt: "An activation icon – a grey outline of a circle bisected at its top by a vertical grey bar that extends from the circumference to below the halfway point of its radius.")
+    }
+    
+    
+    
+    @Section(title: "Add activation initialiser") {
+        @ContentAndMedia {
+            If you set up _MyProject_ using the App Delegate life cycle add the Clarity activation initialiser to `application(_:didFinishLaunchingWithOptions:)`  
+            
+            @Image(source: 02-activating-section1.png, alt: "An initialiser icon – a green cog surrounded at its top and bottom by two green semicircular direction arrows pointing in a clockwise direction.")
+        }
+        
+        @Steps {
+            @Step {
+                Open the file AppDelegate.swift
+                @Code(name: "AppDelegate.swift", file: 02-activate-appdelegate-01-01.swift)
+                
+            }
+            @Step {
+                Add a Clarity import statement.
+                @Code(name: "AppDelegate.swift", file: 02-activate-appdelegate-01-02.swift)
+                
+            }
+            @Step {
+                Add the Clarity activation initialiser to `application(_:didFinishLaunchingWithOptions:)` 
+                
+                Supply the _MyProject_ main bundle to the `withBundle` parameter and set `inPrintMode` to `true`
+                @Code(name: "AppDelegate.swift", file: 02-activate-appdelegate-01-03.swift)
+                
+            }
+        }
+    }

@@ -45,7 +45,7 @@ struct EntityLog: Codable, Equatable {
           
      The sole purpose of the array is for the identification of any duplicate print numbers.
      
-     - Note:
+     - Note
      The array is **not** used for assigning keys or values to the `messages` dictionary.
      */
     var printNumbers = [Int]()
@@ -54,7 +54,7 @@ struct EntityLog: Codable, Equatable {
           
      It is referenced by UsedPrintNumberIdentifiable to list all used print numbers in each EntityLog and by `MessageCollator` to set the maximum entity code character count of the entity codes used in all EntityLogs.
      
-     - Note:
+     - Note
      The property is **not** used to assign the `entityCode` property in each `Message` instance and exists as a convenience for referencing instances.
      */
     var entityCode: String
@@ -67,7 +67,7 @@ struct EntityLog: Codable, Equatable {
         /**
          A string representing the entity code of the EntityLog containing the print number.
               
-         - Note:
+         - Note
          The value of the property will be the same for all print numbers contained in an EntityLog but will be different from other messages merged into the `MessageCollator``messages` dictionary.
          */
         var entityCode: String
@@ -80,7 +80,7 @@ struct EntityLog: Codable, Equatable {
          
          Function numbers are displayed as relative function numbers if the setting `calculateFunctionNumbersRelativeToEntity` is set to the bool value true.
                   
-         - Note:
+         - Note
          The value returned from the `firstIndex(of:)->Self.Index?` used on the `kB21A` (`entity_functions`) array in the initialiser is unwrapped using the nil coalescing operator. If the value returned is nil `functionNumberInEntity` is set to -1 and incremented by 1 to return 0 ( a result that should never occur). Otherwise the value is simply incremented by 1 (to offset the zero indexing of arrays) and return the entity function's sequential position in the array.
          */
         var functionNumberInEntity: Int
@@ -101,7 +101,7 @@ struct EntityLog: Codable, Equatable {
          
          Print numbers are displayed as relative node numbers if the setting `calculateNodeNumbersRelativeToFunction` is set to the bool value true.
                   
-         - Note:
+         - Note
          The value returned from the `firstIndex(of:)->Self.Index?` used on the `kD31A` (`function_nodes`) array in the initialiser is unwrapped using the nil coalescing operator. If the value returned is nil `nodeNumberWithinFunction` is set to -1 and incremented by 1 to return 0 ( a result that should never occur). Otherwise the value is simply incremented by 1 (to offset the zero indexing of arrays) and return the node's sequential position in the array.
          */
         var nodeNumberWithinFunction: Int

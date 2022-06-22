@@ -35,7 +35,7 @@ import Foundation
       
  The structure of the EntityLog JSON is designed for the convenience of the user. It represents the way print numbers appear in the source code relative to functions positioned at the top level of the JSON hierarchy. The EntityLog struct model on the other hand is designed for the efficiency of the framework with print number messages positioned at the top level of the struct hierarchy.
       
- - Note:
+ - Note
  The struct uses a custom semantic naming system to name properties associated with key value pairs and their position in the JSON. This system was developed as an aid to correctly map each key to its position in the struct.
  */
 struct EntityLogService: Codable, Equatable {
@@ -50,7 +50,7 @@ struct EntityLogService: Codable, Equatable {
               
      The struct models an array of JSON objects mapped to the `entity_functions` key in the EntityLog JSON data.
               
-     - Note:
+     - Note
      The struct uses a custom semantic naming system to name properties associated with key value pairs and their position in the JSON. This system was developed as an aid to correctly map each key to its position in the struct.
      */
     struct KB21: Codable , Equatable {
@@ -82,7 +82,7 @@ struct EntityLogService: Codable, Equatable {
                       
          The struct models an array of JSON objects mapped to the `function_nodes` key in the EntityLog JSON data.
                       
-         - Note:
+         - Note
          The struct uses a custom semantic naming system to name properties associated with key value pairs and their position in the JSON. This system was developed as an aid to correctly map each key to its position in the struct.
          */
         struct KD31: Codable , Equatable {
@@ -176,7 +176,7 @@ enum NodeType: Int,Codable , Equatable {
               
      If an error argument is supplied the error is displayed on the following line in the console after the error report `event_description`.
               
-     - Note:
+     - Note
      If the error conforms to LocalizedError the error will be displayed as a NSLocalizedString written for the specific custom error case. Otherwise the error will be described as the type name of the `Error` supplied to the `values` parameter.
               
      Alternatively the error description will be described if `localizedDescription` is called on the error as it is supplied to the `values` parameter.
@@ -192,7 +192,7 @@ enum NodeType: Int,Codable , Equatable {
 
  Each case is assigned a single character value as an abbreviation of the case name. The values are the same used to specify the `FunctionType` of a message in the EntityLog JSON although the values are not directly bound.
 
- - Note:
+ - Note
  The use of this feature is discretional and does not bind the function referenced in the source code to the group specified by a particular case: any case can be used for any group of function, mapped to signify an alternative group or the single default case `CustomFunc` can be used for all functions.
       
  The grouping of functions named in the enum is not intended to be an exhaustive list or the representation of an ideal demarcation.

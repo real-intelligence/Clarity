@@ -31,7 +31,7 @@ A struct that is used as the top level container of a model used to decode Forma
           
 The struct matches the structure of the Formatting JSON exactly and is not currently used to service a struct that models the JSON differently. It embeds nested structs representing objects in the JSON data.
           
-- Note:
+- Note
 The struct uses a custom semantic naming system to name properties associated with key value pairs and their position in the JSON. This system was developed as an aid to correctly map each key to its position in the struct.
      */
 struct FormattingManagerService: Codable, Equatable {
@@ -52,7 +52,7 @@ struct FormattingManagerService: Codable, Equatable {
 
      Most of the parameters within the `outcome_symbols` JSON object relate to the outcome of various conditional statements. The parameters key string values are used to format the outcome symbol of node types when displaying messages in the console.
      
-     - Note:
+     - Note
      The struct uses a custom semantic naming system to name properties associated with key value pairs and their position in the JSON. This system was developed as an aid to correctly map each key to its position in the struct.
          */
     struct OutcomeSymbols: Codable, Equatable {
@@ -62,7 +62,7 @@ struct FormattingManagerService: Codable, Equatable {
         let kB: String
         /**
          A string mapped to the `if_true_condition_negative_outcome` key in the Formatting JSON data.
-         - Note:
+         - Note
          The use of the `if_true_condition_negative_outcome` key in place of the `if_true_condition` is discretional.
          
          The `if_true_condition` and `else_condition` keys can be used for all conditional statements and still convey general outcome.
@@ -72,7 +72,7 @@ struct FormattingManagerService: Codable, Equatable {
         let kC: String
         /**
          A string mapped to the `else_condition_positive_outcome` key in the Formatting JSON data.
-         - Note:
+         - Note
          The use of the `else_condition_positive_outcome` key in place of the `else_condition` is discretional.
          
          The `if_true_condition` and `else_condition` keys can be used for all conditional statements and still convey general outcome.
@@ -82,13 +82,13 @@ struct FormattingManagerService: Codable, Equatable {
         let kD: String
         /**
          A string mapped to the `case_true_positive_outcome` key in the Formatting JSON data. This key is for print statements placed in the case branch body of Switch statements that are designated as a positive or expected outcome.
-         - Note:
+         - Note
          The purpose of differential formatting according to the semantic outcome of conditional statements is as an additional visual aid that makes it easier to spot anomalies or unexpected routes in the control flow. It is also designed to help developers gain understanding of the functionality of unfamiliar code.
          */
         let kE: String
         /**
          A string mapped to the `case_true_negative_outcome` key in the Formatting JSON data. This key is for print statements placed in the case branch body of Switch statements that are designated as a negative or unexpected outcome.
-         - Note:
+         - Note
          The use of this feature is discretional – alternatively, the key `case_true_positive_outcome` could be used for all Switch cases.
          
          The purpose of differential formatting according to the semantic outcome of conditional statements is as an additional visual aid that makes it easier to spot anomalies or unexpected routes in the control flow. It is also designed to help developers gain understanding of the functionality of unfamiliar code.
@@ -146,7 +146,7 @@ struct FormattingManagerService: Codable, Equatable {
      
      The parameters key string values are used to format the control flow node type symbol of node types when displaying messages in the console.
      
-     - Note:
+     - Note
      The struct uses a custom semantic naming system to name properties associated with key value pairs and their position in the JSON. This system was developed as an aid to correctly map each key to its position in the struct.
          */
     struct ControlFlowNodeSymbols: Codable, Equatable {
@@ -192,7 +192,7 @@ struct FormattingManagerService: Codable, Equatable {
      
      The parameters key string values are used to format the function type symbol of node types when displaying `functionName` messages in the console.
      
-     - Note:
+     - Note
      The grouping of functions named in the enum is not intended to be an exhaustive list or the representation of an ideal demarcation.
           
      The purpose of differential formatting according to function group is as an additional visual aid that makes it easier to spot anomalies or unexpected routes in the control flow. It is also designed to help developers gain understanding of the functionality of unfamiliar code.
@@ -248,7 +248,7 @@ struct FormattingManagerService: Codable, Equatable {
      
      The parameters key integer values are used to add additional custom spacers at specific locations within each message printed to the console. A single integer represents one character of empty space in the console.
      
-     - Note:
+     - Note
      Use of the custom spacers is discretionary and not necessary for formatting print messages.
          */
     struct Spacers: Codable, Equatable {
@@ -275,7 +275,7 @@ struct FormattingManagerService: Codable, Equatable {
          
          Spacer4 is positioned between the node symbol group and the outcome symbol in the message line. Its value is reflected by all other lines printed simultaneously with the message (such as the effect description and values).
          
-         - Note:
+         - Note
          Spacer4 is not used by messages printed when the key `displayNodeSequenceWithoutDescriptions` value is true in the Settings JSON.
          */
         let kD: Int

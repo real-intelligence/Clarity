@@ -96,6 +96,10 @@
 		F47A802D2718787C00502804 /* PrintOverloadVisualConsoleCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A802C2718787C00502804 /* PrintOverloadVisualConsoleCheck.swift */; };
 		F47A802F271878E600502804 /* PrintConstantsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A802E271878E600502804 /* PrintConstantsTests.swift */; };
 		F47A80312718793F00502804 /* TestingUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A80302718793F00502804 /* TestingUtilities.swift */; };
+		F480697C27D63DDA0057B64C /* Clarity.docc in Sources */ = {isa = PBXBuildFile; fileRef = F480697B27D63DDA0057B64C /* Clarity.docc */; };
+		F480697D27D63DDA0057B64C /* Clarity.docc in Sources */ = {isa = PBXBuildFile; fileRef = F480697B27D63DDA0057B64C /* Clarity.docc */; };
+		F480697E27D63DDA0057B64C /* Clarity.docc in Sources */ = {isa = PBXBuildFile; fileRef = F480697B27D63DDA0057B64C /* Clarity.docc */; };
+		F480697F27D63DDA0057B64C /* Clarity.docc in Sources */ = {isa = PBXBuildFile; fileRef = F480697B27D63DDA0057B64C /* Clarity.docc */; };
 		F497FE3727284A19002461F9 /* TemplateJSON in Resources */ = {isa = PBXBuildFile; fileRef = F47A800D271870EE00502804 /* TemplateJSON */; };
 		F497FE3827284A30002461F9 /* ClarityJSON in Resources */ = {isa = PBXBuildFile; fileRef = F47A800827186F2000502804 /* ClarityJSON */; };
 /* End PBXBuildFile section */
@@ -159,6 +163,7 @@
 		F47A802C2718787C00502804 /* PrintOverloadVisualConsoleCheck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintOverloadVisualConsoleCheck.swift; sourceTree = "<group>"; };
 		F47A802E271878E600502804 /* PrintConstantsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintConstantsTests.swift; sourceTree = "<group>"; };
 		F47A80302718793F00502804 /* TestingUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingUtilities.swift; sourceTree = "<group>"; };
+		F480697B27D63DDA0057B64C /* Clarity.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Clarity.docc; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -271,6 +276,7 @@
 				F47A7FCE27186B7000502804 /* Message Collator */,
 				F47A7FE327186CC500502804 /* Print Logic */,
 				F47A7FDE27186C8000502804 /* PrintOverloads.swift */,
+				F480697B27D63DDA0057B64C /* Clarity.docc */,
 			);
 			path = Clarity;
 			sourceTree = "<group>";
@@ -643,6 +649,7 @@
 				F466A0C327284572008DFC88 /* EntityLog.swift in Sources */,
 				F466A0C827284586008DFC88 /* ClarityPrintHelper.swift in Sources */,
 				F466A0C52728457B008DFC88 /* UsedPrintNumberIdentifiable.swift in Sources */,
+				F480697F27D63DDA0057B64C /* Clarity.docc in Sources */,
 				F466A0C727284583008DFC88 /* ClarityPrintLogic.swift in Sources */,
 				F466A0C22728456E008DFC88 /* EntityLogService.swift in Sources */,
 				F466A0CA2728458E008DFC88 /* ClarityPrintEnums.swift in Sources */,
@@ -666,6 +673,7 @@
 				F47A7FE527186CF300502804 /* ClarityPrintLogic.swift in Sources */,
 				F47A7FD027186BA400502804 /* MessageCollator.swift in Sources */,
 				F47A7FD527186BD700502804 /* UsedPrintNumberIdentifiable.swift in Sources */,
+				F480697C27D63DDA0057B64C /* Clarity.docc in Sources */,
 				F47A7FC02718684800502804 /* FormattingManagerService.swift in Sources */,
 				F47A7FF927186DA300502804 /* ClarityPrintEnums.swift in Sources */,
 				F47A7FDF27186C8000502804 /* PrintOverloads.swift in Sources */,
@@ -710,6 +718,7 @@
 				F47A7FE627186CF300502804 /* ClarityPrintLogic.swift in Sources */,
 				F47A7FD127186BA400502804 /* MessageCollator.swift in Sources */,
 				F47A7FD627186BD700502804 /* UsedPrintNumberIdentifiable.swift in Sources */,
+				F480697D27D63DDA0057B64C /* Clarity.docc in Sources */,
 				F47A7FC12718684800502804 /* FormattingManagerService.swift in Sources */,
 				F47A7FFA27186DA300502804 /* ClarityPrintEnums.swift in Sources */,
 				F47A7FE027186C8000502804 /* PrintOverloads.swift in Sources */,
@@ -733,6 +742,7 @@
 				F47A7FE727186CF300502804 /* ClarityPrintLogic.swift in Sources */,
 				F47A7FD227186BA400502804 /* MessageCollator.swift in Sources */,
 				F47A7FD727186BD700502804 /* UsedPrintNumberIdentifiable.swift in Sources */,
+				F480697E27D63DDA0057B64C /* Clarity.docc in Sources */,
 				F47A7FC22718684800502804 /* FormattingManagerService.swift in Sources */,
 				F47A7FFB27186DA300502804 /* ClarityPrintEnums.swift in Sources */,
 				F47A7FE127186C8000502804 /* PrintOverloads.swift in Sources */,

@@ -1,0 +1,208 @@
+@Tutorial(time: 6) {
+    @Intro(title: "Print to the console") {
+        
+        Add all information relating to print statements in the corresponding EntityLog JSON file. This will be referenced from JSON by a unique print number.
+        
+        @Image(source: 04-reference-printstatement-intro.png, alt: "A small Xcode Swift file document icon with a reference pointer pointing to a small Xcode JSON file document icon placed directly above. An arrow points from the small Xcode Swift file document icon to a screenshot placed to its right that shows the Xcode console displaying Clarity print statement output.")
+    }
+    
+    @Section(title: "Add a Clarity print statement to the source code") {
+        @ContentAndMedia {
+            So far we have created a single EntityLog file to reference print statements in `MyProjectApp`.swift.
+            
+            We will now add a print statement to the `MyProjectApp` type.
+            
+            @Image(source: 04-addprintstatement-section1.png, alt: "A small Xcode Swift file document icon – a white document icon containing an orange Swift logo with the word SWIFT emblazoned underneath – the title MyProjectApp.swift is written underneath the document icon.")
+        }
+        
+        @Steps {
+            @Step {
+                Open the file `MyProjectApp`.swift  
+                @Code(name: "MyProjectApp.swift", file: 04-reference-printstatement-01-01.swift)
+                 
+            }
+            @Step {
+                After the Clarity activation statement in the custom initialiser add a Clarity print statement that will be referenced by the print number value 2.
+                
+                Simply supply the integer value `2` as argument to the print statement. 
+                
+                @Code(name: "MyProjectApp.swift", file: 04-reference-printstatement-01-02.swift)
+                
+                 
+            }
+            
+        }
+    }
+    @Section(title: "Add corresponding data to the associated JSON") {
+        @ContentAndMedia {
+            
+            Functions in the source code are represented by entity function JSON objects. These entity function objects are identified by a function number and contain an array of function node JSON objects: one for each Clarity print statement within the body of the associated function. 
+            
+            Switch back to the `MyProjectApp` JSON file to add another print statement function node.
+            
+            @Image(source: 04-addJSONdata-section2.png, alt: "A small Xcode JSON file document icon – a white document icon with an Xcode white hammer logo on a light blue background with the word JSON emblazoned underneath – the title MyProjectApp.json is written underneath the document icon.")
+        }
+        
+        @Steps {
+            @Step {
+                Open `MyProjectApp.json`
+                @Code(name: "MyProjectApp.json", file: 04-reference-printstatement-02-01.json)
+                 
+            }
+            
+            @Step {
+                Copy the single function node JSON object currently in the `function_nodes` array and paste it as the second item of the array.
+                
+                Ensure that you add a comma between array items, JSON objects and parameters in JSON code.
+                @Code(name: "MyProjectApp.json", file: 04-reference-printstatement-02-02.json)
+                
+            }
+            
+            @Step {
+                Assign the integer value 2 to the key `print_number`.
+                @Code(name: "MyProjectApp.json", file: 04-reference-printstatement-02-03.json)
+                
+            }
+            @Step {
+                Assign the integer value 1 to the key `node_type`.
+                @Code(name: "MyProjectApp.json", file: 04-reference-printstatement-02-04.json)
+                 
+            }
+            
+            @Step {
+                Assign the string value 'Something happened here' to the key `event_description`.
+                @Code(name: "MyProjectApp.json", file: 04-reference-printstatement-02-05.json)
+                 
+            }
+            @Step {
+                Assign the string value 'This is what should happen next' to the key `effect_description`.
+                @Code(name: "MyProjectApp.json", file: 04-reference-printstatement-02-06.json)
+                
+            }
+            
+            @Step {
+                Run `MyProjectApp`.
+                
+                Your message should appear in the console formatted for an 'If true condition' – node type 1.
+                @Image(source: 04-reference-printstatement-02-07.png, alt: "A screenshot shows the Xcode console displaying Clarity print statement output of an 'If true condition' for print number 2.")
+                 
+            }
+        }
+    }
+    @Section(title: "Add a function name print statement to the source code") {
+        @ContentAndMedia {
+            So far we have added a simple print statement that references the description of an event in the control flow.
+            
+            We will now add a print statement that will log the name of the function for print number 1. We have already added the associated JSON function node for print number 1 to `MyProjectApp.json` in the previous topic <doc:Create-EntityLog-JSON-files>. This function node had its  node type set to 0 – the node type for printing a function name. 
+            
+            It is a good convention to reserve the first item in the `function_nodes` array for printing the name of the corresponding function. 
+            
+            @Image(source: 04-addprintstatement-section1.png, alt: "A small Xcode Swift file document icon – a white document icon containing an orange Swift logo with the word SWIFT emblazoned underneath – the title MyProjectApp.swift is written underneath the document icon.")
+        }
+        
+        @Steps {
+            @Step {
+                Open the file `MyProjectApp`.swift  
+                @Code(name: "MyProjectApp.swift", file: 04-reference-printstatement-03-01.swift)
+                 
+            }
+            @Step {
+                Add a Clarity function name print statement for print number 1 before the print statement we added in the previous section.
+                
+                Supply the function name macro `#function` as argument to the optional `functionName` parameter that follows the unlabelled `printNumber` parameter. 
+                
+                @Code(name: "MyProjectApp.swift", file: 04-reference-printstatement-03-02.swift)
+                
+                 
+            }
+            @Step {
+                Run `MyProjectApp`.
+                
+                The initialiser function name will appear in the console formatted as a 'custom' 'function name' – node type 0 before the 'If true condition' output for print statement 2.
+                @Image(source: 04-reference-printstatement-03-03.png, alt: "A screenshot shows the Xcode console displaying Clarity print statement output of a 'function name' for print number 1, this is followed by an 'If true condition' for print number 2. The 'function name' output contains the default symbol for a custom function – a red table tennis bat.")
+                 
+            }
+            @Step {
+                Open the corresponding "MyProjectApp.json file.
+                @Code(name: "MyProjectApp.json", file: 04-reference-printstatement-03-04.json)
+                 
+            }
+            @Step {
+                Assign the string character value 'i'' to the key `function_type`.
+                @Code(name: "MyProjectApp.json", file: 04-reference-printstatement-03-05.json)
+                
+            }
+            @Step {
+                Run `MyProjectApp`.
+                
+                The initialiser function name will now appear in the console formatted as an 'initialiser'. Note that although initialiser names always begin with 'init' it can be helpful to see a specified symbol for initialisers to easily distinguish them from other functions in the console.
+                @Image(source: 04-reference-printstatement-03-06.png, alt: "A screenshot shows the Xcode console displaying Clarity print statement output of a 'function name' for print number 1, this is followed by an 'If true condition' for print number 2. The 'function name' output now contains the default symbol for an initialiser – a green recycle icon.")
+                 
+            }
+            
+        }
+    }
+    @Section(title: "Log values from a print statement") {
+        @ContentAndMedia {
+            Clarity print statements can also be used to log values to the console.
+            
+            We will now add a print statement that will log values for print number 3. 
+            
+            @Image(source: 04-addprintstatement-section1.png, alt: "A small Xcode Swift file document icon – a white document icon containing an orange Swift logo with the word SWIFT emblazoned underneath – the title MyProjectApp.swift is written underneath the document icon.")
+        }
+        
+        @Steps {
+            @Step {
+                Open the file `MyProjectApp`.swift  
+                @Code(name: "MyProjectApp.swift", file: 04-reference-printstatement-04-01.swift)
+                 
+            }
+            @Step {
+                Add a Clarity value reporter print statement for print number 3.
+                
+                Supply an array of Ints as argument to the optional `values` parameter that follows the unlabelled `printNumber` parameter.  
+                
+                @Code(name: "MyProjectApp.swift", file: 04-reference-printstatement-04-02.swift)
+                
+                 
+            }
+            @Step {
+                Open the corresponding "MyProjectApp.json file.
+                @Code(name: "MyProjectApp.json", file: 04-reference-printstatement-04-03.json)
+                 
+            }
+            @Step {
+                Copy the first function node JSON object in the `function_nodes` array and paste it as the last item of the array.
+                @Code(name: "MyProjectApp.json", file: 04-reference-printstatement-04-04.json)
+                
+            }
+            @Step {
+                Assign the integer value 3 to the key `print_number`.
+                @Code(name: "MyProjectApp.json", file: 04-reference-printstatement-04-05.json)
+                
+            }
+            @Step {
+                Assign the integer value 11 to the key `node_type`.
+                @Code(name: "MyProjectApp.json", file: 04-reference-printstatement-04-06.json)
+                 
+            }
+            @Step {
+                Assign the string value 'My array of values' to the key `event_description`. Alternatively, assign the variable name if you wish to create one to store the array before assigning it to the `values` parameter. 
+                
+                Note that the effect description key remains assigned to an empty string.
+                @Code(name: "MyProjectApp.json", file: 04-reference-printstatement-04-07.json)
+                
+            }
+            
+            @Step {
+                Run `MyProjectApp`.
+                
+                The values in the array will be listed immediately after the event message line that contains the node information.
+            
+             
+             @Image(source: 04-reference-printstatement-04-08.png, alt: "A screenshot shows the Xcode console displaying Clarity print statement output of a 'function name' for print number 1, followed by an 'If true condition' for print number 2, followed by a value reporter for print number 3 – with the array values: 1,2 and 3 listed on subsequent lines.")
+            }
+            
+        }
+    }
+}

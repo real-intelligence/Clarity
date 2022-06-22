@@ -35,7 +35,7 @@ import Foundation
   
  The general type of a value is all that is required to handle printing elements appropriately to the console (the purpose of the print statement values argument).
  
- - Note:
+ - Note
     Each `PrintValueType` case is calculated from a message `NodeType` and not stored on the message itself.
  */
 enum PrintValueType {
@@ -62,7 +62,7 @@ enum PrintValueType {
   
  `PrintType` contains cases for all possible combinations and none.
  
- - Note:
+ - Note
     The `PrintType` case is not stored on the message itself.
  */
 enum PrintType {

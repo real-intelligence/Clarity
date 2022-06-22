@@ -1,0 +1,127 @@
+@Tutorial(time: 3) {
+    @Intro(title: "Install as a Swift Package") {
+        This tutorial guides you through installing Clarity as a Swift Package. You’ll start by creating a new iOS project.
+        
+        
+        
+        @Image(source: install-as-swiftpackage-intro.png, alt: "The Swift Package logo – a brown cardboard packing box with the Swift logo on one side.")
+    }
+    
+    @Section(title: "Create MyProject") {
+        @ContentAndMedia {
+            Create a new iOS project called _MyProject_. 
+            
+            @Image(source: 01-installing-section1.png, alt: "An arrow pointing from the Xcode application icon to an Xcode app project icon.")
+        }
+        
+        @Steps {
+            @Step {
+                Create a new project using the iOS App template.
+                
+                @Image(source: 01-installing-swiftpackage-section1-1.png, alt: "A screenshot of the template selector in Xcode. In the top row, iOS is selected as the platform. In the Application section, App is selected as the template; there's a highlight placed over the Next button at the lower-right of the sheet.")
+            }
+            
+            @Step {
+                Enter "MyProject" as the Product Name. Select "SwiftUI" from the Interface pop-up menu, then click Next.
+                
+                @Image(source: 01-installing-swiftpackage-section1-2.png, alt: "A screenshot of the project sheet, which shows the Product Name for the app being built as MyProject. The Interface is set to SwiftUI, and the Language is set to Swift.")
+            }
+            @Step {
+                 Choose a location to save the MyProject project on your Mac, then click Create.
+                
+                @Image(source: 01-installing-swiftpackage-section1-3.png, alt: "A screenshot of the save sheet, which shows the Finder is set to the Desktop.")
+            }
+            
+        }
+    }
+    @Section(title: "Add Clarity to the project.") {
+        @ContentAndMedia {
+            Add _Clarity_ as a dependency to the project. 
+            
+            @Image(source: 01-installing-section2.png, alt: "An arrow pointing from the Clarity framework icon to the MyProject app project icon.")
+        }
+        
+        @Steps {
+            @Step {
+                Select _MyProject_ as the PROJECT in the projects and targets list.
+                
+                @Image(source: 01-installing-swiftpackage-section2-1.png, alt: "A screenshot of the project open in Xcode with the project icon highlighted as the selected PROJECT in the projects and targets list.")
+            }
+            
+            @Step {
+                Select the _Package Dependancies_ tab. 
+                @Image(source: 01-installing-swiftpackage-section2-2.png, alt: "A screenshot of the Package Dependancies tab selected for the selected PROJECT in the projects and targets list.")
+                
+            }
+            @Step {
+                Click the + button for _Add Package Dependancy_
+                
+                @Image(source: 01-installing-swiftpackage-section2-3.png, alt: "A screenshot of the Add Package sheet with a range of suggested Apple Swift Packages.")
+            }
+            @Step {
+                Type the following URL into the browser:
+                
+                `https://github.com/real-intelligence/Clarity.git` 
+                
+                @Image(source: 01-installing-swiftpackage-section2-4.png, alt:"A screenshot of the Add Package sheet with https://github.com/real-intelligence/Clarity.git typed into the URL browser")
+            }
+            @Step {
+                From the _Dependency Rule_ dropdown select _Up to Next Major Version_ and then click _Add Package_
+                
+                @Image(source: 01-installing-swiftpackage-section2-5.png, alt:"A screenshot of the Dependency Rule dropdown set to Up to Next Major Version and the Add to Project dropdown set to MyProject.")
+            }
+            @Step {
+                In the _Choose Package Products for Clarity_ alert panel ensure that _MyProject_ is selected as a target and then click _Add Package_
+                
+                @Image(source: 01-installing-swiftpackage-section2-6.png, alt:"A screenshot of the Choose Package Products for Clarity sheet with MyProject selected for Add to Target")
+            }
+            @Step {
+                Clarity will appear in the _Package Dependancies_ section of the Project Navigator. 
+                
+                @Image(source: 01-installing-swiftpackage-section2-7.png, alt:"A screenshot of the Clarity package under Package Dependancies in the Project Navigator.")
+            }
+            
+            
+            
+        }
+    }
+    
+    @Section(title: "Add Clarity to a watchOS project.") {
+        @ContentAndMedia {
+            Add _Clarity_ as a dependency to a watchOS project. 
+            
+            The watchOS platform requires Clarity to be added to the WatchKit Extension target.
+            
+            @Image(source: 01-installing-section3.png, alt: "An arrow pointing from the Clarity framework icon to the MyProject watchOS app project icon.")
+        }
+        
+        @Steps {
+
+            @Step {
+                Select _MyProject WatchKit Extension_ target in TARGETS in the projects and targets list.
+                
+                @Image(source:  01-installing-swiftpackage-section3-1.png, alt:"A screenshot of the project open in Xcode with the project WatchKit Extension icon highlighted as the selected TARGET in the projects and targets list.")
+            }
+            
+            @Step {
+                In the _Frameworks, Libraries, and Embedded Content_ section click the + button and select _Clarity_.
+                
+                Note that this section will be called _Frameworks and Embedded Content_ if your project is itself a framework.
+                
+                @Image(source:  01-installing-swiftpackage-section3-2.png, alt:"A screenshot shows the 'Choose frameworks and libraries to add' sheet with the ClarityPackage library icon highlighted.")
+            }
+            @Step {
+                Clarity will now be listed in _Frameworks, Libraries, and Embedded Content_.
+                
+                @Image(source:  01-installing-swiftpackage-section3-3.png, alt:"A screenshot shows Clarity listed in the 'Frameworks, Libraries, and Embedded Content' section of the target general tab.")
+            }
+            @Step {
+                Build the project.
+                
+                @Image(source:  01-installing-swiftpackage-section3-3.png, alt:"A screenshot shows Clarity listed in the 'Frameworks, Libraries, and Embedded Content' section of the target general tab.")
+            }
+            
+        }
+    }
+    
+}

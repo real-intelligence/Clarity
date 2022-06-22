@@ -1,0 +1,128 @@
+@Tutorial(time: 3) {
+    @Intro(title: "Install as an XCFramework") {
+        Each Clarity GitHub Release will include a framework binary that can be added to all Apple platforms.
+        
+        This tutorial guides you through installing Clarity as an XCFramework. You’ll start by creating a new iOS project.
+
+        @Image(source: install-as-xcframework-intro.png, alt: "The XCFramework logo – a blue work box with a handle.")
+    }
+    
+    @Section(title: "Create MyProject") {
+        @ContentAndMedia {
+            Create a new iOS project called _MyProject_ 
+            
+            @Image(source: 01-installing-section1.png, alt: "An arrow pointing from the Xcode application icon to an Xcode app project icon.")
+        }
+        
+        @Steps {
+            @Step {
+                Create a new project using the iOS App template.
+                
+                @Image(source: 02-installing-xcframework-section1-1.png, alt: "A screenshot of the template selector in Xcode. In the top row, iOS is selected as the platform. In the Application section, App is selected as the template; there's a highlight placed over the Next button at the lower-right of the sheet.")
+            }
+            
+            @Step {
+                Enter "MyProject" as the Product Name. Select "SwiftUI" from the Interface pop-up menu, then click Next.
+                
+                @Image(source: 02-installing-xcframework-section1-2.png, alt: "A screenshot of the project sheet, which shows the Product Name for the app being built as MyProject. The Interface is set to SwiftUI, and the Language is set to Swift.")
+            }
+            @Step {
+                 Choose a location to save the MyProject project on your Mac, then click Create.
+                
+                @Image(source: 02-installing-xcframework-section1-3.png, alt: "A screenshot of the save sheet, which shows the Finder is set to the Desktop.")
+            }
+            
+        }
+    }
+    @Section(title: "Add Clarity to the project.") {
+        @ContentAndMedia {
+            Add _Clarity_ as a dependency to the project. 
+            
+            @Image(source: 01-installing-section2.png, alt: "An arrow pointing from the Clarity framework icon to the MyProject app project icon.")
+        }
+        
+        @Steps {
+            @Step {
+                Navigate to the Clarity GitHub Releases page at the following URL:
+                
+                `https://github.com/real-intelligence/Clarity/releases`
+                
+                @Image(source: 02-installing-xcframework-section2-1.png, alt: "A screenshot of a browser window showing the Clarity GitHub Releases page at the URL github.com/real-intelligence/Clarity/releases.")
+            }
+            
+            @Step {
+                In the _Assets_ section click to download  _Clarity.xcframework.zip_ 
+                
+                @Image(source: 02-installing-xcframework-section2-2.png, alt: "A screenshot showing the Clarity.xcframework.zip file being selected in the Assets section of the Clarity GitHub Releases page.")
+            }
+            @Step {
+                Double-click on the downloaded zip file to expand it and then move the expanded _Clarity.xcframework_ to a convenient location.
+                
+                @Image(source: 02-installing-xcframework-section2-3.png, alt:"A screenshot showing a Finder window of the Downloads folder that contains the downloaded Clarity.xcframework.zip file and an expanded folder of the Clarity.xcframework.")
+            }
+            @Step {
+                Select _MyProject_ target in TARGETS in the projects and targets list.
+                
+                @Image(source: 02-installing-xcframework-section2-4.png, alt:"A screenshot shows the project open in Xcode with the project MyProject  icon highlighted as the selected TARGET in the projects and targets list.")
+            }
+            @Step {
+                Select the General tab.
+                
+                @Image(source: 02-installing-xcframework-section2-4.png, alt:"A screenshot shows the project open in Xcode with the project MyProject  icon highlighted as the selected TARGET in the projects and targets list with the General tab selected.")
+            }
+            @Step {
+                Drag and drop _Clarity.xcframework_ into the _Frameworks, Libraries, and Embedded Content_ section.
+                
+                Note that this section will be called _Frameworks and Embedded Content_ if your project is itself a framework.
+                
+                @Image(source: 02-installing-xcframework-section2-5.png, alt:"A screenshot shows the Clarity xcframework listed in the 'Frameworks, Libraries, and Embedded Content' section of the target general tab.")
+            }
+            @Step {
+                Build the project.
+                
+                @Image(source: 02-installing-xcframework-section2-5.png, alt:"A screenshot shows the Clarity xcframework listed in the 'Frameworks, Libraries, and Embedded Content' section of the target general tab.")
+            }
+             
+        }
+    }
+    @Section(title: "Add Clarity to a watchOS project.") {
+        @ContentAndMedia {
+            Add _Clarity_ as a dependency to a watchOS project. 
+            
+            The watchOS platform requires Clarity to be added to the WatchKit Extension target.
+            
+            @Image(source: 01-installing-section3.png, alt: "An arrow pointing from the Clarity framework icon to the MyProject watchOS app project icon.")
+        }
+        
+        @Steps {
+            @Step {
+                Follow Steps 1-4 of the previous section 'Add Clarity to the project'.
+            }
+            @Step {
+                Select _MyProject WatchKit Extension_ target in TARGETS in the projects and targets list.
+                
+                @Image(source: 02-installing-xcframework-section3-2.png, alt:"A screenshot of the project open in Xcode with the project WatchKit Extension icon highlighted as the selected TARGET in the projects and targets list.")
+            }
+            
+            @Step {
+                In the _Frameworks, Libraries, and Embedded Content_ section click the + button and select _Clarity_.
+                
+                Note that this section will be called _Frameworks and Embedded Content_ if your project is itself a framework.
+                
+                @Image(source: 02-installing-xcframework-section3-3.png, alt:"A screenshot shows the 'Choose frameworks and libraries to add' sheet with the ClarityPackage library icon highlighted.")
+            }
+            @Step {
+                Clarity will now be listed in _Frameworks, Libraries, and Embedded Content_.
+                
+                @Image(source: 02-installing-xcframework-section3-4.png, alt:"A screenshot shows Clarity listed in the 'Frameworks, Libraries, and Embedded Content' section of the target general tab.")
+            }
+            @Step {
+                Build the project.
+                
+                @Image(source: 02-installing-xcframework-section3-4.png, alt:"A screenshot shows Clarity listed in the 'Frameworks, Libraries, and Embedded Content' section of the target general tab.")
+            }
+            
+        }
+    }
+    
+}

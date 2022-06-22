@@ -1,0 +1,26 @@
+{
+    "entity_code":"MYAPP",
+    "entity_functions" : [
+        {
+            "function_number":1,
+            "function_number_always_custom":false,
+            "function_type":"f",
+            "function_nodes":[
+                {
+                    "print_number":1,
+                    "node_type":0,
+                    "event_description":"",
+                    "effect_description":""
+                },
+                {
+                    "print_number":2,
+                    "node_type":1,
+                    "event_description":"Something happened here",
+                    "effect_description":"This is what should happen next"
+                }
+            ]
+        }
+    ]
+}
+
+

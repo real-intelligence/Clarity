@@ -1,0 +1,142 @@
+@Tutorial(time: 3) {
+    @Intro(title: "Install as an embedded framework") {
+        Projects that install libraries as embedded frameworks must be initialised as a git repository.
+        
+        This tutorial guides you through installing Clarity as an embedded framework. You’ll start by creating a new iOS project.
+
+        @Image(source: install-as-embedded-intro.png, alt: "The Framework logo – a gold work box with a handle")
+    }
+    @Section(title: "Create MyProject") {
+        @ContentAndMedia {
+            Create a new iOS project called _MyProject_. 
+            
+            @Image(source: 01-installing-section1.png, alt: "An arrow pointing from the Xcode application icon to an Xcode app project icon.")
+        }
+        
+        @Steps {
+            @Step {
+                Create a new project using the iOS App template.
+                
+                @Image(source: 03-installing-embedded-section1-1.png, alt: "A screenshot of the template selector in Xcode. In the top row, iOS is selected as the platform. In the Application section, App is selected as the template; there's a highlight placed over the Next button at the lower-right of the sheet.")
+            }
+            
+            @Step {
+                Enter "MyProject" as the Product Name. Select "SwiftUI" from the Interface pop-up menu, then click Next.
+                
+                @Image(source: 03-installing-embedded-section1-2.png, alt: "A screenshot of the project sheet, which shows the Product Name for the app being built as MyProject. The Interface is set to SwiftUI, and the Language is set to Swift.")
+            }
+            @Step {
+                 Choose a location to save the MyProject project on your Mac, then click Create.
+                 
+                 Ensure that _Source Control: Create Git repository on my Mac_ is checked on the Interface pop-up menu then click Create. 
+                
+                @Image(source: 03-installing-embedded-section1-3.png, alt: "A screenshot of the save sheet, which shows the Finder is set to the Desktop.")
+            }
+            
+        }
+    }
+    
+    @Section(title: "Add Clarity to the project.") {
+        @ContentAndMedia {
+            Add _Clarity_ as a dependency to the project. 
+            
+            @Image(source: 01-installing-section2.png, alt: "An arrow pointing from the Clarity framework icon to the MyProject app project icon.")
+        }
+        
+        @Steps {
+            @Step {
+                Right click on the folder that encloses the _MyProject_ project and select _New Terminal at Folder_ from the Folder Actions section of the Finder popover menu.
+                
+                @Image(source: 03-installing-embedded-section2-1.png, alt: "A screenshot showing the Finder popover menu over the selected MyProject project folder. The option 'New Terminal at Folder' is being selected.")
+            }
+            
+            @Step {
+                In Terminal add Clarity as a git submodule by running the following command:
+                
+                `git submodule add https://github.com/real-intelligence/Clarity.git`
+                
+                @Image(source: 03-installing-embedded-section2-2.png, alt: "A screenshot showing a Terminal window with the command 'git submodule add https://github.com/real-intelligence/Clarity.git' selected.")
+            }
+            
+            @Step {
+                This will create a folder named Clarity at the root level of your project.
+                
+                @Image(source: 03-installing-embedded-section2-3.png, alt: "A screenshot showing a Finder window in column mode with the Clarity workspace folder selected within the MyProject Xcode project folder.")
+            }
+            
+            @Step {
+                Drag the Clarity.xcodeproj file from Finder into the Project Navigator of _MyProject_ as a nested folder reference. 
+                
+                @Image(source: 03-installing-embedded-section2-4.png, alt:"A screenshot showing the Clarity workspace folder being dragged from the Finder to the Project Navigator of MyProject project in Xcode as a nested folder reference.")
+            }
+            @Step {
+                Select _MyProject_ target in TARGETS in the projects and targets list.
+                
+                @Image(source: 03-installing-embedded-section2-5.png, alt:"A screenshot shows the project open in Xcode with the project MyProject icon highlighted as the selected TARGET in the projects and targets list.")
+            }
+            @Step {
+                Select the General tab.
+                
+                @Image(source: 03-installing-embedded-section2-5.png, alt:"A screenshot shows the project open in Xcode with the project MyProject  icon highlighted as the selected TARGET in the projects and targets list with the General tab selected.")
+            }
+            @Step {
+                In the _Frameworks, Libraries, and Embedded Content_ section click the + button and select _Clarity_.
+                
+                Note that this section will be called _Frameworks and Embedded Content_ if your project is itself a framework.
+                
+                @Image(source: 03-installing-embedded-section2-7.png, alt:"A screenshot shows the 'Choose frameworks and libraries to add' sheet with the ClarityPackage library icon highlighted.")
+            }
+            @Step {
+                Clarity will now be listed in _Frameworks, Libraries, and Embedded Content_.
+                
+                @Image(source: 03-installing-embedded-section2-8.png, alt:"A screenshot shows the Clarity framework library icon listed in the 'Frameworks, Libraries, and Embedded Content' section of the target general tab.")
+            }
+            @Step {
+                Build the project.
+                
+                @Image(source: 03-installing-embedded-section2-8.png, alt:"A screenshot shows the Clarity framework library icon listed in the 'Frameworks, Libraries, and Embedded Content' section of the target general tab.")
+            }
+            
+        }
+    }
+    @Section(title: "Add Clarity to a watchOS project.") {
+        @ContentAndMedia {
+            Add _Clarity_ as a dependency to a watchOS project. 
+            
+            The watchOS platform requires Clarity to be added to the WatchKit Extension target.
+            
+            @Image(source: 01-installing-section3.png, alt: "An arrow pointing from the Clarity framework icon to the MyProject watchOS app project icon.")
+        }
+        
+        @Steps {
+            @Step {
+                Follow Steps 1-4 of the previous section 'Add Clarity to the project'.
+            }
+            @Step {
+                Select _MyProject WatchKit Extension_ target in TARGETS in the projects and targets list.
+                
+                @Image(source: 03-installing-embedded-section3-2.png, alt:"A screenshot of the project open in Xcode with the project WatchKit Extension icon highlighted as the selected TARGET in the projects and targets list.")
+            }
+            
+            @Step {
+                In the _Frameworks, Libraries, and Embedded Content_ section click the + button and select _Clarity_.
+                
+                Note that this section will be called _Frameworks and Embedded Content_ if your project is itself a framework.
+                
+                @Image(source: 03-installing-embedded-section3-3.png, alt:"A screenshot shows the 'Choose frameworks and libraries to add' sheet with the ClarityPackage library icon highlighted.")
+            }
+            @Step {
+                Clarity will now be listed in _Frameworks, Libraries, and Embedded Content_.
+                
+                @Image(source: 03-installing-embedded-section3-4.png, alt:"A screenshot shows Clarity listed in the 'Frameworks, Libraries, and Embedded Content' section of the target general tab.")
+            }
+            @Step {
+                Build the project.
+                
+                @Image(source: 03-installing-embedded-section3-4.png, alt:"A screenshot shows Clarity listed in the 'Frameworks, Libraries, and Embedded Content' section of the target general tab.")
+            }
+            
+        }
+    }
+    
+}

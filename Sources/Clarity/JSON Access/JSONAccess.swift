@@ -51,10 +51,10 @@ extension JSONAccess{
      
      The method is designed to be used where a project resource directory contains a JSON file identifiable by name that is known to be valid for a decoder service type belonging to the target. The file can be decoded even where the directory contains multiple JSON files that require different service types.
      
-     - Note:
+     - Note
      The service type `T` used to decode the JSON file is inferred using the `self` keyword.  `self` refers to the variable that the return value of the method is assigned.
     
-     - Important:
+     - Important
      The method will only attempt to decode a JSON file that has the same name as passed to the parameter `resourceName`.
      
      - Parameters:
@@ -88,7 +88,7 @@ extension JSONAccess{
      
      Valid JSON files can be decoded if other files contained in the directory that require a different service type are known by name. The names of the files that require a different service type must be added to the optional `excludedFiles` array parameter argument. The method will then not attempt to decode any JSON file named in the array.
      
-     - Note:
+     - Note
      It is not necessary for the files of the service type to be decoded to be known by name.
      
      The service type `T` used to decode the JSON files is inferred using the `self` keyword.  `self` refers to the variable that the return value of the method is assigned.

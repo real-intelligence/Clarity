@@ -1,0 +1,47 @@
+@Tutorial(time: 1) {
+    @Intro(title: "Activate for App") {
+        Add the Clarity activation initialiser at the entry point of an App lifecycle client application.
+        
+        @Image(source: activate-as-app-intro.png, alt: "An activation icon – an orange outline of a circle bisected at its top by a vertical orange bar that extends from the circumference to below the halfway point of its radius.")
+    }
+    
+    
+    
+    @Section(title: "Add activation initialiser") {
+        @ContentAndMedia {
+            Create a custom initialiser for the type that acts as the entry point of the application (unless a custom initialiser already exists). The application entry point is the type that conforms to the `App` protocol and is annotated with the `@main` attribute.
+            
+            Then call the Clarity activation initialiser from the application entry point custom initialiser.
+            
+            @Image(source: 02-activating-section1.png, alt: "An initialiser icon – a green cog surrounded at its top and bottom by two green semicircular direction arrows pointing in a clockwise direction.")
+            
+        }
+        
+        @Steps {
+            @Step {
+                Open the file MyProjectApp.swift
+                @Code(name: "MyProjectApp.swift", file: 02-activate-app-01-01.swift)
+                 
+            }
+            @Step {
+                Add a Clarity import statement.
+                @Code(name: "MyProjectApp.swift", file: 02-activate-app-01-02.swift)
+                 
+            }
+            
+            @Step {
+                Create a custom initialiser for the `MyProjectApp` type.
+                @Code(name: "MyProjectApp.swift", file: 02-activate-app-01-03.swift)
+                 
+            }
+            
+            @Step {
+                Add the Clarity activation initialiser to the custom initialiser.
+                
+                Supply the _MyProject_ main bundle to the `withBundle` parameter and set `inPrintMode` to `true`
+                @Code(name: "MyProjectApp.swift", file: 02-activate-app-01-04.swift)
+                 
+            }
+        }
+    }
+    

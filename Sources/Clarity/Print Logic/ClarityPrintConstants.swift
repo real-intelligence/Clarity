@@ -64,7 +64,7 @@ enum PrintConstants {
     /**
      A Unicode string representing the single value label of a value reporter message.
      
-     - Note:
+     - Note
       A single space suffix is concatenated at the end of the label rather than allocated its own slot in the composite array. This is for array optimisation purposes as well as for code semantics: the space is part of a sentence rather than acting as a column separator.
      */
     static let valueReporterLabel = "Value for variable"+singleSpace
@@ -72,14 +72,14 @@ enum PrintConstants {
     /**
      A Unicode string representing the plural values label of a value reporter message.
      
-     - Note:
+     - Note
       A single space suffix is concatenated at the end of the label rather than allocated its own slot in the composite array. This is for array optimisation purposes as well as for code semantics: the space is part of a sentence rather than acting as a column separator.
      */
     static let valuesReporterLabel = "Values for variable"+singleSpace
     /**
      A Unicode string representing the label of an error reporter message.
      
-     - Note:
+     - Note
       A single space suffix is concatenated at the end of the label rather than allocated its own slot in the composite array. This is for array optimisation purposes as well as for code semantics: the space is part of a sentence rather than acting as a column separator.
      */
     static let errorReporterLabel = "Error for"+singleSpace
@@ -89,7 +89,7 @@ enum PrintConstants {
     /**
      A Unicode string representing the singular linking verb label for a reporter message.
      
-     - Note:
+     - Note
       A single space prefix is concatenated at the beginning of the label rather than allocated its own slot in the composite array. This is for array optimisation purposes as well as for code semantics: the space is part of a sentence rather than acting as a column separator.
      */
     static let isLabel =  singleSpace+"is:"
@@ -97,7 +97,7 @@ enum PrintConstants {
     /**
      A Unicode string representing the plural linking verb label for a reporter message.
      
-     - Note:
+     - Note
       A single space prefix is concatenated at the beginning of the label rather than allocated its own slot in the composite array. This is for array optimisation purposes as well as for code semantics: the space is part of a sentence rather than acting as a column separator.
      */
     static let areLabel = singleSpace+"are:"
@@ -107,7 +107,7 @@ enum PrintConstants {
     /**
      A Unicode string representing a linker symbol between the message node 'SKU style' information section of an event message and its description readout.
      
-     - Note:
+     - Note
      A double space prefix is concatenated at the beginning of the label and a single space suffix is concatenated at the end of the label. These spaces act as column separators but are not allocated slots in the composite array for optimisation purposes. They are also part of a section that would lose efficacy as a linker if spaced further apart: there are no custom spacers in these positions for this reason.
      */
     static let linker_EventDescription = doubleSpace+"-"+singleSpace
@@ -123,14 +123,14 @@ enum PrintConstants {
     /**
      A Unicode string representing a spacer that enables the fail node symbol to appear in the slot that is directly before other components of the node symbol section.
          
-     - Note:
+     - Note
      If a message contains the fail node symbol the spacer is placed in the composite slot index `index_FailNodeSymbolSpacer`. If a message does not contain the fail node symbol the spacer is placed in both the fail node symbol slot `index_FailNodeSymbol` and the dedicated slot for the spacer `index_FailNodeSymbolSpacer`.
 
      The spacer length is calculated from the fail node symbol character count so the two slots will always be the same length.
           
      This arrangement maintains a left alignment of the other components of the node symbol section in one column.
      
-     - Important:
+     - Important
      If the fail node symbol is ever made user customisable or changed to an Apple symbol the spacer length would need to be calculated using the method `symbolSpaceCount()`.
  */
     static let spacer_FailNodeSymbol = String(repeating: singleSpace, count: failNodeSymbol.count)
@@ -146,10 +146,10 @@ enum PrintConstants {
     /**
      A Unicode string representing a spacer that compensates for the function type symbol when calculating right justification between the entity code and the raw value of `FunctionType` for control flow messages.
      
-     - Important:
+     - Important
      If the raw value of `FunctionType` is ever made user customisable or changed to an Apple symbol the spacer length would need to be calculated using the method `symbolSpaceCount()`.
 
-     - Note:
+     - Note
      `FunctionType` should not be confused with `FunctionTypeSymbols` that are user customisable.
      */
     static let spacer_FType = singleSpace
@@ -251,7 +251,7 @@ enum PrintConstants {
      
      This `IndexSet` is used for the calculation of the readout spacer section of event and value messages.
      
-     - Note:
+     - Note
      Readout spacer section compensation for the function type symbol is calculated into the value at `index_RJustifyAdjusterFromFunctionElements` and is therefore accounted for by `defaultReadoutSpacers`.
      */
     static let defaultReadoutComponents: IndexSet                      = [

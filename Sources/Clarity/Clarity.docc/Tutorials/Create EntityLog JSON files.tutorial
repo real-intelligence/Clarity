@@ -1,0 +1,70 @@
+@Tutorial(time: 2) {
+    @Intro(title: "Create EntityLog JSON") {
+        The ClarityJSON folder contains two template files. Make a copy of either file for each entity that will contain Clarity print statements.
+        
+        A helpful convention is to name each JSON file with the same name as its associated entity (custom type) class, structure or enum. 
+        
+        
+        
+        @Image(source: create-entitylog-json-files-intro.png, alt: "A large Xcode JSON file document icon – a white document icon with an Xcode white hammer logo on a light blue background with the word JSON emblazoned underneath – the title EntityLogService.json is written underneath the document icon.")
+    }
+    
+    @Section(title: "Create an EntityLog file for ContentView") {
+        @ContentAndMedia {
+            _MyProject_ was created as an Xcode template App lifecycle application and will contain the struct `MyProjectApp` by default. We will create an EntityLog JSON file that will be associated with the `MyProjectApp` type (entity).
+            
+            Note that the JSON is decoded into an <doc:EntityLogService> type but is referred to as `EntityLog` in this tutorial for convenience.
+            
+            
+            @Image(source: 04-create-entitylog-section1.png, alt: "A small Xcode JSON file document icon – a white document icon with an Xcode white hammer logo on a light blue background with the word JSON emblazoned underneath – the title MyProjectApp.json is written underneath the document icon.")
+        }
+        
+        @Steps {
+            @Step {
+                Delete the Clarity JSON file _ExampleEntityLog.json_ from the referenced ClarityJSON folder.
+                
+                @Image(source: 04-create-entitylog-01-01.png, alt: "A screenshot shows the file ExampleEntityLog.json right click selected within the Xcode Project Navigator overlaid with a popover that shows the option 'Delete' selected")
+            }
+            @Step {
+                Duplicate the JSON file named `TemplateEntityLogStructure` in the `ClarityJSON` folder and name the duplicated file `MyProjectApp`.
+                
+                Ensure that the created `MyProjectApp.json` file remains at the top level of the `ClarityJSON` folder.
+                
+                @Image(source: 04-create-entitylog-01-02.png, alt: "A screenshot shows the MyProjectApp JSON file selected within the Xcode Project Navigator overlaid with a Finder window open at the project with MyProjectApp.json selected within the ClarityJSON folder at the same level as the TemplateEntityLogStructure.json file")
+            }
+            
+            @Step {
+                Verify that the `MyProjectApp` JSON file was copied from a valid EntityLog template with the correct structure and default values shown here.   
+                
+                @Code(name: "MyProjectApp.json", file: 04-create-entitylog-01-02.json)
+            }
+            @Step {
+                Assign the string value 'MYAPP' to the key `entity_code`.
+                
+                If Xcode issues an alert that the file is 'locked for editing' simply unlock it by selecting the option provided.
+                
+                @Code(name: "MyProjectApp.json", file: 04-create-entitylog-01-03.json)
+            }
+            @Step {
+                Assign the integer value 1 to the key `function_number`.
+                
+                @Code(name: "MyProjectApp.json", file: 04-create-entitylog-01-04.json)
+            }
+            @Step {
+                Assign the integer value 1 to the key `print_number`.
+                
+                @Code(name: "MyProjectApp.json", file: 04-create-entitylog-01-05.json)
+            }
+            @Step {
+                Assign an empty string value to the key `event_description`.
+                
+                @Code(name: "MyProjectApp.json", file: 04-create-entitylog-01-06.json)
+            }
+            @Step {
+                Assign an empty string value to the key `effect_description`.
+                
+                @Code(name: "MyProjectApp.json", file: 04-create-entitylog-01-07.json)
+            }
+        }
+    }
+}

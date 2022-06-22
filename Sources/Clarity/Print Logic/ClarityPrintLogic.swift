@@ -52,12 +52,13 @@ struct ClarityPrintLogic: ClarityPrintHelper {
         - functionName: An optional String  the function name derived from a `#function` macro argument provided to the relevant public Clarity print overloads. If this parameter is included Clarity formats and prints the log as a function call node for the function that contains `printNumber`.
         - values: An optional parameter for the inclusion of variable values to be printed as part of the message. If this parameter is included Clarity formats and prints the log as a value report node. The parameter can be a single value of any type,  a `Collection` of any type or an instance conforming to the `Error` protocol.
      
-     - Note:
+     - Note
      The print overloads would never provide arguments to both `functionName` and `values` in a single call.
      
      `PrintType` will be set for an `.event` when an effect string is required despite `.Effect` being a valid `PrintType`. This anomoly is caused because it is the only occurrence when two different `PrintType`s require evaluation for the same print call. This is solved by the `inout` return of a flag from the string compilation helper method.
      */
-  internal   func printLogic(_ printNumber: Int, _ settings:SettingsManagerService?, _ functionName: String? = nil, _ values: Any? = nil) {
+    
+    internal   func printLogic(_ printNumber: Int, _ settings:SettingsManagerService?, _ functionName: String? = nil, _ values: Any? = nil) {
         
         // MARK: -  💂‍♀️ 1. Guard return conditions
         

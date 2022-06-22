@@ -36,7 +36,7 @@ import Foundation
  
  The default methods print alerts to the console specific to each type of duplicate.
  
- - Note:
+ - Note
     The protocol has not been made generic for reasons of legibility of intent. However it could easily be fully decoupled from Clarity should the need arise – generic placeholders would be needed for EntityLog, EntityLog.Message and EntityLog.Code.
  
     Alternatively the dictionary of EntityCodes keyed by duplicate print number could be compiled by MessageCollator and passed as an argument to `detectDuplicatePrintNumbersAcrossEntityLogs(_ :suppressAlert:)->(Bool,[Int:[String]]) ` with a rewritten method signature. This would also require exposure of the default protocol 'duplicate type 2' print alert methods.
@@ -85,7 +85,7 @@ extension DuplicatePrintNumberIdentifiable {
      
      If the `uniqueDuplicatePrintNumbersAcrossFiles` array is empty the method returns the value `false` with an empty dictionary. Otherwise the method calls ‘type 2 duplicate print alert methods, compiles a dictionary of EntityCodes keyed by duplicate print number and returns the dictionary with the value `true`.
      
-     - Note:
+     - Note
         The returned dictionary of EntityCodes keyed by duplicate print number `entityCodesKeyedByDuplicate` is compiled specifically for use by the test target.
      - Parameters:
          - entityLogs: An array of EntityLogs.
@@ -183,7 +183,7 @@ extension DuplicatePrintNumberIdentifiable {
      
      The alert is for the duplicate 'type 2' – duplicate print numbers detected across multiple EntityLogs.
      
-     - Note:
+     - Note
         The method will be called once for each print number that is duplicated across multiple EntityCodes.
      
      - Parameters:

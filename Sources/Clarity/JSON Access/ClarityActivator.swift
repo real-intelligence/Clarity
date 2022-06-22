@@ -27,9 +27,7 @@
 import Foundation
 
 /**
-A class initialised as a single instance conforming to `JSONAccess` that is used by the Clarity framework to access client application Clarity JSON files.
-
-The Clarity JSON files contain all the information required to format and print client application logs to the console.
+A public class initialised as a single instance conforming to `JSONAccess` that is used by the ``Clarity`` framework to access client application ClarityJSON files.
  */
 public class ClarityActivator: JSONAccess {
 
@@ -57,19 +55,19 @@ public class ClarityActivator: JSONAccess {
         */
     static let jsonBundle = externalBundle ?? Bundle(for: ClarityActivator.self)
 
+    
+    
+
     /**
-     A constant that stores the result of a closure that computes whether the client application is in DEBUG mode.
+     A constant that stores the result of a closure that computes whether the client application is in DEBUG mode. The functionality of this constant will only work as intended if Clarity is installed as an embedded framework.
      
-     The closure calls `_isDebugAssertConfiguration()` –  this function must be called from within the client to return the correct value for the client application.
-     
-     The `isClientInDebugMode` constant is lazily set when first accessed on assignment to the parameter  `inPrintMode` of the ClarityActivator initialiser by the client application.
-     
-     - Note:
-     When accessed by the Clarity framework test target the constant will return the DEBUG build mode state of the framework test target. Evaluating the build mode state of the test target is necessary for the correct operation of certain unit tests including testing the operation of ` verifyClarityJSONDirectory(forBundle:)` .
+     See Docc extensions folder for details.
      */
-    static public let isClientInDebugMode = {
+    @available(*, deprecated, message: "Set `inPrintMode` manually.")
+    static public let isClientInDebugMode = { 
         _isDebugAssertConfiguration()
     }()
+    
     /**
      A Bool that signifies whether the ClarityActivator initialiser parameter `inPrintMode:` is set manually to `true` rather than via the closure constant `isClientInDebugMode`.
           
@@ -89,7 +87,7 @@ public class ClarityActivator: JSONAccess {
      
      The closure returns the result of calling `decoderServicesFromBundle<T: Decodable>(_: inSubDirectory:excludingFiles:) -> [T]`.
 
-     - Important:
+     - Important
      The variable is not an optional unlike the other decoder service type variables.
      
      In the event that a client application contains Clarity print statements but the referenced EntityLogService JSON files are missing from the ClarityJSON folder (orphaned print numbers) MessageCollator will hand an empty dictionary of messages to the print logic. The print logic will then simply ignore any Clarity print calls rather than crash.
@@ -121,7 +119,7 @@ public class ClarityActivator: JSONAccess {
      The closure returns the result of calling
      `decoderServiceFromBundle<T: Decodable>(_: inSubdirectory:forResourceName:) -> T?`.
      
-     - Note:
+     - Note
      If the variable is set to nil the JSONAccess protocol extension method `printAlertForCorruptJSON(for: )`  or the method `verifyClarityJSONDirectory(forBundle:)-> Bool` will present an alert and take action depending on the circumstance.
      */
     static var settings: SettingsManagerService? = {
@@ -141,113 +139,12 @@ public class ClarityActivator: JSONAccess {
     }()
     
     /**
-         A custom failable initialiser for ClarityActivator that is used by client applications to activate the Clarity logging framework with the given specifications.
+     A custom failable initialiser for ``ClarityActivator`` that is used by client applications to activate ``Clarity`` with the given specifications.
 
-         - Parameters:
+        - Parameters:
             - externalBundle: The client application main bundle.
-            - inPrintMode: The print mode status: usually set in accordance with the application DEBUG status. If set to the value `true` Clarity will be made active and print messages to the console.
-            - displayStatus: A bool that determines whether or not to display the print mode and activation status of Clarity on initialisation. This parameter defaults to `true` and its inclusion in the activation expression is optional unless setting it to `false`.
-
-         
-            The main bundle is used to access the user Clarity json files stored in the ClarityJSON folder: these files are used to calculate, format and print to the console details correlating to the index of Clarity print statements and user preferences.
-     
-            This initialiser is not required by the Clarity framework test target during internal testing of the functionality of the framework. The JSON data derived properties are set lazily by calling JSONAccess protocol generic decoding methods.
-
-             The initialiser is set  `@discardableResult` as a convenience for the client application activation API.
-     
-         - Note:
-            Setting `isClientInDebugMode` as the argument to `inPrintMode` will disable Clarity print statements when the client application is in RELEASE mode. If printing Clarity logs is required in RELEASE mode simply pass `true`. Conversely if disabling Clarity print statements is required in DEBUG mode simply pass `false`.
-     
-            Client application DEBUG mode status must be accessed using the `ClarityActivator` computed var `isClientInDebugMode` and NOT via the `DEBUG` macro nor calling `_isDebugAssertConfiguration()` directly within the framework in order to provide the correct value for the client application.
-         - Important:
-            Setting `isClientInDebugMode` as the argument to `inPrintMode` functions as described only when using the Clarity project source code and the client application within the same Workspace during development. In all other cases it is currently impossible for a framework to detect the build configuration of a client and therefore necessary to set  `inPrintMode` manually to either `true` or `false` as required. For maximum efficiency ensure that Clarity remains embedded and that `inPrintMode` is set manually to `false` when archiving for release.
-
-     
-         The main tasks of this initialiser are:
-          - to check whether `inPrintMode` has been set manually to override the application DEBUG status.
-          - to assign the client application main bundle internally so the framework can access the client JSON files.
-          - to verify that the necessary JSON files exist in the client application main bundle. (Detecting corrupt or invalid JSON is handled by the protocol decoder methods).
-        
-     ## Activation workflow examples
-     The Clarity activation initialiser should only be called once in an application.
-     
-         *SwiftUI App @main workflow*
-        ```
-         import Clarity
-         //...
-        @main
-        struct ClientForBigSuriOSApp: App {
-        init() {
-                //Either Automatic activation
-                ClarityActivator(withBundle: Bundle.main, inPrintMode: ClarityActivator.isClientInDebugMode, displayStatus:false)
-                
-                //Or Manual activation (NOT both!)
-                 ClarityActivator(withBundle: Bundle.main, inPrintMode: true, displayStatus:false)
-        }
-        //...
-        ```
-    
-         *App Delegate workflow*
-        ```
-        import Clarity
-        //...
-
-        func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-                 
-                 //Either Automatic activation
-                 ClarityActivator(withBundle: Bundle.main, inPrintMode: ClarityActivator.isClientInDebugMode, displayStatus:false)
-                 
-                 //Or Manual activation (NOT both!)
-                  ClarityActivator(withBundle: Bundle.main, inPrintMode: true, displayStatus:false)
-        //...
-        ```
-     
-     
-     ## Framework as a client workflow
-     
-     Framework applications that have a single entry point method should activate Clarity in the same way as shown above in the entry point method implementation.
-
-     Framework applications that do not have a single entry point will need to implement a class that includes a static variable that lazily stores the result of a closure containing the activation initialiser.  This closure will then need to be accessed by all classes, structs or enums that use Clarity. This technique will ensure that Clarity is activated only once and that any failure to activate Clarity will not adversely affect the client framework.
-
-            - Important:
-     Framework applications will need to call the Bundle initialiser `init(for:) ` supplying the implementing class as argument to the `aClass` parameter to access the correct Bundle for the framework.
-     
-     *Framework as a client without a single entry point workflow*
-
-     ```
-         // Activation
-         import Clarity
-
-         class ClarityServiceExample {
-
-             static let clarityActivation: ClarityActivator? = {
-                 return ClarityActivator(withBundle: Bundle(for: ClarityServiceExample.self), inPrintMode: true)
-             }()
-         }
-         
-         
-         // Accessing the activation
-         import Clarity
-
-         class MyClass {
-            public init(parameterName:Type) {
-            
-            // All essential work here …
-
-             guard let _ = ClarityService.clarityActivation else{
-                 print("Clarity activation failed")
-                 return
-             }
-                  
-             // Place Clarity print statement for the initialiser here if required.
-         }
-
-            // Clarity print statements can now be placed anywhere in the class.
-         }
-             //...
-         
-     ```
-     
+            - inPrintMode: The print mode status: usually set in accordance with the application DEBUG status. If set to `true` ``Clarity`` will be made active and print messages to the console.
+            - displayStatus: A bool that determines whether or not to display the print mode and activation status of ``Clarity`` on initialisation. This parameter defaults to `true` –  its inclusion in the activation expression is only required when set to `false`.
          */
     @discardableResult
     public  init?(withBundle externalBundle: Bundle?, inPrintMode:Bool, displayStatus:Bool = true) {
@@ -364,10 +261,10 @@ extension ClarityActivator {
      
      This method also acts as a utility to copy the necessary JSON files to the desktop in a folder named ClarityJSON on the first run of a client application after the framework has been embedded. This folder can then be dragged into the client project as a copied folder reference.
         
-     - Important:
+     - Important
      This method will only attempt to verify the ClarityJSON directory, copy missing items to the desktop and print an alert when the value of `inPrintMode` resolves to true.
      
-     - Note:
+     - Note
      There is no system level API that can directly identify whether a named subdirectory exists in a bundle. Therefore this method checks for the content expected in the subdirectory `ClarityJSON` to verify that the subdirectory itself exists.
      
      The actions taken as a consequence of running this method are:
@@ -382,8 +279,10 @@ extension ClarityActivator {
      - Returns: A Bool signifying whether the ClarityJSON has been verified successfully. The return is a `@discardableResult`
      */
     @discardableResult
-    public static func verifyClarityJSONDirectory(forBundle externalBundle: Bundle)-> Bool{
-       
+     static func verifyClarityJSONDirectory(forBundle externalBundle: Bundle)-> Bool{
+         
+         
+         
         if (isClientInDebugMode && isClientOverrideDebug == false) || isClientOverrideRelease{
             
             let isSettingsFile = externalBundle.url(forResource: "Settings", withExtension: "json", subdirectory: "ClarityJSON") != nil
@@ -498,10 +397,10 @@ extension ClarityActivator {
 
      If only a single preference file is missing from the client ClarityJSON directory then a default copy of that file will be made and placed on the desktop (and not placed in an enclosing folder).
           
-     - Important:
+     - Important
      Copying the TemplateJSON folder to the desktop will currently work when running client applications in device simulators. The copy attempt is likely to fail with a permission error when running macOS applications. If the attempt fails instructions on how to copy the TemplateJSON folder from derived data are printed to the console.
               
-     - Note:
+     - Note
      The variable `sourceDirectoryURL` is assigned via a relative path of the TemplateJSON to the file location as an alternative path if the path cannot be derived from the bundle. The alternative path can only be created if the framework and client reside in the same workspace. If both paths return nil the URL remains initialised from an empty string and the method will catch the copy file error and print manual copy instructions to the console.  It is currently not possible to access the developer machine home directory path programmatically when the framework code is run from within a client application. `NSHomeDirectory` resolves to the home directory of the device or simulated device instead of the developer machine.
 
      There are six main task phases to the method:
@@ -632,7 +531,7 @@ extension ClarityActivator {
             - fileManager: The shared file manager object
             - missingFileName: The name of the missing preference file
      
-         - Note:
+         - Note
          This method propagates any error thrown by `removeItem(at:)`
      */
     fileprivate static func removePreferenceFiles( _ newFileURL: URL, _ fileManager: FileManager, _ missingFileName: String = "") throws {
@@ -655,7 +554,7 @@ extension ClarityActivator {
             - newFileURL: The URL to the default ClarityJSON directory copied to the desktop
             - fileManager: The shared file manager object
      
-         - Note:
+         - Note
          This method propagates any error thrown by `removeItem(at:)`
      */
     fileprivate static func removeEntityLogFiles( _ newFileURL: URL,  _ fileManager: FileManager) throws {
@@ -671,6 +570,7 @@ extension ClarityActivator {
     
 
 }
+
 
 extension ClarityActivator {
     // Extension for grouping code dealing with printing alerts to console
@@ -766,7 +666,7 @@ extension ClarityActivator {
             - directoryState: A ClarityJSONDirectoryState enum containing the correct case for the client application missing file status.
             - result: A Result enum that uses a custom `FileCopySuccess` enum for its `.success` case associated value and an `Error` type for its `.failure` case associated value.
          
-         - Note:
+         - Note
          The `FileCopySuccess` enum `replaceCopy(newName:)` used in the Result type returns an associated string value containing the new name of any file that already existed on the desktop with the same name as a replaced missing item.
      */
      static func printAlertForMissingFile(_ missingfile:String, forDirectoryState directoryState: ClarityJSONDirectoryState, withResult result: Result<FileCopySuccess, Error>) -> String{
@@ -873,7 +773,7 @@ extension ClarityActivator {
         Swift.print("   - add more EntityLog.json files at any time as required\n")
         Swift.print("4. Copy or move ExampleEntityLog.json to a separate location for reference and delete it from the ClarityJSON folder")
         Swift.print("   - the template files do not need to be deleted\n")
-        Swift.print("❗️IMPORTANT:\n•The Settings.json and Formatting.json files must NOT be renamed, \ndeleted or have keys altered – (key values can be edited)")
+        Swift.print("❗️Important\n•The Settings.json and Formatting.json files must NOT be renamed, \ndeleted or have keys altered – (key values can be edited)")
         Swift.print("•EntityLog JSON files MUST be uniquely named, \nthe JSON object structure must be maintained but arrays can contain unlimited items")
         Swift.print("•The ClarityJSON directory must NOT be renamed\n")
         Swift.print("NOTES:\n•If either Settings.json and Formatting.json have their keys corrupted, \nare deleted, renamed or the whole ClarityJSON directory is deleted \neither the single affected file or a default directory containing missing  \nfiles will be copied to the desktop on the next run or test of the application\nwith these instructions printed to console\n")

@@ -42,7 +42,7 @@ extension UsedPrintNumberIdentifiable{
      It is used as a convenience to list print numbers used by client application JSON files and to detect duplicate print numbers across EntityLog instances.
         
         The individual keys in the returned array represent the print number used to key each Message referenced in the client application.
-     - Note:
+     - Note
         The keys compiled from each EntityLog have been previously uniqued by virtue of being stored in the EntityLog `messages` dictionary property. Appending the `keys` arrays for all EntityLogs allows the returned array to contain any duplicates that might exist across files.
      - Parameters:
          - entityLogs: An array of EntityLog instances.
@@ -68,7 +68,7 @@ extension UsedPrintNumberIdentifiable{
      
         The array of tuples is then reassembled into a dictionary for the return value.
      
-        - Note:
+        - Note
         The method only prints an alert if specified to do so in the user settings file. Therefore there is no requirement for a convenience parameter to suppress the alert for unit tests (unlike those contained in the obligatory duplicate print number alert methods).
      
         The method is prefixed with the word 'print' in keeping with all alert methods in the framework code. The related user settings JSON key is prefixed with the word 'list' to distinguish its advisory purpose from other settings that control functionality.
@@ -114,7 +114,7 @@ extension UsedPrintNumberIdentifiable{
      
      The method sorts the keys for each EntityLog Message dictionary instance in ascending order into a uniqued set and prints them to the console (according to user preferences).
      
-     - Note:
+     - Note
      The method only prints an alert if specified to do so in the user settings file. Therefore there is no requirement for a convenience parameter to suppress the alert for unit tests (unlike those contained in the obligatory duplicate print number alert methods).
      
      The method is prefixed with the word 'print' in keeping with all alert methods in the framework code. The related user settings JSON key is prefixed with the word 'list' to distinguish its advisory purpose from other settings that control functionality.
@@ -148,7 +148,7 @@ extension UsedPrintNumberIdentifiable{
      
      It then prints the value to the console (according to user preferences).
      
-     - Note:
+     - Note
      The method only prints an alert if specified to do so in the user settings file. Therefore there is no requirement for a convenience parameter to suppress the alert for unit tests (unlike those contained in the obligatory duplicate print number alert methods).
      
      The method is prefixed with the word 'print' in keeping with all alert methods in the framework code. The related user settings JSON key is prefixed with the word 'list' to distinguish its advisory purpose from other settings that control functionality.

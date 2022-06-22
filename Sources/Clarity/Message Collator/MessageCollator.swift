@@ -70,7 +70,7 @@ struct MessageCollator : DuplicatePrintNumberIdentifiable, UsedPrintNumberIdenti
      
      MessageCollator uses the dictionary to print a duplicate print number alert to the console if duplicates are detected.
      
-     - Important:
+     - Important
       The duplicate print numbers represent duplicates found in the EntityLogService JSON files and not multiple calls of Clarity print statements using the same Int as argument in the client application.
      */
     static var  duplicatePrintNumbersKeyedByEntityCode = [String: [Int]]()
@@ -83,9 +83,9 @@ struct MessageCollator : DuplicatePrintNumberIdentifiable, UsedPrintNumberIdenti
      
         The initialiser also compiles lists of print numbers used by client application JSON files. These are printed to the console on first launch if any of the 'list print number' preferences are `true` in Settings.json.
 
-        - Note:
+        - Note
         Both the duplicate alert and print number list presentation are only required on the first launch of a client app and therefore must be presented during initialisation.
-        - Important:
+        - Important
          Duplicate alerts represent duplicate print numbers found in the EntityLogService JSON files and not multiple calls of Clarity print statements using the same Int as argument in the client application.
      
          It is unlikely, inadvisable but not necessarily an error to reference the same message from multiple points in the code. It is however an error to attempt to reference multiple messages in the JSON files using the same print number from multiple points in the code.

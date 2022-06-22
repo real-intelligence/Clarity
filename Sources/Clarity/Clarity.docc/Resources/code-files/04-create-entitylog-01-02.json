@@ -1,0 +1,20 @@
+{
+    "entity_code":"MYENTITY",
+    "entity_functions" : [
+        {
+            "function_number":0,
+            "function_number_always_custom":false,
+            "function_type":"f",
+            "function_nodes":[
+                {
+                    "print_number":0,
+                    "node_type":0,
+                    "event_description":"description of the event that occurred at the decision node",
+                    "effect_description":"description of the effect expected to happen as a result of the event"
+                }
+            ]
+        }
+    ]
+}
+
+

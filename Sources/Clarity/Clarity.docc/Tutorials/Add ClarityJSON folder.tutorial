@@ -1,0 +1,50 @@
+@Tutorial(time: 2) {
+    @Intro(title: "Add ClarityJSON Folder") {
+        A folder named ClarityJSON is copied to the desktop when a client application is run for the first time after Clarity has been activated: this folder needs to be added to your application.
+        
+        The ClarityJSON folder contains JSON files: these include settings files required by Clarity and templates for you to build entity reference files.
+        
+        Drag this folder into the `MyProject` Xcode project as a folder reference.
+        
+        
+        @Image(source: add-json-intro.png, alt: "A blue Finder folder icon emblazoned with an orange JSON logo of a semicolon surrounded by curly brackets. A Finder 'add icon’: a cursor placed diagonally above a green plus icon – is shown at the bottom right corner of the folder.")
+    }
+    
+    @Section(title: "Add the ClarityJSON folder ") {
+        @ContentAndMedia {
+            Ensure that Clarity has been activated according to the steps in Chapter 2 before running the app. 
+            
+            Note that if for any reason the ClarityJSON is not copied to your desktop download the folder named `TemplateJSON` from the Clarity GitHub repository and rename it `ClarityJSON`.
+            
+            @Image(source: 03-addjson-section1.png, alt: "An arrow pointing from the JSON folder icon to the MyProject app project icon.")
+        }
+        
+        @Steps {
+            @Step {
+                Run the `MyProject` application in any Xcode device simulator.
+                
+                A folder containing template and default settings JSON files named ClarityJSON will be copied to the desktop with a confirmation message printed to the console.
+                
+                @Image(source: 03-add-jsonfiles-section1-1.png, alt: "A screenshot of the Xcode console with a message that advises that a ClarityJSON folder has been copied to the desktop and that it needs to be added to your project.")
+            }
+            
+            @Step {
+                Drag the ClarityJSON folder into the `MyProject` Xcode project so that it is nested under (as a child of) the `MyProject` Xcode project icon.
+                
+                @Image(source: 03-add-jsonfiles-section1-2.png, alt: "A screenshot of the ClarityJSON folder being dragged into the Xcode project so that it is nested under (as a child of) the project name icon.")
+            }
+            @Step {
+                In the pop up window that appears ensure that 'Copy items if needed' is checked, that the folder is added to the `MyProject` project target and that 'Create folder references' is selected.
+                
+                @Image(source: 03-add-jsonfiles-section1-3.png, alt: "A screenshot of the 'Choose options for adding these files:' sheet with the project target checked, 'Copy items if needed' checked and 'Create folder references' selected.")
+            }
+            @Step {
+                Run `MyProject` again.
+                
+                If the ClarityJSON folder was added to your project correctly the console will display the Clarity logging framework title and there will be no advisory messages to the contrary. The ClarityJSON folder copied to the desktop in Step 1 can now be deleted.
+                
+                @Image(source: 03-add-jsonfiles-section1-4.png, alt: "A screenshot of the console showing the Clarity logging framework title but without any alert messages – this confirms that Clarity is active and has the correct JSON files referenced in the project.")
+            }
+        }
+    }
+}

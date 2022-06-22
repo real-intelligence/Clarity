@@ -54,7 +54,7 @@ extension Array where Element: Hashable {
       2. Filter the values of each grouping for those that have a count greater than 1. These will be the array values that have duplicates.
       3. Create a new array from the filtered keys of the dictionary. This will contain the unique duplicates of the original array.
      
-     - Note:
+     - Note
      The array element must conform to Hashable.
 
      - Returns: An array that contains the unique duplicate elements contained in the original array.
@@ -112,7 +112,7 @@ extension String{
     /**
      An extension method that returns an Int representing the count value of the String that includes Apple symbols, letters, numbers and whitespace. Apple symbols have their count multiplied by 2.
      
-     - Important:
+     - Important
      Apple symbols return a character count value of 1 but use the space of two characters in the console.
      
      The method count calculation is predicated on the fact that a string assigned for a user symbol could include any combination of character types.

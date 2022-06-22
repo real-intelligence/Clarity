@@ -58,7 +58,7 @@ extension ClarityPrintHelper{
      - nodeType:  The NodeType case of the Message associated with `printNumber`.
      - goForPrint:  An `inout` parameter that returns whether a print number should have its associated message printed to the console according to specifications calculated from the other given parameters.
      
-     - Note:
+     - Note
      The parameter `functionNumber` is given a default value to allow its omission in unit tests where not required.
      */
     func goForPrintFromSettings(_ settings: SettingsManagerService,
@@ -204,12 +204,12 @@ extension ClarityPrintHelper{
 
      This approach is effective and performant.
 
-     - Important:
+     - Important
      The method is agnostic about how the array should be used for concatenating the message string. A component value is assigned to every slot position represented in the array whether or not the slot is used in the message string for the print number. It is only important that the correct values are assigned to the components for the context of the message to print.
 
      The size of the array should remain optimum for the sake of performance. Testing a large array with empty indexes as placeholders had a small but noticeable impact on the speed of unit tests run in total.
 
-     - Note:
+     - Note
      The ‘slot’ index numbers are named and stored in a constant file to ensure a single value of truth. This allows the composite to be easily amended in future releases.
 
      The string character count of certain spacers are calculated from components with strings of variable character count. This includes calculations that ensure some number columns remain right aligned and other component columns remain left aligned.
@@ -378,7 +378,7 @@ extension ClarityPrintHelper{
      There are two main task phases to the method:
        1. Evaluate `functionName`: if the argument is nil or a blank string set the node type case to the value of the message `nodeType`  property derived from JSON. Otherwise set the node type case to `.functionName`.
        2. Evaluate `values`: if the argument is not nil and it conforms to the `Error` protocol overwrite the node type case to `.errorReporter` otherwise overwrite the node type case to `.valueReporter`.
-     - Note:
+     - Note
      The `functionName` and `values` parameters will never both have arguments in the same call.
 
      - Parameters:
@@ -406,7 +406,7 @@ extension ClarityPrintHelper{
      
      The method switches on the incoming NodeType and FunctionType case parameter arguments and assigns symbol values derived from the Formatting JSON data to the `inout` parameters.
      
-     - Note:
+     - Note
      This method divides NodeTypes into three distinct categories: control flow nodes, outcome types or function types depending on the column the symbol is placed.
      
      If the `nodeType` parameter is a `functionName` case the two Switch statements on `nodeType` will default and the `inout` parameters will remain unchanged as empty strings. The Switch statement on `functionType` will assign a value to `functionTypeSymbol` on all calls (all Message instances have a FunctionType if not a function type symbol). If the `nodeType` parameter is not a `functionName` case the value will be ignored by the method that concatenates message strings.
@@ -500,7 +500,7 @@ extension ClarityPrintHelper{
         2. Calculate the number of digit places in the number using the `log10(_:) ` function. This requires converting `integer` into a `Double` and adding 1 to the result ( the log 10 of a single digit equates to 0).
         3. Convert the `Double` back into an `Int` for the return.
 
-     - Note:
+     - Note
         This method is a candidate for converting into an extension method on Int.
  
      - Parameters:
@@ -524,7 +524,7 @@ extension ClarityPrintHelper{
          
         The inverse number is assigned to the parameter `count` of the String initialiser `init(repeating: count:)` with a single space String assigned to the parameter `repeating` to create a blank spacer string of the specified length.
 
-         - Note:
+         - Note
         The returned spacer is used to compile strings containing column elements that are correctly justified based on the variable content of other elements adjacent to them in the string.
 
         The basis of a maximum of 5 digit places is predicated on the notion that a client project using Clarity would never require the use of a maximum function number or print number exceeding 99,999.
@@ -561,7 +561,7 @@ extension ClarityPrintHelper{
  /**
      A method that calculates the difference between the maximum character count of all EntityLog EntityCodes and a given EntityCode count. It then returns a blank spacer string of the calculated length as an inout parameter.
 
-     - Note:
+     - Note
      The returned differential spacer is applied to all message string types in the composite slot position following the slot for the `EntityCode` value. All following components in the message will be moved forward by the count of the differential spacer and thereby align with messages containing an `EntityCode` with a different character count. If a message belongs to an `EntityLog` with an `EntityCode` that is equal to the maximum count the differential spacer will have the value of an empty string (and not be offset forward).
 
      - Parameters:
@@ -586,7 +586,7 @@ extension ClarityPrintHelper{
              
          The returned empty spacer is used to ensure correct alignment between the message event description readout and subsequent readouts on following lines in the console (the effect description and/or value reports).
 
-         - Important:
+         - Important
          Apple symbols return a character count value of 1 but use the space of two characters in the console. A client application can specify custom values for symbols: these could be set as ordinary String characters or Apple symbols therefore this method uses the extension method `symbolSpaceCount()` to calculate the correct value from the JSON Formatting data.
 
          There are six main task phases to the method:
@@ -597,7 +597,7 @@ extension ClarityPrintHelper{
             5. Calculate the total string character count for all strings in both composite arrays.
             6. Return a blank spacer string with a character count equal to the combined total.
 
-         - Note:
+         - Note
            `functionTypeSymbol` is accounted for by the constant `IndexSet` `defaultReadoutSpacers` via its character count included in `spacer_RJustifyAdjusterFromFunctionElements`.
 
          - Parameters:
@@ -735,7 +735,7 @@ extension ClarityPrintHelper{
         3. Switch on `printType`: create additional unions between relevant index sets and use them as arguments to filter the composite string array so that it only contains the required components for each `PrintType` case.
         4. Concatenate and return the filtered array.
      
-     - Note:
+     - Note
          The `IndexSet` for the effect message only includes component slots for readout values: the spacer is calculated separately by another method.
 
      - Parameters:
@@ -808,7 +808,7 @@ extension ClarityPrintHelper{
      2. The collection is iterated according to its type so that the relevant string can be built and printed to the console.
      3. Each message is appended into a String array for the return value.
      
-     - Note:
+     - Note
      The value messages are appended into a String array that is returned for testing purposes only.
      - Parameters:
          - collection: A generic collection that conforms to `Sequence` that contains values to be printed to the console.
@@ -856,7 +856,7 @@ extension ClarityPrintHelper{
 
      The inclusion of the given readout spacer ensures that the value string is always aligned with other message readouts.
      
-     - Note:
+     - Note
      The value message is returned for testing purposes only.
 
      - Parameters:

@@ -1,0 +1,48 @@
+@Tutorials(name: "Clarity") {
+    @Intro(title: "Meet Clarity") {
+        Get started with Clarity by building _MyProject_ – an app for demonstrating basic use cases of the Clarity framework.
+        
+  @Image(source: clarity-logo-tutorial.png, alt: "The Clarity logo – the word Clarity in bright font on a black background illuminated by a torch.") 
+    }
+    @Chapter(name: "Install Clarity") {
+        Install Clarity as either a Swift Package, an XCFramework or an embedded framework.
+        
+        @Image(source: chapter1-installClarity.png, alt: "The word Installation in bright font on a black background illuminated by a torch.")
+        
+        @TutorialReference(tutorial: "doc:Install-as-a-Swift-Package")
+        @TutorialReference(tutorial: "doc:Install-as-an-XCFramework")
+        @TutorialReference(tutorial: "doc:Install-as-an-Embedded-Framework")
+    }
+    
+    
+    @Chapter(name: "Activate Clarity") {
+        Activate Clarity by adding the Clarity activation initialiser to the entry point of your application.
+        
+        @Image(source: chapter2-activateClarity.png, alt: "The word Activation in bright font on a black background illuminated by a torch.")
+        
+        @TutorialReference(tutorial: "doc:Activate-for-App-Lifecycle")
+        @TutorialReference(tutorial: "doc:Activate-for-App-Delegate")
+        @TutorialReference(tutorial: "doc:Activate-as-Framework-Client")
+    }
+    
+    @Chapter(name: "Add Clarity JSON files") {
+        Run your app with Clarity activated for the first time and then add the created ClarityJSON folder to your project.
+        
+        @Image(source: chapter3-addJSON.png, alt: "The word JSON in bright font on a black background illuminated by a torch.")
+        
+        @TutorialReference(tutorial: "doc:Add-ClarityJSON-folder")
+        @TutorialReference(tutorial: "doc:Add-ClarityJSON-folder-(watchOS)")
+    }
+    
+    
+    
+    @Chapter(name: "Use Clarity print statements") {
+        Copy a template EntityLog JSON file for each entity that will use Clarity print statements. Then write Clarity print statements where required and write referenced data in the JSON file.
+        
+        @Image(source: chapter4-printStatements.png, alt: "The word Logging in bright font on a black background illuminated by a torch.")
+        
+        @TutorialReference(tutorial: "doc:Create-EntityLog-JSON-files")
+        @TutorialReference(tutorial: "doc:Add-print-statements")
+    }
+}
+
