@@ -56,6 +56,12 @@
                     "node_type":12,
                     "event_description":"description of the error",
                     "effect_description":"n/a"
+                },
+                {
+                    "print_number":600,
+                    "node_type":11,
+                    "event_description":"Publisher info",
+                    "effect_description":"n/a"
                 }
             ]
         }

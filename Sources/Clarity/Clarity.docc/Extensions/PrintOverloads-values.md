@@ -75,6 +75,24 @@ Note that there are equivalent versions of this function written in extensions o
 [print(_:values:settings:) -> ViewModifier](https://realint.org/claritydevdocs/Extensions/ViewModifier.html#/s:7SwiftUI12ViewModifierP7ClarityE5print_6values8settingsQrSi_ypSgAD22SettingsManagerServiceVSgtF)
 
 
+### Publishers.ReceiveOn extension version
+New to Release 2 there is a version of Clarity print statement written as an overload on the default [`print(_:to:)`](https://developer.apple.com/documentation/combine/publishers/receiveon/print(_:to:)/) structure in an extension for the [`Publishers.ReceiveOn`](https://developer.apple.com/documentation/combine/publishers/receiveon/) structure. Use this function in the same manner as [`print(_:to:)`](https://developer.apple.com/documentation/combine/publishers/receiveon/print(_:to:)/) but provide a print number for the first parameter. The method will then compile Clarity formatted log information and pass it to the `prefix` parameter of the Swift version of the method that will be called in turn. 
+
+
+Example:
+````
+...
+    .receive(on: DispatchQueue.main).print(printMe(600), to: nil)
+````
+
+Also new in Release 2 there is a related function ``print(_:valuesForPublisherType:settings:)`` that takes a generic publisher type and outputs the Output and Failure type for the specific publisher in the form of a `Dictionary<String:String>` value formatted as a value reporter.
+
+Example:
+````
+    print(2, valuesForPublisherType: URLSession.DataTaskPublisher.self)
+````
+
+
 ## Topics
 
 

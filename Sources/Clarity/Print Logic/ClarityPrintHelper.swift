@@ -434,6 +434,8 @@ extension ClarityPrintHelper{
                 controlFlowNodeSymbol = formatting.kBOb.kE
             case .errorReporter:
                 controlFlowNodeSymbol = formatting.kBOb.kF
+            case .publisherReceiveReporter:
+                controlFlowNodeSymbol = formatting.kBOb.kE
                 
             default:
                 break
@@ -464,7 +466,9 @@ extension ClarityPrintHelper{
                 outcomeTypeSymbol = formatting.kAOb.kK
             case .errorReporter:
                 outcomeTypeSymbol = formatting.kAOb.kL
-                
+                // Additional symbols for Combine reporters will need to be temporarily non customisable until better solution found to prevent breaking version changes when adding keys to the JSON
+            case .publisherReceiveReporter:
+                outcomeTypeSymbol = "⌚️"
             default:
                 break
             }

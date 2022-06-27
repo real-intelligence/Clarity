@@ -139,7 +139,72 @@ struct ClarityPrintLogic: ClarityPrintHelper {
             }
         }
     }
+
 }
 
 
-
+// For Combine publisher 
+extension ClarityPrintLogic{
+    
+    
+    /// A method that formats and prints a message to the console corresponding to data stored as JSON for a given print number. This method acts as the single internal call point for the public Clarity publisher `print(_:to)` overload.
+    ///
+    /// - Parameter printNumber: A unique number used as a key to access a specific associated message from a dictionary containing all message data.
+    /// - Returns: A string of Clarity formatted log information intended to be passed the `prefix` parameter.
+    internal   func printLogic(_ printNumber: Int) -> String? {
+        
+        //Note: compiler does not want to extract any more duplicatable sections from the main printLogic method therefore although possible to extract certain sections decided to repeat code rather than risk performance drop
+        //Placed in extension for SOLID conformance
+        // MARK: -  💂‍♀️ 1. Guard return conditions
+        // This form of Clarity print statement will only use the bundle version
+        guard let usedSettings = ClarityActivator.settings else{
+            if ClarityDeveloperAlerts.isClarityDeveloperInternalPrinting{
+                Swift.print("CLPL   ⚠️ Settings.json missing  -  NO PRINT" )
+            }
+            return nil
+        }
+        
+        guard let formatting = ClarityActivator.formatting else{
+            return nil
+        }
+        
+        let printMessages = MessageCollator.sharedMessages
+        guard let messageToPrint = printMessages[printNumber] else {
+            if usedSettings.alertOrphanedPrintNumbersDetected{
+                printAlertForDetectedOrphanPrintNumber(printNumber)
+            }
+            return nil
+        }
+        
+        // MARK: -  🍽 2. Resolve goForPrint
+        //Only procede with string compile calculations if true
+        
+        var goForPrint = false
+        //TODO: 🎈TODO  new NodeType for publisher receive with for symbol ⌚️
+        let nodeType = NodeType.publisherReceiveReporter
+        let entityCode = messageToPrint.entityCode
+        let functionNumber = messageToPrint.functionNumber
+        
+        goForPrintFromSettings(usedSettings, entityCode, printNumber, functionNumber:functionNumber, nodeType, &goForPrint)
+        
+        var compiledStringForPrint = ""
+        if goForPrint{
+            // MARK: - 🪢 3. Compile print string(s)
+            
+            //Compile sequential composite as per main printLogic method but passing nil to function name and values
+            let composite =  self.compileSequentialComposite(printNumber, messageToPrint, nodeType, usedSettings, formatting, nil, nil)
+            
+            //None required elements
+            var printValueType: PrintValueType = .none // should always remain .none
+            var compiledStringForEffectPrint = "" // should always remain empty
+            var printEffectString = false // should always remain false
+            
+            
+            //Compile string(s) to print passing nil to values – the string should include everything up to and including the event description
+            compileStringsFromComposite(composite, nodeType, usedSettings, nil, &printValueType, &compiledStringForPrint,   &printEffectString, &compiledStringForEffectPrint)
+        }
+        //Simply return the string and let caller deal if empty string
+        return compiledStringForPrint
+    }
+    
+}

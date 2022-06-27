@@ -95,12 +95,12 @@ class MessageCollatorTests: XCTestCase {
     }
     
     func test_ListAllPrintNumbersReturnsCorrectValues (){
-        let expectedPrintNumbersSet = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 35, 36, 55, 72, 73, 95, 97, 98, 135, 191, 195, 197, 198, 199, 205, 206, 298, 299, 301, 398, 401, 402, 500, 1135, 7856, 9998, 11135, 99988, 99989, 99990, 99991, 99992, 99993, 99994, 99995, 99996, 99997, 99998, 99999]
+        let expectedPrintNumbersSet = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 35, 36, 55, 72, 73, 95, 97, 98, 135, 191, 195, 197, 198, 199, 205, 206, 298, 299, 301, 398, 401, 402, 500, 600, 1135, 7856, 9998, 11135, 99988, 99989, 99990, 99991, 99992, 99993, 99994, 99995, 99996, 99997, 99998, 99999]
         
         XCTAssertEqual(MessageCollator.printAllUsedPrintNumbers(for: entityLogs), expectedPrintNumbersSet)
     }
     func test_ListAllPrintNumbersForEntityCodeZZYYReturnsCorrectValues (){
-        let expectedPrintNumbersSet = [195, 197, 198, 298, 299]
+        let expectedPrintNumbersSet = [195, 197, 198, 298, 299, 600]
         
         let printNumbers =  MessageCollator.printAllUsedPrintNumbersByEntityCode(for: entityLogs)["ZZYY"]
         

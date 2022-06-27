@@ -14,6 +14,8 @@ Customisable settings enable the isolation of specific elements and referenced d
 
 The minimal API consists of two overload analogues of the Swift [`print(_:separator:terminator:)`](https://developer.apple.com/documentation/swift/1541053-print) function – these functions: ``print(_:functionName:settings:)`` and  ``print(_:values:settings:)`` reference associated JSON data via an index. 
 
+New to Release are two functions for use when working with Combine publishers: ``print(_:valuesForPublisherType:settings:)`` and an extension overload of [`print(_:to:)`](https://developer.apple.com/documentation/combine/publishers/receiveon/print(_:to:)/).
+
 Note that the term *print statements* used in this documentation always refers to **Clarity** print statements unless stated otherwise.
 
 ![The Clarity logo – the word Clarity in bright font on a black background illuminated by a torch ](clarity-logo.png)
@@ -37,6 +39,7 @@ Note that the term *print statements* used in this documentation always refers t
 - <doc:Output-values-and-errors>
 - ``print(_:values:settings:)``
 - ``print(_:functionName:settings:)``
+- ``print(_:valuesForPublisherType:settings:)``
 
 
 ### Display Settings

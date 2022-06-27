@@ -8,6 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		F41C60672719BB650060212C /* Clarity_tv.h in Headers */ = {isa = PBXBuildFile; fileRef = F41C60652719BB650060212C /* Clarity_tv.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F45CAA842864A45900E914BD /* PrintOverloadsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45CAA832864A45900E914BD /* PrintOverloadsView.swift */; };
+		F45CAA852864A45900E914BD /* PrintOverloadsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45CAA832864A45900E914BD /* PrintOverloadsView.swift */; };
+		F45CAA862864A45900E914BD /* PrintOverloadsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45CAA832864A45900E914BD /* PrintOverloadsView.swift */; };
+		F45CAA872864A45900E914BD /* PrintOverloadsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45CAA832864A45900E914BD /* PrintOverloadsView.swift */; };
+		F45CAA892864A80A00E914BD /* PrintOverloadsViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45CAA882864A80A00E914BD /* PrintOverloadsViewModifier.swift */; };
+		F45CAA8A2864A80A00E914BD /* PrintOverloadsViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45CAA882864A80A00E914BD /* PrintOverloadsViewModifier.swift */; };
+		F45CAA8B2864A80A00E914BD /* PrintOverloadsViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45CAA882864A80A00E914BD /* PrintOverloadsViewModifier.swift */; };
+		F45CAA8C2864A80A00E914BD /* PrintOverloadsViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45CAA882864A80A00E914BD /* PrintOverloadsViewModifier.swift */; };
+		F45CAA8E2864A93600E914BD /* PrintOverloadsReceiveOn.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45CAA8D2864A93600E914BD /* PrintOverloadsReceiveOn.swift */; };
+		F45CAA8F2864A93600E914BD /* PrintOverloadsReceiveOn.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45CAA8D2864A93600E914BD /* PrintOverloadsReceiveOn.swift */; };
+		F45CAA902864A93600E914BD /* PrintOverloadsReceiveOn.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45CAA8D2864A93600E914BD /* PrintOverloadsReceiveOn.swift */; };
+		F45CAA912864A93600E914BD /* PrintOverloadsReceiveOn.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45CAA8D2864A93600E914BD /* PrintOverloadsReceiveOn.swift */; };
+		F45CAA932864CAC900E914BD /* ExtensionPrintReceiveOnTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45CAA922864CAC900E914BD /* ExtensionPrintReceiveOnTests.swift */; };
+		F463676928645A6A00A6B845 /* ExtensionPrintViewsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F463676828645A6A00A6B845 /* ExtensionPrintViewsTests.swift */; };
 		F466A0BC2728448E008DFC88 /* UtilitySystemExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A7FFE27186DFC00502804 /* UtilitySystemExtensions.swift */; };
 		F466A0BD27284491008DFC88 /* ClarityDeveloperAlerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A800327186E3D00502804 /* ClarityDeveloperAlerts.swift */; };
 		F466A0BE2728455E008DFC88 /* JSONAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A7F94271863E400502804 /* JSONAccess.swift */; };
@@ -102,6 +116,11 @@
 		F480697F27D63DDA0057B64C /* Clarity.docc in Sources */ = {isa = PBXBuildFile; fileRef = F480697B27D63DDA0057B64C /* Clarity.docc */; };
 		F497FE3727284A19002461F9 /* TemplateJSON in Resources */ = {isa = PBXBuildFile; fileRef = F47A800D271870EE00502804 /* TemplateJSON */; };
 		F497FE3827284A30002461F9 /* ClarityJSON in Resources */ = {isa = PBXBuildFile; fileRef = F47A800827186F2000502804 /* ClarityJSON */; };
+		F4A56DDB2869BD5F008BF19C /* PrintOverloadsPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A56DDA2869BD5F008BF19C /* PrintOverloadsPublisher.swift */; };
+		F4A56DDC2869BD5F008BF19C /* PrintOverloadsPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A56DDA2869BD5F008BF19C /* PrintOverloadsPublisher.swift */; };
+		F4A56DDD2869BD5F008BF19C /* PrintOverloadsPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A56DDA2869BD5F008BF19C /* PrintOverloadsPublisher.swift */; };
+		F4A56DDE2869BD5F008BF19C /* PrintOverloadsPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A56DDA2869BD5F008BF19C /* PrintOverloadsPublisher.swift */; };
+		F4A56DE02869CA6E008BF19C /* PrintOverloadPublisherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A56DDF2869CA6E008BF19C /* PrintOverloadPublisherTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,6 +139,12 @@
 		F41C60662719BB650060212C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F43BD8842729A27700EBD08D /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		F43BD8852729A2A800EBD08D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		F45CAA832864A45900E914BD /* PrintOverloadsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintOverloadsView.swift; sourceTree = "<group>"; };
+		F45CAA882864A80A00E914BD /* PrintOverloadsViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintOverloadsViewModifier.swift; sourceTree = "<group>"; };
+		F45CAA8D2864A93600E914BD /* PrintOverloadsReceiveOn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintOverloadsReceiveOn.swift; sourceTree = "<group>"; };
+		F45CAA922864CAC900E914BD /* ExtensionPrintReceiveOnTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionPrintReceiveOnTests.swift; sourceTree = "<group>"; };
+		F46367672864576200A6B845 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		F463676828645A6A00A6B845 /* ExtensionPrintViewsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionPrintViewsTests.swift; sourceTree = "<group>"; };
 		F47A7F5E27185E9F00502804 /* Clarity.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Clarity.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F47A7F6127185E9F00502804 /* Clarity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Clarity.h; sourceTree = "<group>"; };
 		F47A7F6227185E9F00502804 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -164,6 +189,8 @@
 		F47A802E271878E600502804 /* PrintConstantsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintConstantsTests.swift; sourceTree = "<group>"; };
 		F47A80302718793F00502804 /* TestingUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingUtilities.swift; sourceTree = "<group>"; };
 		F480697B27D63DDA0057B64C /* Clarity.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Clarity.docc; sourceTree = "<group>"; };
+		F4A56DDA2869BD5F008BF19C /* PrintOverloadsPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintOverloadsPublisher.swift; sourceTree = "<group>"; };
+		F4A56DDF2869CA6E008BF19C /* PrintOverloadPublisherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintOverloadPublisherTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,6 +245,7 @@
 			isa = PBXGroup;
 			children = (
 				F43BD8852729A2A800EBD08D /* README.md */,
+				F46367672864576200A6B845 /* LICENSE */,
 				F43BD8842729A27700EBD08D /* Package.swift */,
 			);
 			name = Deployment;
@@ -276,6 +304,10 @@
 				F47A7FCE27186B7000502804 /* Message Collator */,
 				F47A7FE327186CC500502804 /* Print Logic */,
 				F47A7FDE27186C8000502804 /* PrintOverloads.swift */,
+				F45CAA832864A45900E914BD /* PrintOverloadsView.swift */,
+				F45CAA882864A80A00E914BD /* PrintOverloadsViewModifier.swift */,
+				F45CAA8D2864A93600E914BD /* PrintOverloadsReceiveOn.swift */,
+				F4A56DDA2869BD5F008BF19C /* PrintOverloadsPublisher.swift */,
 				F480697B27D63DDA0057B64C /* Clarity.docc */,
 			);
 			path = Clarity;
@@ -299,6 +331,9 @@
 				F47A802C2718787C00502804 /* PrintOverloadVisualConsoleCheck.swift */,
 				F47A802E271878E600502804 /* PrintConstantsTests.swift */,
 				F47A80302718793F00502804 /* TestingUtilities.swift */,
+				F463676828645A6A00A6B845 /* ExtensionPrintViewsTests.swift */,
+				F45CAA922864CAC900E914BD /* ExtensionPrintReceiveOnTests.swift */,
+				F4A56DDF2869CA6E008BF19C /* PrintOverloadPublisherTests.swift */,
 			);
 			path = ClarityTests;
 			sourceTree = "<group>";
@@ -647,16 +682,20 @@
 				F466A0BD27284491008DFC88 /* ClarityDeveloperAlerts.swift in Sources */,
 				F466A0C427284577008DFC88 /* MessageCollator.swift in Sources */,
 				F466A0C327284572008DFC88 /* EntityLog.swift in Sources */,
+				F45CAA8C2864A80A00E914BD /* PrintOverloadsViewModifier.swift in Sources */,
+				F45CAA872864A45900E914BD /* PrintOverloadsView.swift in Sources */,
 				F466A0C827284586008DFC88 /* ClarityPrintHelper.swift in Sources */,
 				F466A0C52728457B008DFC88 /* UsedPrintNumberIdentifiable.swift in Sources */,
 				F480697F27D63DDA0057B64C /* Clarity.docc in Sources */,
 				F466A0C727284583008DFC88 /* ClarityPrintLogic.swift in Sources */,
+				F4A56DDE2869BD5F008BF19C /* PrintOverloadsPublisher.swift in Sources */,
 				F466A0C22728456E008DFC88 /* EntityLogService.swift in Sources */,
 				F466A0CA2728458E008DFC88 /* ClarityPrintEnums.swift in Sources */,
 				F466A0C92728458A008DFC88 /* ClarityPrintConstants.swift in Sources */,
 				F466A0C027284567008DFC88 /* SettingsManagerService.swift in Sources */,
 				F466A0CB272845A5008DFC88 /* PrintOverloads.swift in Sources */,
 				F466A0BE2728455E008DFC88 /* JSONAccess.swift in Sources */,
+				F45CAA912864A93600E914BD /* PrintOverloadsReceiveOn.swift in Sources */,
 				F466A0BF27284562008DFC88 /* ClarityActivator.swift in Sources */,
 				F466A0C12728456B008DFC88 /* FormattingManagerService.swift in Sources */,
 				F466A0BC2728448E008DFC88 /* UtilitySystemExtensions.swift in Sources */,
@@ -671,16 +710,20 @@
 				F47A7FFF27186DFC00502804 /* UtilitySystemExtensions.swift in Sources */,
 				F47A7FEA27186D2E00502804 /* ClarityPrintHelper.swift in Sources */,
 				F47A7FE527186CF300502804 /* ClarityPrintLogic.swift in Sources */,
+				F45CAA892864A80A00E914BD /* PrintOverloadsViewModifier.swift in Sources */,
+				F45CAA842864A45900E914BD /* PrintOverloadsView.swift in Sources */,
 				F47A7FD027186BA400502804 /* MessageCollator.swift in Sources */,
 				F47A7FD527186BD700502804 /* UsedPrintNumberIdentifiable.swift in Sources */,
 				F480697C27D63DDA0057B64C /* Clarity.docc in Sources */,
 				F47A7FC02718684800502804 /* FormattingManagerService.swift in Sources */,
+				F4A56DDB2869BD5F008BF19C /* PrintOverloadsPublisher.swift in Sources */,
 				F47A7FF927186DA300502804 /* ClarityPrintEnums.swift in Sources */,
 				F47A7FDF27186C8000502804 /* PrintOverloads.swift in Sources */,
 				F47A7FCA2718693E00502804 /* EntityLog.swift in Sources */,
 				F47A7FB5271867A600502804 /* ClarityActivator.swift in Sources */,
 				F47A7F95271863E400502804 /* JSONAccess.swift in Sources */,
 				F47A7FC5271868A600502804 /* EntityLogService.swift in Sources */,
+				F45CAA8E2864A93600E914BD /* PrintOverloadsReceiveOn.swift in Sources */,
 				F47A7FEF27186D4E00502804 /* ClarityPrintConstants.swift in Sources */,
 				F47A7FBB2718681C00502804 /* SettingsManagerService.swift in Sources */,
 				F47A7FDA27186C0E00502804 /* DuplicatePrintNumberIdentifiable.swift in Sources */,
@@ -691,7 +734,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F463676928645A6A00A6B845 /* ExtensionPrintViewsTests.swift in Sources */,
 				F47A801F2718760400502804 /* FormattingManagerServiceTests.swift in Sources */,
+				F45CAA932864CAC900E914BD /* ExtensionPrintReceiveOnTests.swift in Sources */,
 				F47A8023271876C600502804 /* EntityLogTests.swift in Sources */,
 				F47A801B2718742000502804 /* RoundTripJSONDecodingTests.swift in Sources */,
 				F47A802F271878E600502804 /* PrintConstantsTests.swift in Sources */,
@@ -701,6 +746,7 @@
 				F47A8029271877CE00502804 /* CompilePrintStringMethodsTests.swift in Sources */,
 				F47A80252718770600502804 /* MessageCollatorTests.swift in Sources */,
 				F47A8019271873AF00502804 /* JSONAccessTests.swift in Sources */,
+				F4A56DE02869CA6E008BF19C /* PrintOverloadPublisherTests.swift in Sources */,
 				F47A80312718793F00502804 /* TestingUtilities.swift in Sources */,
 				F47A801D271875A600502804 /* SettingsManagerServiceTests.swift in Sources */,
 				F47A80212718767100502804 /* EntityLogServiceTests.swift in Sources */,
@@ -716,16 +762,20 @@
 				F47A800027186DFC00502804 /* UtilitySystemExtensions.swift in Sources */,
 				F47A7FEB27186D2E00502804 /* ClarityPrintHelper.swift in Sources */,
 				F47A7FE627186CF300502804 /* ClarityPrintLogic.swift in Sources */,
+				F45CAA8A2864A80A00E914BD /* PrintOverloadsViewModifier.swift in Sources */,
+				F45CAA852864A45900E914BD /* PrintOverloadsView.swift in Sources */,
 				F47A7FD127186BA400502804 /* MessageCollator.swift in Sources */,
 				F47A7FD627186BD700502804 /* UsedPrintNumberIdentifiable.swift in Sources */,
 				F480697D27D63DDA0057B64C /* Clarity.docc in Sources */,
 				F47A7FC12718684800502804 /* FormattingManagerService.swift in Sources */,
+				F4A56DDC2869BD5F008BF19C /* PrintOverloadsPublisher.swift in Sources */,
 				F47A7FFA27186DA300502804 /* ClarityPrintEnums.swift in Sources */,
 				F47A7FE027186C8000502804 /* PrintOverloads.swift in Sources */,
 				F47A7FCB2718693E00502804 /* EntityLog.swift in Sources */,
 				F47A7FB6271867A600502804 /* ClarityActivator.swift in Sources */,
 				F47A7F96271863E400502804 /* JSONAccess.swift in Sources */,
 				F47A7FC6271868A600502804 /* EntityLogService.swift in Sources */,
+				F45CAA8F2864A93600E914BD /* PrintOverloadsReceiveOn.swift in Sources */,
 				F47A7FF027186D4E00502804 /* ClarityPrintConstants.swift in Sources */,
 				F47A7FBC2718681C00502804 /* SettingsManagerService.swift in Sources */,
 				F47A7FDB27186C0E00502804 /* DuplicatePrintNumberIdentifiable.swift in Sources */,
@@ -740,16 +790,20 @@
 				F47A800127186DFC00502804 /* UtilitySystemExtensions.swift in Sources */,
 				F47A7FEC27186D2E00502804 /* ClarityPrintHelper.swift in Sources */,
 				F47A7FE727186CF300502804 /* ClarityPrintLogic.swift in Sources */,
+				F45CAA8B2864A80A00E914BD /* PrintOverloadsViewModifier.swift in Sources */,
+				F45CAA862864A45900E914BD /* PrintOverloadsView.swift in Sources */,
 				F47A7FD227186BA400502804 /* MessageCollator.swift in Sources */,
 				F47A7FD727186BD700502804 /* UsedPrintNumberIdentifiable.swift in Sources */,
 				F480697E27D63DDA0057B64C /* Clarity.docc in Sources */,
 				F47A7FC22718684800502804 /* FormattingManagerService.swift in Sources */,
+				F4A56DDD2869BD5F008BF19C /* PrintOverloadsPublisher.swift in Sources */,
 				F47A7FFB27186DA300502804 /* ClarityPrintEnums.swift in Sources */,
 				F47A7FE127186C8000502804 /* PrintOverloads.swift in Sources */,
 				F47A7FCC2718693E00502804 /* EntityLog.swift in Sources */,
 				F47A7FB7271867A600502804 /* ClarityActivator.swift in Sources */,
 				F47A7FB12718668C00502804 /* JSONAccess.swift in Sources */,
 				F47A7FC7271868A600502804 /* EntityLogService.swift in Sources */,
+				F45CAA902864A93600E914BD /* PrintOverloadsReceiveOn.swift in Sources */,
 				F47A7FF127186D4E00502804 /* ClarityPrintConstants.swift in Sources */,
 				F47A7FBD2718681C00502804 /* SettingsManagerService.swift in Sources */,
 				F47A7FDC27186C0E00502804 /* DuplicatePrintNumberIdentifiable.swift in Sources */,

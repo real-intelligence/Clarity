@@ -184,6 +184,13 @@ enum NodeType: Int,Codable , Equatable {
      If there is no argument supplied it will simply display the error report `event_description` as a comment without actual error information.
      */
     case errorReporter
+    
+    /**
+     The message should be displayed as a publisher receive report.
+
+     This case is used with overloads of the `print(to:)` method.
+     */
+    case publisherReceiveReporter
 }
 /**
  An enum for storing the function group state of the message associated with a print number.
