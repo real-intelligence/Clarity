@@ -19,6 +19,9 @@
    <FileRef
       location = "group:tvOS Example/tvOS Example.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:Resources">
+   </FileRef>
    <Group
       location = "group:iOS App Delegate Example/../Demo Settings"
       name = "Demo Settings for Examples">
