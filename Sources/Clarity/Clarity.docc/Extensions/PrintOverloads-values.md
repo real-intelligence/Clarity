@@ -76,7 +76,7 @@ Note that there are equivalent versions of this function written in extensions o
 
 
 ### Publishers.ReceiveOn extension version
-New to Release 2 there is a version of Clarity print statement written as an overload on the default [`print(_:to:)`](https://developer.apple.com/documentation/combine/publishers/receiveon/print(_:to:)/) structure in an extension for the [`Publishers.ReceiveOn`](https://developer.apple.com/documentation/combine/publishers/receiveon/) structure. Use this function in the same manner as [`print(_:to:)`](https://developer.apple.com/documentation/combine/publishers/receiveon/print(_:to:)/) but provide a print number for the first parameter. The method will then compile Clarity formatted log information and pass it to the `prefix` parameter of the Swift version of the method that will be called in turn. 
+New to Release 2 there is a version of Clarity print statement written as an overload on the default [`print(_:to:)`](https://developer.apple.com/documentation/combine/publishers/receiveon/print(_:to:)/) method in an extension for the [`Publishers.ReceiveOn`](https://developer.apple.com/documentation/combine/publishers/receiveon/) structure. Use this function in the same manner as [`print(_:to:)`](https://developer.apple.com/documentation/combine/publishers/receiveon/print(_:to:)/) but provide a print number for the first parameter. The method will then compile Clarity formatted log information and pass it to the `prefix` parameter of the Swift version of the method that will be called in turn. 
 
 
 Example:
